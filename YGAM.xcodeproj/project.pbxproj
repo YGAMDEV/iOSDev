@@ -24,6 +24,14 @@
 		45E957BF20AC3F2F00A01EB0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957BE20AC3F2F00A01EB0 /* Enums.swift */; };
 		45E957C220AC415300A01EB0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957C120AC415300A01EB0 /* Questions.swift */; };
 		45E957C720AC521100A01EB0 /* QuestionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957C620AC521100A01EB0 /* QuestionCoordinator.swift */; };
+		F4C767B920C1855100B5DB77 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767B820C1855100B5DB77 /* Dashboard.storyboard */; };
+		F4C767BB20C1877400B5DB77 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */; };
+		F4C767BF20C1881E00B5DB77 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767BE20C1881E00B5DB77 /* Questions.storyboard */; };
+		F4C767C120C1890400B5DB77 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767C020C1890400B5DB77 /* QuestionsViewController.swift */; };
+		F4C767C420C189D800B5DB77 /* SignPosting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767C320C189D800B5DB77 /* SignPosting.storyboard */; };
+		F4C767C720C18A3900B5DB77 /* SignpostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767C620C18A3900B5DB77 /* SignpostingViewController.swift */; };
+		F4C767CA20C18ACF00B5DB77 /* Achievements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767C920C18ACF00B5DB77 /* Achievements.storyboard */; };
+		F4C767CD20C18B2E00B5DB77 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767CC20C18B2E00B5DB77 /* AchievementsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,14 @@
 		45E957BE20AC3F2F00A01EB0 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		45E957C120AC415300A01EB0 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		45E957C620AC521100A01EB0 /* QuestionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCoordinator.swift; sourceTree = "<group>"; };
+		F4C767B820C1855100B5DB77 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		F4C767BE20C1881E00B5DB77 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
+		F4C767C020C1890400B5DB77 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		F4C767C320C189D800B5DB77 /* SignPosting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignPosting.storyboard; sourceTree = "<group>"; };
+		F4C767C620C18A3900B5DB77 /* SignpostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostingViewController.swift; sourceTree = "<group>"; };
+		F4C767C920C18ACF00B5DB77 /* Achievements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Achievements.storyboard; sourceTree = "<group>"; };
+		F4C767CC20C18B2E00B5DB77 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,10 @@
 		45E957A120AC3E4A00A01EB0 /* YGAM */ = {
 			isa = PBXGroup;
 			children = (
+				F4C767B520C184B400B5DB77 /* Achievements */,
+				F4C767B420C184AC00B5DB77 /* Dashboard */,
+				F4C767B320C184A200B5DB77 /* Questions */,
+				F4C767B220C1849500B5DB77 /* SignPosting */,
 				454B591C20AC6E7300157DA0 /* Views */,
 				45E957C820AC619E00A01EB0 /* ViewControllers */,
 				45E957C520AC51F400A01EB0 /* Coordinator */,
@@ -146,6 +166,106 @@
 				4589023620B9FF8400CA4C46 /* QuestionViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F4C767B220C1849500B5DB77 /* SignPosting */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767C520C18A2600B5DB77 /* Viewcontrollers */,
+				F4C767C220C189B600B5DB77 /* Storyboard */,
+			);
+			path = SignPosting;
+			sourceTree = "<group>";
+		};
+		F4C767B320C184A200B5DB77 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767BC20C187F900B5DB77 /* Viewcontrollers */,
+				F4C767BD20C1880700B5DB77 /* Storyboard */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		F4C767B420C184AC00B5DB77 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767B720C184FF00B5DB77 /* Viewcontrollers */,
+				F4C767B620C184F300B5DB77 /* Storyboard */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		F4C767B520C184B400B5DB77 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767CB20C18ADA00B5DB77 /* Viewcontrollers */,
+				F4C767C820C18AB000B5DB77 /* Stroryboard */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		F4C767B620C184F300B5DB77 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767B820C1855100B5DB77 /* Dashboard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F4C767B720C184FF00B5DB77 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		F4C767BC20C187F900B5DB77 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767C020C1890400B5DB77 /* QuestionsViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		F4C767BD20C1880700B5DB77 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767BE20C1881E00B5DB77 /* Questions.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F4C767C220C189B600B5DB77 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767C320C189D800B5DB77 /* SignPosting.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F4C767C520C18A2600B5DB77 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767C620C18A3900B5DB77 /* SignpostingViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		F4C767C820C18AB000B5DB77 /* Stroryboard */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767C920C18ACF00B5DB77 /* Achievements.storyboard */,
+			);
+			path = Stroryboard;
+			sourceTree = "<group>";
+		};
+		F4C767CB20C18ADA00B5DB77 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767CC20C18B2E00B5DB77 /* AchievementsViewController.swift */,
+			);
+			path = Viewcontrollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,9 +328,13 @@
 			files = (
 				4589023C20BA00A700CA4C46 /* QuestionCollectionViewCell.xib in Resources */,
 				45E957AD20AC3E4C00A01EB0 /* LaunchScreen.storyboard in Resources */,
+				F4C767CA20C18ACF00B5DB77 /* Achievements.storyboard in Resources */,
 				4589022E20B832E100CA4C46 /* QuestionList.json in Resources */,
 				45E957AA20AC3E4C00A01EB0 /* Assets.xcassets in Resources */,
 				45E957A820AC3E4A00A01EB0 /* Main.storyboard in Resources */,
+				F4C767B920C1855100B5DB77 /* Dashboard.storyboard in Resources */,
+				F4C767C420C189D800B5DB77 /* SignPosting.storyboard in Resources */,
+				F4C767BF20C1881E00B5DB77 /* Questions.storyboard in Resources */,
 				4589023820B9FF8400CA4C46 /* QuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,11 +348,15 @@
 			files = (
 				45E957C720AC521100A01EB0 /* QuestionCoordinator.swift in Sources */,
 				4589023720B9FF8400CA4C46 /* QuestionViewController.swift in Sources */,
+				F4C767C720C18A3900B5DB77 /* SignpostingViewController.swift in Sources */,
 				45E957B920AC3EA200A01EB0 /* APIManager.swift in Sources */,
 				4589023B20BA00A700CA4C46 /* QuestionCollectionViewCell.swift in Sources */,
+				F4C767C120C1890400B5DB77 /* QuestionsViewController.swift in Sources */,
 				45E957A520AC3E4A00A01EB0 /* ViewController.swift in Sources */,
 				45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */,
 				45E957BA20AC3EA200A01EB0 /* ImageManager.swift in Sources */,
+				F4C767CD20C18B2E00B5DB77 /* AchievementsViewController.swift in Sources */,
+				F4C767BB20C1877400B5DB77 /* DashboardViewController.swift in Sources */,
 				45E957BF20AC3F2F00A01EB0 /* Enums.swift in Sources */,
 				45E957C220AC415300A01EB0 /* Questions.swift in Sources */,
 				45E957BC20AC3EA200A01EB0 /* APIRequests.swift in Sources */,
