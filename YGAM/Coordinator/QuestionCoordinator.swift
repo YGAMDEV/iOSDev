@@ -50,7 +50,8 @@ class QuestionCoordinator: NSObject, QuestionCoordinatorDelegate {
             question.answers = answers[previousQuestionID]
         }
         
-        let questionViewController = QuestionViewController(question: question, nibName: "QuestionViewController", bundle: nil)
+//        let questionViewController = QuestionViewController(question: question, nibName: "QuestionViewController", bundle: nil)
+        let questionViewController = BubbleQuestionViewController(question: question, nibName: "BubbleQuestionViewController", bundle: nil)
         questionViewController.delegate = self;
 
         navController.pushViewController(questionViewController, animated: true)
