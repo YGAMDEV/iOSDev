@@ -22,18 +22,22 @@ class BubbleQuestionViewController: UIViewController {
     @IBOutlet weak var dynamicAnimatorReferenceView: UIView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var infoLabelVerticalSpacing: NSLayoutConstraint!
-    
-    public var question: Question
-    public weak var delegate: QuestionCoordinatorDelegate?
+    @IBOutlet weak var progressBar: UIProgressView!
     
     private var animator: UIDynamicAnimator!
-    private var answers = [Answer]()
+    private var answers = [String: [Answer]]()
     private var answerViews = [BubbleAnswerView]()
     private var bubbleBehavior: BubbleBehavior!
+    private var currentAnswer = [Answer]()
+    private var currentQuestion: Question
+    private var navController: UINavigationController
     private var nudged = false
+    private let questions: [Question]
     
-    init(question: Question, nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        self.question = question
+    init(navController: UINavigationController, questions: [Question], nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        self.questions = questions
+        self.currentQuestion = self.questions.first!
+        self.navController = navController
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
@@ -45,56 +49,77 @@ class BubbleQuestionViewController: UIViewController {
         animator = UIDynamicAnimator(referenceView: dynamicAnimatorReferenceView)
         bubbleBehavior = BubbleBehavior()
         animator.addBehavior(bubbleBehavior)
-//        animator.setValue(true, forKey: "debugEnabled")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        questionLabel.text = question.text
+        
         questionLabelBackground.layer.cornerRadius = questionLabel.frame.size.height / 2
         questionLabelBackground.layer.shadowColor = UIColor.darkGray.cgColor
         questionLabelBackground.layer.shadowOpacity = 0.6
         questionLabelBackground.layer.shadowOffset = CGSize.zero
         questionLabelBackground.layer.shadowRadius = 7
+        
+        progressBar.layer.cornerRadius = 5
+        progressBar.layer.borderWidth = 1.0
+        progressBar.layer.borderColor = UIColor.white.cgColor
+        progressBar.clipsToBounds = true
+        progressBar.layer.sublayers![1].cornerRadius = 5
+        progressBar.subviews[1].clipsToBounds = true
+        
+        showQuestion()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        displayAnswers()
+    }
+    
+    // MARK: - Logic
+    
+    private func showQuestion() {
+        updateProgress()
+        if let previousQuestionID = currentQuestion.answersFromQuestion {
+            currentQuestion.answers = answers[previousQuestionID]
+        }
+        questionLabel.text = currentQuestion.text
+        questionLabelBackground.invalidateIntrinsicContentSize()
+        UIView.animate(withDuration: 0.3, animations: {
+            if self.questionLabel.alpha == 0 {
+                self.questionLabel.alpha = 1.0
+                self.view.layoutIfNeeded()
+            }
+        }) { _ in
+            self.displayAnswers()
+        }
     }
     
     @IBAction func nextTapped(_ sender: UIButton) {
         let selectedItems = answerViews.filter({ $0.isSelected })
         
         // Check single questions
-        if (question.type == .single && selectedItems.count != 1) {
+        if (currentQuestion.type == .single && selectedItems.count != 1) {
             showInfoLabelWith("You need to select an answer")
             return
         }
         
         // Check Min Selection
-        if let minSelections = question.minSelections {
-            if selectedItems.count < minSelections || (question.type == .single && selectedItems.count != 1) {
+        if let minSelections = currentQuestion.minSelections {
+            if selectedItems.count < minSelections || (currentQuestion.type == .single && selectedItems.count != 1) {
                 showInfoLabelWith("You need to select at least \(minSelections) answer(s)")
                 return
             }
         }
         
         // Save the answers
-        answers = selectedItems.map{ $0.answer }
+        currentAnswer = selectedItems.map{ $0.answer }
         
         // Check for any nudges
-        if let nudge = question.nudge {
-            let filter = answers.filter() { nudge.trigger.contains($0.text) }
-            let textAnswers = answers.map { $0.text }
+        if let nudge = currentQuestion.nudge {
+            let filter = currentAnswer.filter() { nudge.trigger.contains($0.text) }
+            let textAnswers = currentAnswer.map { $0.text }
             if nudge.trigger == textAnswers || filter.count > 0 {
                 // Check the users answers against the triggers
                 if nudged {
-                    delegate?.didFinish(questionID: question.id, answer: answers, action: nudge.confirmedAction)
+                    questionComplete(action: nudge.confirmedAction)
                 } else {
                     var message = nudge.text
-                    if nudge.text.range(of: "{answer}") != nil, let answer = answers.first {
+                    if nudge.text.range(of: "{answer}") != nil, let answer = currentAnswer.first {
                         message = nudge.text.replacingOccurrences(of: "{answer}", with: answer.text)
                     }
                     showInfoLabelWith(message)
@@ -105,12 +130,53 @@ class BubbleQuestionViewController: UIViewController {
         }
         
         // Single answer question - action is associated with the selected answer
-        if question.type == .single, let action = answers.first?.action {
-            delegate?.didFinish(questionID: question.id, answer: answers, action: action)
+        if currentQuestion.type == .single, let action = currentAnswer.first?.action {
+            questionComplete(action: action)
             return
         }
         
-        delegate?.didFinish(questionID: question.id, answer: answers, action: question.completeAction)
+        questionComplete(action: currentQuestion.completeAction)
+    }
+    
+    func questionComplete(action: Action?) {
+        answers[currentQuestion.id] = currentAnswer
+        guard let action = action else {
+            // Exit
+            navController.popViewController(animated: true)
+            return
+        }
+        
+        switch action.type {
+        case .app:
+            // Exit
+            navController.popViewController(animated: true)
+            return
+        case .question:
+            guard let nextQuestion = questionFor(ID: action.value) else {
+                // Exit
+                navController.popViewController(animated: true)
+                return
+            }
+            currentQuestion = nextQuestion
+            reset()
+        }
+    }
+    
+    func reset() {
+        currentAnswer = []
+        self.infoLabelVerticalSpacing.constant = 0.0
+        UIView.animate(withDuration: 0.3, animations: {
+            self.questionLabel.alpha = 0.0
+            self.infoLabel.alpha = 0.0
+            for answerView in self.answerViews {
+                answerView.alpha = 0.0
+                self.bubbleBehavior.removeItem(answerView)
+            }
+            self.answerViews.removeAll()
+            self.view.layoutSubviews()
+        }) { _ in
+            self.showQuestion()
+        }
     }
     
     func showInfoLabelWith(_ message: String) {
@@ -123,9 +189,8 @@ class BubbleQuestionViewController: UIViewController {
     }
     
     // MARK: - AnswerViews
-    
     private func displayAnswers() {
-        for answer in question.answers! {
+        for answer in currentQuestion.answers! {
             let answerView: BubbleAnswerView = Bundle.main.loadNibNamed("BubbleAnswerView", owner: nil, options: nil)![0] as! BubbleAnswerView
             answerView.answer = answer
             answerView.delegate = self
@@ -164,12 +229,25 @@ class BubbleQuestionViewController: UIViewController {
         
         return (randomX, randomY)
     }
+    
+    // MARK: - Helpers
+    private func questionFor(ID questionID: String) -> Question? {
+        return questions.first(where: { $0.id == questionID })
+    }
+    
+    private func updateProgress() {
+        let index = questions.index(where: { (question) -> Bool in
+            question.id == currentQuestion.id
+        })
+        let test = Float(index!) / Float(questions.count)
+        progressBar.progress = test
+    }
 }
 
 extension BubbleQuestionViewController: BubbleAnswerViewDelegate {
     func answerViewTapped(answerView: BubbleAnswerView) {
         // Check if it's toggle-able due to constraints (single/multi)
-        if question.type == .single {
+        if currentQuestion.type == .single {
             for answerView in answerViews {
                 answerView.isSelected = false
             }

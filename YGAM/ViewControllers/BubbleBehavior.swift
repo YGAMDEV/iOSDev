@@ -37,6 +37,12 @@ class BubbleBehavior: UIDynamicBehavior {
         fieldBehavior.addItem(item)
         addChildBehavior(item.itemBehavior)
     }
+    
+    public func removeItem(_ item: BubbleAnswerView) {
+        collisionBehavior.removeItem(item)
+        fieldBehavior.removeItem(item)
+        removeChildBehavior(item.itemBehavior)
+    }
         
     private func updateFieldForBounds(_ bounds: CGRect) {
         fieldBehavior.position = CGPoint(x: bounds.midX, y: bounds.midY)

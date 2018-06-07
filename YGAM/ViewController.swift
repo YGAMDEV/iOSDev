@@ -8,17 +8,10 @@
 
 import UIKit
 
-protocol CoordinatorDelegate: AnyObject {
-    func coordinatorCompleted()
-}
-
 class ViewController: UIViewController {
-    
-    var questionsCoordinator: QuestionCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,18 +20,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startPressed(_ sender: UIButton) {
+        let questionsRequest = QuestionsRequest()
+        questionsRequest.createModel() { result in
+            switch result {
+            case .failure(let error):
+                print("Failed: \(error)")
+            case .success(let questionList):
+                DispatchQueue.main.async {
+                    self.showQuestions(questions: questionList.questions)
+                }
+            }
+        }
+    }
+    
+    private func showQuestions(questions: [Question]) {
         guard let navController = navigationController else {
             return
         }
-        questionsCoordinator = QuestionCoordinator(rootViewController: navController)
-        questionsCoordinator?.delegate = self
-        questionsCoordinator!.start()
+        let questionViewController = BubbleQuestionViewController(navController: navController, questions: questions, nibName: "BubbleQuestionViewController", bundle: nil)
+        navController.pushViewController(questionViewController, animated: true)
     }
 }
 
-extension ViewController: CoordinatorDelegate {
-    func coordinatorCompleted() {
-        navigationController?.popToViewController(self, animated: true)
-        questionsCoordinator = nil
-    }
-}

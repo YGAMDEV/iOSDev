@@ -26,6 +26,7 @@ class BubbleAnswerView: UIView {
     public var answer: Answer! {
         didSet {
             answerLabel.text = answer.text
+            answerLabel.fitMaxWord()
         }
     }
     
@@ -70,7 +71,7 @@ class BubbleAnswerView: UIView {
         switch state {
         case .selected:
             backgroundColor = .white
-            answerLabel.textColor = .darkGray
+            answerLabel.textColor = UIColor(red: (255.0/255.0), green: (133.0/255.0), blue: (14.0/255.0), alpha: 1.0)
         case .unselected:
             backgroundColor = .clear
             answerLabel.textColor = .white
