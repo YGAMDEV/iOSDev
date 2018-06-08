@@ -122,7 +122,7 @@
         }
       ],
       "nudge": {
-        "text": "Was it really just #{x} hours?",
+        "text": "Was it really {answer}?",
         "trigger": [
           "< 1hr",
           "1-2 hrs",
