@@ -10,12 +10,21 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    private var questions: [Question]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-
-        self.performSegue(withIdentifier: "SignpostSegue", sender: self)
+        let questionsRequest = QuestionsRequest()
+        questionsRequest.createModel() { result in
+            switch result {
+            case .failure(let error):
+                print("Failed: \(error)")
+            case .success(let questionList):
+                self.questions = questionList.questions
+                self.performSegue(withIdentifier: "SignpostSegue", sender: self)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,15 +32,23 @@ class DashboardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "QuestionSegue":
+            if let controller = segue.destination as? BubbleQuestionViewController {
+                controller.questions = questions
+            }
+        case "SignpostSegue":
+            if let controller = segue.destination.childViewControllers.first as? SignpostingViewController {
+                controller.questions = questions
+            }
+        default:
+            break
+        }
     }
-    */
-
+    
+    @IBAction func unwindToDashboard(segue: UIStoryboardSegue) {
+    
+    }
 }

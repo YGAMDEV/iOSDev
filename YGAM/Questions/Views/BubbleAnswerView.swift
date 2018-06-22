@@ -26,7 +26,6 @@ class BubbleAnswerView: UIView {
     public var answer: Answer! {
         didSet {
             answerLabel.text = answer.text
-            answerLabel.fitMaxWord()
         }
     }
     
@@ -49,7 +48,7 @@ class BubbleAnswerView: UIView {
         itemBehavior.allowsRotation = false
         
         layer.cornerRadius = frame.width/2
-        layer.borderWidth = 1
+        layer.borderWidth = 2
         layer.borderColor = UIColor.white.cgColor
         backgroundColor = .clear
     }

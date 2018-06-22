@@ -178,10 +178,10 @@
       "text": "What was the impact?",
       "answers": [
         {
-          "text": "Caused stress/concern"
+          "text": "Caused stress/ concern"
         },
         {
-          "text": "Within entertainment budget"
+          "text": "Within budget"
         },
         {
           "text": "I now owe money to somebody"
@@ -312,7 +312,7 @@
     {
       "id": "11",
       "type": "single",
-      "text": "See how you could you reduce your time online",
+      "text": "See how you could reduce your time online",
       "answers": [
         {
           "text": "Have a face to face chat with a friend",

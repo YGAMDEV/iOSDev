@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xur-AT-tdy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xur-AT-tdy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,6 @@
         <!--Navigation Controller-->
         <scene sceneID="5Wf-9u-pvA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZX0-KU-4U5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Xur-AT-tdy" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uii-aF-r1q">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -23,6 +22,7 @@
                         <segue destination="VIF-dK-36I" kind="relationship" relationship="rootViewController" id="2ru-gA-ilf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZX0-KU-4U5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-455" y="72"/>
         </scene>
@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Questions"/>
                                 <connections>
-                                    <segue destination="68Q-2t-4vj" kind="show" id="caW-DH-e8F"/>
+                                    <segue destination="68Q-2t-4vj" kind="show" identifier="QuestionSegue" id="caW-DH-e8F"/>
                                 </connections>
                             </button>
                         </subviews>

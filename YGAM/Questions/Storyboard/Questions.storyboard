@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gts-tb-2qO">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gts-tb-2qO">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,22 +9,117 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Questions-->
         <scene sceneID="gZy-az-7VK">
             <objects>
-                <viewController id="gts-tb-2qO" customClass="QuestionsViewController" customModule="YGAM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gts-tb-2qO" customClass="BubbleQuestionViewController" customModule="YGAM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2hc-Qv-pIU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QK-60-wh0" userLabel="GradientView" customClass="GradientView" customModule="YGAM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="One really really long Testing Label really really long three line question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCl-ns-pPb" userLabel="QuestionLabel">
+                                <rect key="frame" x="30.666666666666657" y="73" width="314.33333333333337" height="71.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="0uo-P5-0EN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cl0-ad-ToY" userLabel="DynamicAnimatorReferenceView">
+                                <rect key="frame" x="0.0" y="154.33333333333331" width="375" height="571.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yv-sd-kyo">
+                                <rect key="frame" x="147" y="716" width="80" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ser-0n-h6H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextTapped:" destination="gts-tb-2qO" eventType="touchUpInside" id="gLp-Xs-OSD"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2nc-tt-R0u" userLabel="ProgressBar">
+                                <rect key="frame" x="112" y="776" width="150" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="9q2-H9-HzX"/>
+                                    <constraint firstAttribute="width" constant="150" id="OZF-su-jO1"/>
+                                </constraints>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcb-qV-RIM" userLabel="InfoView" customClass="InfoView" customModule="YGAM" customModuleProvider="target">
+                                <rect key="frame" x="154" y="164.33333333333334" width="69" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrS-cK-B9g" userLabel="Info Label">
+                                        <rect key="frame" x="16" y="8" width="37" height="17"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                                        <color key="textColor" red="0.90980392160000001" green="0.54901960780000003" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lrS-cK-B9g" secondAttribute="trailing" constant="16" id="2pt-D6-50g"/>
+                                    <constraint firstItem="lrS-cK-B9g" firstAttribute="leading" secondItem="gcb-qV-RIM" secondAttribute="leading" constant="16" id="498-cL-2aL"/>
+                                    <constraint firstItem="lrS-cK-B9g" firstAttribute="top" secondItem="gcb-qV-RIM" secondAttribute="top" constant="8" id="bfs-Ft-jxO"/>
+                                    <constraint firstAttribute="bottom" secondItem="lrS-cK-B9g" secondAttribute="bottom" constant="8" id="rGv-uv-yB0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2nc-tt-R0u" firstAttribute="top" secondItem="5Yv-sd-kyo" secondAttribute="bottom" constant="16" id="1se-Yd-tI2"/>
+                            <constraint firstItem="Q2y-fe-Bj3" firstAttribute="bottom" secondItem="2nc-tt-R0u" secondAttribute="bottom" constant="-8" id="4Fm-kH-Niq"/>
+                            <constraint firstItem="gcb-qV-RIM" firstAttribute="centerX" secondItem="hCl-ns-pPb" secondAttribute="centerX" id="7dd-GO-rZU"/>
+                            <constraint firstItem="hCl-ns-pPb" firstAttribute="centerX" secondItem="Q2y-fe-Bj3" secondAttribute="centerX" id="CB1-Ww-4oJ"/>
+                            <constraint firstAttribute="leading" secondItem="7QK-60-wh0" secondAttribute="leading" id="GVW-aF-0Y2"/>
+                            <constraint firstItem="cl0-ad-ToY" firstAttribute="bottom" secondItem="5Yv-sd-kyo" secondAttribute="top" constant="10" id="HWB-74-cEu"/>
+                            <constraint firstItem="5Yv-sd-kyo" firstAttribute="centerX" secondItem="Q2y-fe-Bj3" secondAttribute="centerX" id="KGf-xQ-Iad"/>
+                            <constraint firstItem="Q2y-fe-Bj3" firstAttribute="trailing" secondItem="cl0-ad-ToY" secondAttribute="trailing" id="Kef-m9-hAS"/>
+                            <constraint firstItem="2nc-tt-R0u" firstAttribute="centerX" secondItem="5Yv-sd-kyo" secondAttribute="centerX" id="W8n-s4-nZd"/>
+                            <constraint firstItem="7QK-60-wh0" firstAttribute="top" secondItem="2hc-Qv-pIU" secondAttribute="top" id="XUT-JT-ENV"/>
+                            <constraint firstItem="Q2y-fe-Bj3" firstAttribute="leading" secondItem="cl0-ad-ToY" secondAttribute="leading" id="YPM-wH-q4E"/>
+                            <constraint firstItem="cl0-ad-ToY" firstAttribute="top" secondItem="hCl-ns-pPb" secondAttribute="bottom" constant="10" id="ZBq-Cv-fND"/>
+                            <constraint firstItem="gcb-qV-RIM" firstAttribute="top" secondItem="hCl-ns-pPb" secondAttribute="bottom" constant="20" id="hB3-Ya-F6Q"/>
+                            <constraint firstItem="hCl-ns-pPb" firstAttribute="top" secondItem="Q2y-fe-Bj3" secondAttribute="top" constant="29" id="hph-T2-gYB"/>
+                            <constraint firstAttribute="trailing" secondItem="7QK-60-wh0" secondAttribute="trailing" id="inw-Ud-Dj1"/>
+                            <constraint firstItem="Q2y-fe-Bj3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hCl-ns-pPb" secondAttribute="trailing" constant="24" id="jfi-Do-YUB"/>
+                            <constraint firstItem="7QK-60-wh0" firstAttribute="bottom" secondItem="2hc-Qv-pIU" secondAttribute="bottom" id="tex-iI-Lxv"/>
+                            <constraint firstItem="hCl-ns-pPb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q2y-fe-Bj3" secondAttribute="leading" constant="24" id="tpk-Fc-4EF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Q2y-fe-Bj3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Questions" id="FiR-7E-W9A"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="dynamicAnimatorReferenceView" destination="cl0-ad-ToY" id="08y-If-mxS"/>
+                        <outlet property="gradient" destination="7QK-60-wh0" id="hqk-qG-PFp"/>
+                        <outlet property="infoLabel" destination="lrS-cK-B9g" id="DgB-H5-9tm"/>
+                        <outlet property="infoView" destination="gcb-qV-RIM" id="H70-KL-dPt"/>
+                        <outlet property="progressBar" destination="2nc-tt-R0u" id="YiO-4N-br8"/>
+                        <outlet property="questionLabel" destination="hCl-ns-pPb" id="fN5-mT-1TF"/>
+                        <segue destination="JaW-WT-m2g" kind="unwind" identifier="unwindToDashboard" unwindAction="unwindToDashboardWithSegue:" id="PS1-YE-Io7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibw-dP-D32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JaW-WT-m2g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="937" y="143"/>
+            <point key="canvasLocation" x="936.79999999999995" y="142.61083743842366"/>
         </scene>
     </scenes>
 </document>

@@ -18,43 +18,40 @@ private enum Edge: Int {
 class BubbleQuestionViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var questionLabelBackground: UIView!
     @IBOutlet weak var dynamicAnimatorReferenceView: UIView!
+    @IBOutlet weak var gradient: GradientView!
+    @IBOutlet weak var infoView: InfoView!
     @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var infoLabelVerticalSpacing: NSLayoutConstraint!
     @IBOutlet weak var progressBar: UIProgressView!
+
+    public var questions: [Question]! {
+        didSet {
+            currentQuestion = questions.first!
+        }
+    }
     
     private var animator: UIDynamicAnimator!
     private var answers = [String: [Answer]]()
     private var answerViews = [BubbleAnswerView]()
     private var bubbleBehavior: BubbleBehavior!
     private var currentAnswer = [Answer]()
-    private var currentQuestion: Question
-    private var navController: UINavigationController
+    private var currentQuestion: Question!
     private var nudged = false
-    private let questions: [Question]
-    
-    init(navController: UINavigationController, questions: [Question], nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        self.questions = questions
-        self.currentQuestion = self.questions.first!
-        self.navController = navController
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
+    private var answerLocations = [(Edge, CGFloat)]()
+    private let possibleAnswerLocations: [(Edge, CGFloat)] = [ (.top, 0.25), (.top, 0.50), (.top, 0.75),
+                                                      (.right, 0.25), (.right, 0.50), (.right, 0.75),
+                                                      (.bottom, 0.25), (.bottom, 0.50), (.bottom, 0.75),
+                                                      (.left, 0.25), (.left, 0.50), (.left, 0.75) ]
+
+    private var modifier: CGFloat = 0.25
+
     override func viewDidLoad() {
+        navigationController?.navigationBar.isHidden = true
+        
         animator = UIDynamicAnimator(referenceView: dynamicAnimatorReferenceView)
         bubbleBehavior = BubbleBehavior()
         animator.addBehavior(bubbleBehavior)
-        
-        questionLabelBackground.layer.cornerRadius = questionLabel.frame.size.height / 2
-        questionLabelBackground.layer.shadowColor = UIColor.darkGray.cgColor
-        questionLabelBackground.layer.shadowOpacity = 0.6
-        questionLabelBackground.layer.shadowOffset = CGSize.zero
-        questionLabelBackground.layer.shadowRadius = 7
         
         progressBar.layer.cornerRadius = 5
         progressBar.layer.borderWidth = 1.0
@@ -66,23 +63,22 @@ class BubbleQuestionViewController: UIViewController {
         showQuestion()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        bubbleBehavior.willMove(to: animator)
     }
-    
     // MARK: - Logic
     
     private func showQuestion() {
+        answerLocations = possibleAnswerLocations
         updateProgress()
         if let previousQuestionID = currentQuestion.answersFromQuestion {
             currentQuestion.answers = answers[previousQuestionID]
         }
         questionLabel.text = currentQuestion.text
-        questionLabelBackground.invalidateIntrinsicContentSize()
         UIView.animate(withDuration: 0.3, animations: {
             if self.questionLabel.alpha == 0 {
                 self.questionLabel.alpha = 1.0
-                self.view.layoutIfNeeded()
             }
         }) { _ in
             self.displayAnswers()
@@ -94,14 +90,14 @@ class BubbleQuestionViewController: UIViewController {
         
         // Check single questions
         if (currentQuestion.type == .single && selectedItems.count != 1) {
-            showInfoLabelWith("You need to select an answer")
+            showInfoWith("You need to select an answer")
             return
         }
         
         // Check Min Selection
         if let minSelections = currentQuestion.minSelections {
             if selectedItems.count < minSelections || (currentQuestion.type == .single && selectedItems.count != 1) {
-                showInfoLabelWith("You need to select at least \(minSelections) answer(s)")
+                showInfoWith("You need to select at least \(minSelections) answer(s)")
                 return
             }
         }
@@ -122,7 +118,7 @@ class BubbleQuestionViewController: UIViewController {
                     if nudge.text.range(of: "{answer}") != nil, let answer = currentAnswer.first {
                         message = nudge.text.replacingOccurrences(of: "{answer}", with: answer.text)
                     }
-                    showInfoLabelWith(message)
+                    showInfoWith(message)
                     nudged = true
                 }
                 return
@@ -142,19 +138,19 @@ class BubbleQuestionViewController: UIViewController {
         answers[currentQuestion.id] = currentAnswer
         guard let action = action else {
             // Exit
-            navController.popViewController(animated: true)
+            performSegue(withIdentifier: "unwindToDashboard", sender: self)
             return
         }
         
         switch action.type {
         case .app:
             // Exit
-            navController.popViewController(animated: true)
+            performSegue(withIdentifier: "unwindToDashboard", sender: self)
             return
         case .question:
             guard let nextQuestion = questionFor(ID: action.value) else {
                 // Exit
-                navController.popViewController(animated: true)
+                performSegue(withIdentifier: "unwindToDashboard", sender: self)
                 return
             }
             currentQuestion = nextQuestion
@@ -164,13 +160,14 @@ class BubbleQuestionViewController: UIViewController {
     
     func reset() {
         currentAnswer = []
-        self.infoLabelVerticalSpacing.constant = 0.0
+        nudged = false
+        gradient.animateGradient()
         UIView.animate(withDuration: 0.3, animations: {
             self.questionLabel.alpha = 0.0
-            self.infoLabel.alpha = 0.0
+            self.infoView.alpha = 0.0
             for answerView in self.answerViews {
-                answerView.alpha = 0.0
                 self.bubbleBehavior.removeItem(answerView)
+                answerView.removeFromSuperview()
             }
             self.answerViews.removeAll()
             self.view.layoutSubviews()
@@ -179,12 +176,11 @@ class BubbleQuestionViewController: UIViewController {
         }
     }
     
-    func showInfoLabelWith(_ message: String) {
+    func showInfoWith(_ message: String) {
         infoLabel.text = message
-        self.infoLabelVerticalSpacing.constant = 12
+        infoView.setNeedsDisplay()
         UIView.animate(withDuration: 0.3) {
-            self.infoLabel.alpha = 1
-            self.view.layoutIfNeeded()
+            self.infoView.alpha = 1
         }
     }
     
@@ -195,7 +191,6 @@ class BubbleQuestionViewController: UIViewController {
             answerView.answer = answer
             answerView.delegate = self
             answerView.center = randomStartPoint()
-        
             dynamicAnimatorReferenceView.addSubview(answerView)
             UIView.animate(withDuration: 0.7) {
                 answerView.alpha = 1.0
@@ -206,28 +201,23 @@ class BubbleQuestionViewController: UIViewController {
     }
     
     private func randomStartPoint() -> CGPoint {
-        let point = randomPoint()
-        switch randomEdge() {
-        case .top:
-            return CGPoint(x: point.x, y: 0)
-        case .bottom:
-            return CGPoint(x: point.x, y: dynamicAnimatorReferenceView.frame.size.height)
-        case .left:
-            return CGPoint(x: 0, y: point.y)
-        case .right:
-            return CGPoint(x: dynamicAnimatorReferenceView.frame.size.width, y: point.y)
+        switch randomAnswerLocation() {
+        case (.top, let modifier):
+            return CGPoint(x: dynamicAnimatorReferenceView.frame.size.width * modifier, y: 0)
+        case (.bottom, let modifier):
+            return CGPoint(x: dynamicAnimatorReferenceView.frame.size.width * modifier, y: dynamicAnimatorReferenceView.frame.size.height)
+        case (.left, let modifier):
+            return CGPoint(x: 0, y: dynamicAnimatorReferenceView.frame.size.height * modifier)
+        case (.right, let modifier):
+            return CGPoint(x: dynamicAnimatorReferenceView.frame.size.width, y: dynamicAnimatorReferenceView.frame.size.height * modifier)
         }
     }
     
-    private func randomEdge() -> Edge {
-        return Edge(rawValue: (Int(arc4random_uniform(4))))!
-    }
-    
-    private func randomPoint() -> (x: CGFloat, y: CGFloat) {
-        let randomX = CGFloat(arc4random_uniform(UInt32(dynamicAnimatorReferenceView.frame.width)))
-        let randomY = CGFloat(arc4random_uniform(UInt32(dynamicAnimatorReferenceView.frame.height)))
-        
-        return (randomX, randomY)
+    private func randomAnswerLocation() -> (edge: Edge, modifier: CGFloat) {
+        let randomIndex = Int(arc4random_uniform(UInt32(answerLocations.count)))
+        let randomAnswerLocation = answerLocations[randomIndex]
+        answerLocations.remove(at: randomIndex)
+        return randomAnswerLocation
     }
     
     // MARK: - Helpers
@@ -239,8 +229,8 @@ class BubbleQuestionViewController: UIViewController {
         let index = questions.index(where: { (question) -> Bool in
             question.id == currentQuestion.id
         })
-        let test = Float(index!) / Float(questions.count)
-        progressBar.progress = test
+        let progress = Float(index!) / Float(questions.count)
+        progressBar.setProgress(progress, animated: true)
     }
 }
 
