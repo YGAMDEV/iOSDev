@@ -243,5 +243,38 @@ extension BubbleQuestionViewController: BubbleAnswerViewDelegate {
             }
         }
         answerView.toggle()
+        
+        guard let views = adjacentViews(to: answerView) else {
+            return
+        }
+
+        for adjacentView in views {
+            let pushBehavior = UIPushBehavior(items: [adjacentView], mode: .instantaneous)
+            pushBehavior.pushDirection = vector(selectedAnswer: answerView, to: adjacentView)
+            pushBehavior.magnitude = 0.08
+            pushBehavior.active = true
+            pushBehavior.action = {
+                if !pushBehavior.active {
+                    self.animator.removeBehavior(pushBehavior)
+                }
+            }
+            animator.addBehavior(pushBehavior)
+        }
+    }
+    
+    private func adjacentViews(to selectedAnswer: BubbleAnswerView) -> [BubbleAnswerView]? {
+        return answerViews.filter({ isAdjacent(selectedAnswer: selectedAnswer, to: $0) })
+    }
+    
+    private func isAdjacent(selectedAnswer: BubbleAnswerView, to answerView: BubbleAnswerView) -> Bool {
+        let distanceBetweenCenters = sqrt(pow((selectedAnswer.center.x - answerView.center.x), 2) + pow((selectedAnswer.center.y - answerView.center.y), 2))
+        if distanceBetweenCenters >= selectedAnswer.frame.size.width - 2 && distanceBetweenCenters <= selectedAnswer.frame.size.width + 2 {
+            return true
+        }
+        return false
+    }
+    
+    private func vector(selectedAnswer: BubbleAnswerView, to answerView: BubbleAnswerView) -> CGVector {
+        return CGVector(dx: answerView.center.x - selectedAnswer.center.x, dy: answerView.center.y - selectedAnswer.center.y)
     }
 }
