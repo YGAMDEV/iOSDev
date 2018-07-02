@@ -55,21 +55,10 @@
                         <viewLayoutGuide key="safeArea" id="Fcb-51-lWI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="oaU-TK-EH8"/>
-                    <connections>
-                        <segue destination="gDY-LC-FTO" kind="presentation" identifier="SignpostSegue" id="0n9-KG-jRu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hX-lu-BSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="604" y="130.88455772113943"/>
-        </scene>
-        <!--SignPosting-->
-        <scene sceneID="UNQ-mT-W7c">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SignPosting" id="gDY-LC-FTO" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xEc-eB-Zfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1526" y="21"/>
         </scene>
         <!--Achievements-->
         <scene sceneID="QXF-kT-0sh">

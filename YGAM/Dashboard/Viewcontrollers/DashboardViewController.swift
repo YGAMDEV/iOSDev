@@ -22,7 +22,6 @@ class DashboardViewController: UIViewController {
                 print("Failed: \(error)")
             case .success(let questionList):
                 self.questions = questionList.questions
-                self.performSegue(withIdentifier: "SignpostSegue", sender: self)
             }
         }
     }
