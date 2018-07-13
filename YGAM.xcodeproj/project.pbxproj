@@ -44,6 +44,10 @@
 		45FEE99B20EA86610053FA4F /* scratch-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE99A20EA86610053FA4F /* scratch-logo.png */; };
 		45FEE99D20EA89880053FA4F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE99C20EA89880053FA4F /* background.png */; };
 		45FEE9A320EA8DA10053FA4F /* app.png in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE9A220EA8DA10053FA4F /* app.png */; };
+		F42ED15620F8DFC40084D404 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED15520F8DFC40084D404 /* ChartViewController.swift */; };
+		F42ED1BA20F8E1430084D404 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED18C20F8E1430084D404 /* ChartSeries.swift */; };
+		F42ED1BB20F8E1430084D404 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED18D20F8E1430084D404 /* Chart.swift */; };
+		F42ED1BC20F8E1430084D404 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED18E20F8E1430084D404 /* ChartColors.swift */; };
 		F4C767B920C1855100B5DB77 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767B820C1855100B5DB77 /* Dashboard.storyboard */; };
 		F4C767BB20C1877400B5DB77 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */; };
 		F4C767BF20C1881E00B5DB77 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767BE20C1881E00B5DB77 /* Questions.storyboard */; };
@@ -93,6 +97,10 @@
 		45FEE99A20EA86610053FA4F /* scratch-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scratch-logo.png"; sourceTree = "<group>"; };
 		45FEE99C20EA89880053FA4F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		45FEE9A220EA8DA10053FA4F /* app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app.png; sourceTree = "<group>"; };
+		F42ED15520F8DFC40084D404 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		F42ED18C20F8E1430084D404 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
+		F42ED18D20F8E1430084D404 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		F42ED18E20F8E1430084D404 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
 		F4C767B820C1855100B5DB77 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F4C767BE20C1881E00B5DB77 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 		45E957A120AC3E4A00A01EB0 /* YGAM */ = {
 			isa = PBXGroup;
 			children = (
+				F42ED15720F8DFCD0084D404 /* Frameworks */,
 				45FEE98B20EA7BB00053FA4F /* OnBoarding */,
 				F4C767B520C184B400B5DB77 /* Achievements */,
 				F4C767B420C184AC00B5DB77 /* Dashboard */,
@@ -239,6 +248,32 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		F42ED15720F8DFCD0084D404 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F42ED15820F8E1430084D404 /* SwiftChart-1.0.0 */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		F42ED15820F8E1430084D404 /* SwiftChart-1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				F42ED18B20F8E1430084D404 /* Source */,
+			);
+			path = "SwiftChart-1.0.0";
+			sourceTree = "<group>";
+		};
+		F42ED18B20F8E1430084D404 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F42ED18C20F8E1430084D404 /* ChartSeries.swift */,
+				F42ED18D20F8E1430084D404 /* Chart.swift */,
+				F42ED18E20F8E1430084D404 /* ChartColors.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		F4C767B220C1849500B5DB77 /* SignPosting */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */,
+				F42ED15520F8DFC40084D404 /* ChartViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -441,6 +477,8 @@
 				45E957B920AC3EA200A01EB0 /* APIManager.swift in Sources */,
 				45E957BA20AC3EA200A01EB0 /* ImageManager.swift in Sources */,
 				4542F85820DCDAEE0022CC09 /* GradientView.swift in Sources */,
+				F42ED1BA20F8E1430084D404 /* ChartSeries.swift in Sources */,
+				F42ED15620F8DFC40084D404 /* ChartViewController.swift in Sources */,
 				F4C767CD20C18B2E00B5DB77 /* AchievementsViewController.swift in Sources */,
 				F4C767BB20C1877400B5DB77 /* DashboardViewController.swift in Sources */,
 				4527C9D820C130C200590790 /* BubbleQuestionViewController.swift in Sources */,
@@ -449,7 +487,9 @@
 				4527C9DB20C138B900590790 /* BubbleAnswerView.swift in Sources */,
 				45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */,
 				45FEE99320EA7DAB0053FA4F /* OnBoardingViewController.swift in Sources */,
+				F42ED1BC20F8E1430084D404 /* ChartColors.swift in Sources */,
 				45E957BF20AC3F2F00A01EB0 /* Enums.swift in Sources */,
+				F42ED1BB20F8E1430084D404 /* Chart.swift in Sources */,
 				45E957C220AC415300A01EB0 /* Questions.swift in Sources */,
 				45E957BC20AC3EA200A01EB0 /* APIRequests.swift in Sources */,
 				45E957BB20AC3EA200A01EB0 /* NetworkRequest.swift in Sources */,
@@ -589,13 +629,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N94Y33LN3H;
 				INFOPLIST_FILE = YGAM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skybettingandgaming.YGAM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YGAM.scribit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -607,13 +647,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N94Y33LN3H;
 				INFOPLIST_FILE = YGAM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skybettingandgaming.YGAM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YGAM.scribit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
