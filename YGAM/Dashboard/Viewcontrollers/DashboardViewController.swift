@@ -10,6 +10,7 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var viewCoontrollerContainer: UIView!
     @IBOutlet weak var sectionSegmentedControl: UISegmentedControl!
     private var questions: [Question]?
 

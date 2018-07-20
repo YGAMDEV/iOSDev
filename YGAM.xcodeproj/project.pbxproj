@@ -55,6 +55,9 @@
 		F4C767C720C18A3900B5DB77 /* SignpostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767C620C18A3900B5DB77 /* SignpostingViewController.swift */; };
 		F4C767CA20C18ACF00B5DB77 /* Achievements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767C920C18ACF00B5DB77 /* Achievements.storyboard */; };
 		F4C767CD20C18B2E00B5DB77 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767CC20C18B2E00B5DB77 /* AchievementsViewController.swift */; };
+		F4D8BF4221022CD900D57764 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8BF4121022CD900D57764 /* TasksTableViewController.swift */; };
+		F4D8BF4421022CEC00D57764 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8BF4321022CEC00D57764 /* TrackerViewController.swift */; };
+		F4D8BF4621022CFE00D57764 /* BadgesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8BF4521022CFE00D57764 /* BadgesCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +111,9 @@
 		F4C767C620C18A3900B5DB77 /* SignpostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostingViewController.swift; sourceTree = "<group>"; };
 		F4C767C920C18ACF00B5DB77 /* Achievements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Achievements.storyboard; sourceTree = "<group>"; };
 		F4C767CC20C18B2E00B5DB77 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		F4D8BF4121022CD900D57764 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
+		F4D8BF4321022CEC00D57764 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
+		F4D8BF4521022CFE00D57764 /* BadgesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +330,9 @@
 			children = (
 				F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */,
 				F42ED15520F8DFC40084D404 /* ChartViewController.swift */,
+				F4D8BF4121022CD900D57764 /* TasksTableViewController.swift */,
+				F4D8BF4321022CEC00D57764 /* TrackerViewController.swift */,
+				F4D8BF4521022CFE00D57764 /* BadgesCollectionViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -480,12 +489,15 @@
 				F42ED1BA20F8E1430084D404 /* ChartSeries.swift in Sources */,
 				F42ED15620F8DFC40084D404 /* ChartViewController.swift in Sources */,
 				F4C767CD20C18B2E00B5DB77 /* AchievementsViewController.swift in Sources */,
+				F4D8BF4421022CEC00D57764 /* TrackerViewController.swift in Sources */,
 				F4C767BB20C1877400B5DB77 /* DashboardViewController.swift in Sources */,
 				4527C9D820C130C200590790 /* BubbleQuestionViewController.swift in Sources */,
 				45FEE99520EA7E490053FA4F /* OnBoardingDetailsView.swift in Sources */,
 				4527C9E120C13AD100590790 /* BubbleBehavior.swift in Sources */,
+				F4D8BF4221022CD900D57764 /* TasksTableViewController.swift in Sources */,
 				4527C9DB20C138B900590790 /* BubbleAnswerView.swift in Sources */,
 				45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */,
+				F4D8BF4621022CFE00D57764 /* BadgesCollectionViewController.swift in Sources */,
 				45FEE99320EA7DAB0053FA4F /* OnBoardingViewController.swift in Sources */,
 				F42ED1BC20F8E1430084D404 /* ChartColors.swift in Sources */,
 				45E957BF20AC3F2F00A01EB0 /* Enums.swift in Sources */,
