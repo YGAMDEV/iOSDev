@@ -22,6 +22,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Rubik-Bold.ttf</string>
 		<string>Rubik</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

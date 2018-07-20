@@ -34,8 +34,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqB-St-lZx">
-                                <rect key="frame" x="139" y="378" width="97" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqB-St-lZx">
+                                <rect key="frame" x="139" y="395" width="97" height="30"/>
                                 <state key="normal" title="Achievements"/>
                                 <connections>
                                     <segue destination="K1g-8z-0OQ" kind="show" id="wXg-Ka-2Xe"/>
@@ -61,6 +61,20 @@
                                     <segue destination="fqA-CC-gbD" kind="embed" id="2RO-E7-Yhz"/>
                                 </connections>
                             </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tKx-Yh-d58">
+                                <rect key="frame" x="0.0" y="263" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="LO2-Mc-tys"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="TASKS"/>
+                                    <segment title="TRACKER"/>
+                                    <segment title="BADGES"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="gW7-c8-4ne" eventType="valueChanged" id="8TG-7e-Ofn"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <constraints>
                             <constraint firstItem="0IL-91-soU" firstAttribute="top" secondItem="Aeg-J3-NzT" secondAttribute="bottom" id="CRO-7l-ozh"/>
@@ -70,13 +84,20 @@
                             <constraint firstItem="Aeg-J3-NzT" firstAttribute="top" secondItem="Fcb-51-lWI" secondAttribute="top" id="MwZ-GB-VER"/>
                             <constraint firstItem="0IL-91-soU" firstAttribute="leading" secondItem="ONf-CD-S0E" secondAttribute="leading" id="aHl-Di-21e"/>
                             <constraint firstAttribute="trailing" secondItem="0IL-91-soU" secondAttribute="trailing" id="dLz-jd-2a7"/>
+                            <constraint firstItem="tKx-Yh-d58" firstAttribute="trailing" secondItem="Aeg-J3-NzT" secondAttribute="trailing" id="kN4-Di-OTw"/>
                             <constraint firstItem="0IL-91-soU" firstAttribute="bottom" secondItem="Fcb-51-lWI" secondAttribute="bottom" id="m9y-bt-QkY"/>
                             <constraint firstItem="0IL-91-soU" firstAttribute="top" secondItem="ONf-CD-S0E" secondAttribute="top" constant="263" id="nJK-5p-lZF"/>
+                            <constraint firstItem="tKx-Yh-d58" firstAttribute="leading" secondItem="Aeg-J3-NzT" secondAttribute="leading" id="s70-kq-vs0"/>
+                            <constraint firstItem="tKx-Yh-d58" firstAttribute="top" secondItem="0IL-91-soU" secondAttribute="top" id="vSm-UQ-6PN"/>
                             <constraint firstItem="0IL-91-soU" firstAttribute="centerX" secondItem="a7M-5G-8eG" secondAttribute="centerX" id="wbf-V4-hZW"/>
+                            <constraint firstItem="aqB-St-lZx" firstAttribute="top" secondItem="tKx-Yh-d58" secondAttribute="bottom" constant="88" id="ysx-VZ-cF8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fcb-51-lWI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="oaU-TK-EH8"/>
+                    <connections>
+                        <outlet property="sectionSegmentedControl" destination="tKx-Yh-d58" id="Fzb-2o-pAj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hX-lu-BSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
