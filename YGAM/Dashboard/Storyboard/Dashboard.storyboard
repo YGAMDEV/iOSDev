@@ -50,6 +50,7 @@
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aeg-J3-NzT">
                                 <rect key="frame" x="0.0" y="64" width="375" height="199"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.40784313725490196" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="mXD-z8-3gz" kind="embed" id="hNI-3h-pa9"/>
                                 </connections>
@@ -61,7 +62,6 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0IL-91-soU" firstAttribute="top" secondItem="Aeg-J3-NzT" secondAttribute="bottom" id="CRO-7l-ozh"/>
                             <constraint firstItem="0IL-91-soU" firstAttribute="trailing" secondItem="Aeg-J3-NzT" secondAttribute="trailing" id="Cjh-jc-ZGJ"/>
@@ -98,18 +98,19 @@
             </objects>
             <point key="canvasLocation" x="1526" y="236"/>
         </scene>
-        <!--View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="hY0-dJ-Kmy">
             <objects>
-                <viewController id="mXD-z8-3gz" sceneMemberID="viewController">
+                <viewController id="mXD-z8-3gz" customClass="ChartViewController" customModule="YGAM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNb-UA-cgd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="l2B-iR-bmh"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arK-Qx-1sV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="660" y="-10"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="q5z-RN-2t1">
@@ -119,10 +120,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="404"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BRS-hx-ebT"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAI-RM-eEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="641" y="327"/>
         </scene>
     </scenes>
 </document>
