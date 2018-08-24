@@ -145,7 +145,7 @@ class BubbleQuestionViewController: UIViewController {
         switch action.type {
         case .app:
             // Exit
-            performSegue(withIdentifier: "unwindToDashboard", sender: self)
+            performSegue(withIdentifier: "DashboardSegue", sender: self)
             return
         case .question:
             guard let nextQuestion = questionFor(ID: action.value) else {

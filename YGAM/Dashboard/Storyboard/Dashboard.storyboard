@@ -48,23 +48,10 @@
                                     <segue destination="61a-67-P78" kind="show" identifier="QuestionSegue" id="ZKF-Vc-r0z"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aeg-J3-NzT">
-                                <rect key="frame" x="0.0" y="88" width="375" height="286"/>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.40784313725490196" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="mXD-z8-3gz" kind="embed" id="hNI-3h-pa9"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IL-91-soU">
-                                <rect key="frame" x="0.0" y="374" width="375" height="438"/>
-                                <connections>
-                                    <segue destination="fqA-CC-gbD" kind="embed" id="2RO-E7-Yhz"/>
-                                </connections>
-                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tKx-Yh-d58">
-                                <rect key="frame" x="0.0" y="374" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="XWN-rU-LPJ"/>
+                                    <constraint firstAttribute="height" constant="44" id="D8X-Z8-06W"/>
                                 </constraints>
                                 <segments>
                                     <segment title="TASKS"/>
@@ -75,22 +62,25 @@
                                     <action selector="segmentValueChanged:" destination="gW7-c8-4ne" eventType="valueChanged" id="8TG-7e-Ofn"/>
                                 </connections>
                             </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IL-91-soU">
+                                <rect key="frame" x="0.0" y="132" width="375" height="680"/>
+                                <connections>
+                                    <segue destination="fqA-CC-gbD" kind="embed" id="2RO-E7-Yhz"/>
+                                </connections>
+                            </containerView>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tKx-Yh-d58" firstAttribute="centerX" secondItem="aqB-St-lZx" secondAttribute="centerX" id="2Vr-Qc-okJ"/>
                             <constraint firstItem="aqB-St-lZx" firstAttribute="centerX" secondItem="a7M-5G-8eG" secondAttribute="centerX" id="2yR-uh-7M1"/>
                             <constraint firstAttribute="bottom" secondItem="0IL-91-soU" secondAttribute="bottom" id="3Xh-sN-5eg"/>
-                            <constraint firstItem="0IL-91-soU" firstAttribute="top" secondItem="tKx-Yh-d58" secondAttribute="top" id="4p5-pU-Z0j"/>
-                            <constraint firstItem="Aeg-J3-NzT" firstAttribute="leading" secondItem="tKx-Yh-d58" secondAttribute="leading" id="4ul-8l-S7Z"/>
-                            <constraint firstItem="Aeg-J3-NzT" firstAttribute="trailing" secondItem="tKx-Yh-d58" secondAttribute="trailing" id="BUZ-9L-9Cp"/>
-                            <constraint firstItem="tKx-Yh-d58" firstAttribute="leading" secondItem="0IL-91-soU" secondAttribute="leading" id="EbJ-Kc-K7H"/>
-                            <constraint firstAttribute="trailing" secondItem="Aeg-J3-NzT" secondAttribute="trailing" id="KF0-Uo-za1"/>
-                            <constraint firstItem="0IL-91-soU" firstAttribute="top" secondItem="Aeg-J3-NzT" secondAttribute="bottom" id="TFd-Ja-pil"/>
+                            <constraint firstItem="0IL-91-soU" firstAttribute="top" secondItem="tKx-Yh-d58" secondAttribute="bottom" id="FCq-4C-Jyk"/>
+                            <constraint firstItem="0IL-91-soU" firstAttribute="leading" secondItem="ONf-CD-S0E" secondAttribute="leading" id="IVR-ZX-UbG"/>
+                            <constraint firstAttribute="trailing" secondItem="0IL-91-soU" secondAttribute="trailing" id="TP0-NX-fjk"/>
+                            <constraint firstItem="tKx-Yh-d58" firstAttribute="leading" secondItem="0IL-91-soU" secondAttribute="leading" id="TPD-4A-XpB"/>
+                            <constraint firstItem="tKx-Yh-d58" firstAttribute="centerX" secondItem="aqB-St-lZx" secondAttribute="centerX" id="W3v-kD-OVZ"/>
                             <constraint firstItem="a7M-5G-8eG" firstAttribute="top" secondItem="aqB-St-lZx" secondAttribute="bottom" constant="40" id="aow-tO-S3d"/>
-                            <constraint firstItem="Aeg-J3-NzT" firstAttribute="leading" secondItem="ONf-CD-S0E" secondAttribute="leading" id="ec5-di-NhF"/>
-                            <constraint firstItem="aqB-St-lZx" firstAttribute="top" secondItem="tKx-Yh-d58" secondAttribute="bottom" constant="88" id="ff6-nd-aIh"/>
-                            <constraint firstItem="Aeg-J3-NzT" firstAttribute="top" secondItem="Fcb-51-lWI" secondAttribute="top" id="med-CJ-MOp"/>
-                            <constraint firstItem="0IL-91-soU" firstAttribute="trailing" secondItem="tKx-Yh-d58" secondAttribute="trailing" id="on9-EW-zRr"/>
+                            <constraint firstItem="tKx-Yh-d58" firstAttribute="trailing" secondItem="0IL-91-soU" secondAttribute="trailing" id="edq-9f-0ga"/>
+                            <constraint firstItem="tKx-Yh-d58" firstAttribute="top" secondItem="Fcb-51-lWI" secondAttribute="top" id="huc-pF-kPt"/>
                             <constraint firstItem="Fcb-51-lWI" firstAttribute="bottom" secondItem="a7M-5G-8eG" secondAttribute="bottom" constant="172" id="p53-LO-3mX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fcb-51-lWI"/>
@@ -121,26 +111,12 @@
             </objects>
             <point key="canvasLocation" x="1526" y="236"/>
         </scene>
-        <!--Chart View Controller-->
-        <scene sceneID="hY0-dJ-Kmy">
-            <objects>
-                <viewController id="mXD-z8-3gz" customClass="ChartViewController" customModule="YGAM" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zNb-UA-cgd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="l2B-iR-bmh"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="arK-Qx-1sV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="660" y="-10"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="q5z-RN-2t1">
             <objects>
                 <viewController id="fqA-CC-gbD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kNP-3m-NDK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="680"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BRS-hx-ebT"/>
@@ -148,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAI-RM-eEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="327"/>
+            <point key="canvasLocation" x="606" y="861"/>
         </scene>
     </scenes>
 </document>

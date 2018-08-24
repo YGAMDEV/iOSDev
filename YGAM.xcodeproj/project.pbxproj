@@ -104,6 +104,7 @@
 		F42ED18C20F8E1430084D404 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
 		F42ED18D20F8E1430084D404 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		F42ED18E20F8E1430084D404 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
+		F4901C7E21303AED009868CE /* YGAM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YGAM.entitlements; sourceTree = "<group>"; };
 		F4C767B820C1855100B5DB77 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F4C767BE20C1881E00B5DB77 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		45E957A120AC3E4A00A01EB0 /* YGAM */ = {
 			isa = PBXGroup;
 			children = (
+				F4901C7E21303AED009868CE /* YGAM.entitlements */,
 				F42ED15720F8DFCD0084D404 /* Frameworks */,
 				45FEE98B20EA7BB00053FA4F /* OnBoarding */,
 				F4C767B520C184B400B5DB77 /* Achievements */,
@@ -418,6 +420,11 @@
 				TargetAttributes = {
 					45E9579E20AC3E4A00A01EB0 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -640,6 +647,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YGAM/YGAM.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N94Y33LN3H;
 				INFOPLIST_FILE = YGAM/Info.plist;
@@ -649,6 +658,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.YGAM.Scrabit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -658,6 +668,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YGAM/YGAM.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N94Y33LN3H;
 				INFOPLIST_FILE = YGAM/Info.plist;
@@ -667,6 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.YGAM.Scrabit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

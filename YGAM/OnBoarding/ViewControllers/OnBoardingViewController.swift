@@ -22,6 +22,8 @@ class OnBoardingViewController: UIViewController {
 
     @IBOutlet weak var appBadge: UIView!
     @IBOutlet weak var startButton: UIButton!
+
+    private var initialQuestions: [Question]?
     
     struct Constants {
         static let magnifiedOffset: CGFloat = 60.0
@@ -29,6 +31,8 @@ class OnBoardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        loadQuestions()
         
         detailView1.titleLabel.text = "Take Control"
         detailView1.informationLabel.text = " Our questionnaire will help you identify any areas that may need extra focus. It's quick, simple and fun to use"
@@ -59,6 +63,30 @@ class OnBoardingViewController: UIViewController {
     fileprivate func setMagnifiedView(_ view: UIView, scale: CGFloat) {
         view.alpha = scale
         view.transform = CGAffineTransform(scaleX: scale, y: scale)
+    }
+
+    func loadQuestions() {
+        let questionsRequest = QuestionsRequest()
+        questionsRequest.createModel() { result in
+            switch result {
+            case .failure(let error):
+                print("Failed: \(error)")
+            case .success(let questionList):
+                self.initialQuestions = questionList.questions
+            }
+        }
+    }
+
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "QuestionSegue":
+            if let controller = segue.destination as? BubbleQuestionViewController {
+                controller.questions = initialQuestions
+            }
+        default:
+            break
+        }
     }
 }
 
