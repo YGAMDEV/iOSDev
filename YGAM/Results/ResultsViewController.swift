@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ResultsViewController: UIViewController {
 
@@ -28,6 +29,8 @@ class ResultsViewController: UIViewController {
             calculateTimeResults()
         }
     }
+    
+    private let center = UNUserNotificationCenter.current()
     
     private let controlResultScale = 12.5
     private let moneyResultScale = 50
@@ -60,17 +63,52 @@ class ResultsViewController: UIViewController {
     // MARK: - Selections
     @IBAction func controlButton(_ sender: UIButton) {
         // Setup Tasks for Control
-        performSegue(withIdentifier: "DashboardSegue", sender: nil)
+        scheduleNotifications()
     }
     
     @IBAction func moneyButton(_ sender: UIButton) {
         // Setup Tasks for Money
-        performSegue(withIdentifier: "DashboardSegue", sender: nil)
+        scheduleNotifications()
     }
     
     @IBAction func timeButton(_ sender: UIButton) {
         // Setup Tasks for Time
-        performSegue(withIdentifier: "DashboardSegue", sender: nil)
+        scheduleNotifications()
+    }
+    
+    private func scheduleNotifications() {
+        center.getNotificationSettings { settings in
+            if settings.authorizationStatus == .authorized {
+                self.createNotifications()
+            }
+            self.dismiss()
+        }
+    }
+    
+    private func dismiss() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "DashboardSegue", sender: nil)
+        }
+    }
+    
+    // MARK: - Notification Creation
+    private func createNotifications() {
+//        let numberOfSecondsInADay: Double = 86400
+        let numberOfSecondsInADay: Double = 10
+        let numberOfDays = 3
+        for i in 1...numberOfDays {
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(i) * numberOfSecondsInADay, repeats: false)
+            let request = UNNotificationRequest(identifier: "\(i)", content: self.notificationContent(), trigger: trigger)
+            center.add(request, withCompletionHandler: nil)
+        }
+    }
+    
+    private func notificationContent() -> UNMutableNotificationContent {
+        let content = UNMutableNotificationContent()
+        content.body = "Come back and update us on your progress"
+        content.sound = UNNotificationSound.default()
+        
+        return content
     }
     
     // MARK: - Result Calculations

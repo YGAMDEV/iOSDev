@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qc4-ht-K8W" userLabel="TopContainer">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="443"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scrabit Logo" translatesAutoresizingMaskIntoConstraints="NO" id="QYO-Yg-ehX">
-                                        <rect key="frame" x="144.5" y="151" width="86" height="140"/>
+                                        <rect key="frame" x="144.5" y="151.5" width="86" height="140"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,10 +32,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eX7-l0-Plz" userLabel="BottomContainer">
-                                <rect key="frame" x="0.0" y="442" width="375" height="225"/>
+                                <rect key="frame" x="0.0" y="443" width="375" height="224"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YGAM Logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Kj-nT-7R8">
-                                        <rect key="frame" x="137.5" y="140" width="100" height="61"/>
+                                        <rect key="frame" x="137.5" y="139" width="100" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="61" id="lVB-8N-Gx7"/>
                                             <constraint firstAttribute="width" constant="100" id="r76-xs-y8J"/>
@@ -46,7 +46,7 @@
                                 <constraints>
                                     <constraint firstItem="5Kj-nT-7R8" firstAttribute="centerX" secondItem="eX7-l0-Plz" secondAttribute="centerX" id="2vs-oN-Jjb"/>
                                     <constraint firstAttribute="bottom" secondItem="5Kj-nT-7R8" secondAttribute="bottom" constant="24" id="DI2-tz-j1m"/>
-                                    <constraint firstAttribute="height" constant="225" id="SCU-TR-iv8"/>
+                                    <constraint firstAttribute="height" constant="224" id="SCU-TR-iv8"/>
                                 </constraints>
                             </view>
                         </subviews>
