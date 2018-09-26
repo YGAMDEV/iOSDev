@@ -70,7 +70,7 @@ class BubbleAnswerView: UIView {
         switch state {
         case .selected:
             backgroundColor = .white
-            answerLabel.textColor = UIColor(red: (255.0/255.0), green: (133.0/255.0), blue: (14.0/255.0), alpha: 1.0)
+            answerLabel.textColor = UIColor(red:0.19, green:0.14, blue:0.68, alpha:1)
         case .unselected:
             backgroundColor = .clear
             answerLabel.textColor = .white

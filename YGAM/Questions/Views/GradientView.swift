@@ -11,9 +11,9 @@ import UIKit
 class GradientView: UIView {
     
     var gradient = CAGradientLayer()
-    
-    let lightOrange = UIColor(red: (231.0/255.0), green: (138.0/255.0), blue: (27.0/255.0), alpha: 1.0).cgColor
-    let darkOrange = UIColor(red: (215.0/255.0), green: (80.0/255.0), blue: (0.0/255.0), alpha: 1.0).cgColor
+
+    let firstColour = UIColor(red:0.19, green:0.14, blue:0.68, alpha:1).cgColor
+    let secondColour = UIColor(red:0.78, green:0.43, blue:0.84, alpha:1).cgColor
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,10 +33,9 @@ class GradientView: UIView {
         
         gradient = gradientLayer
         
-        gradient.colors = [darkOrange, lightOrange]
+        gradient.colors = [firstColour, secondColour]
         gradient.startPoint = CGPoint(x: 0.7, y: 0)
         gradient.endPoint = CGPoint(x: 0.3, y: 1)
-        gradient.locations = [0.0, 2.0]
         gradient.drawsAsynchronously = true
         gradient.frame = bounds
         
@@ -46,15 +45,15 @@ class GradientView: UIView {
     public func animateGradient() {
         CATransaction.begin()
         CATransaction.setCompletionBlock {
-            self.gradient.colors = [self.lightOrange, self.darkOrange]
+            self.gradient.colors = [self.secondColour, self.firstColour]
             CATransaction.begin()
             CATransaction.setCompletionBlock {
-                self.gradient.colors = [self.darkOrange, self.lightOrange]
+                self.gradient.colors = [self.firstColour, self.secondColour]
             }
-            self.animateGradient(colors: [self.darkOrange, self.lightOrange])
+            self.animateGradient(colors: [self.firstColour, self.secondColour])
             CATransaction.commit()
         }
-        animateGradient(colors: [lightOrange, darkOrange])
+        animateGradient(colors: [secondColour, firstColour])
         CATransaction.commit()
     }
     

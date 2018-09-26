@@ -14,7 +14,7 @@ class InfoView: UIView {
     private var tooltipHeight = 0
 
     private struct Constants {
-        static let borderRadius: CGFloat = 6.0
+        static let borderRadius: CGFloat = 4.0
         static let shadowRadius: CGFloat = 4.0
         static let shadowColor = UIColor(red: (85.0/255.0), green: (85.0/255.0), blue: (85.0/255.0), alpha: 0.35).cgColor
     }

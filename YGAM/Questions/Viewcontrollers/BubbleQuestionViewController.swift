@@ -145,7 +145,8 @@ class BubbleQuestionViewController: UIViewController {
         switch action.type {
         case .app:
             // Exit
-            performSegue(withIdentifier: "DashboardSegue", sender: self)
+//            performSegue(withIdentifier: "DashboardSegue", sender: self)
+            performSegue(withIdentifier: "ResultsSegue", sender: self)
             return
         case .question:
             guard let nextQuestion = questionFor(ID: action.value) else {
@@ -231,6 +232,16 @@ class BubbleQuestionViewController: UIViewController {
         })
         let progress = Float(index!) / Float(questions.count)
         progressBar.setProgress(progress, animated: true)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultsSegue" {
+            if let controller = segue.destination as? ResultsViewController {
+                controller.questions = questions
+                controller.answers = answers
+            }
+        }
     }
 }
 

@@ -11,6 +11,18 @@ import UIKit
 @IBDesignable
 class OnBoardingDetailsView: UIView {
 
+    var infoText: String? {
+        didSet {
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineHeightMultiple = 1.3
+            let attrString = NSMutableAttributedString(string: infoText!)
+            attrString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+            informationLabel.attributedText = attrString
+            informationLabel.textAlignment = .center
+        }
+    }
+    @IBOutlet weak var backgroundView: GradientBackgroundView!
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var informationLabel: UILabel!
     

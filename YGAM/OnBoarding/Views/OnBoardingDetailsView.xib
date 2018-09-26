@@ -10,13 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Rubik-Light.ttf">
-            <string>Rubik-Light</string>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingDetailsView" customModule="YGAM" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundView" destination="aKf-AN-C9f" id="hBf-PJ-0Lk"/>
                 <outlet property="imageView" destination="llx-z8-0oe" id="O6h-l6-VU7"/>
                 <outlet property="informationLabel" destination="UAw-Yi-2ll" id="c1M-tz-mPS"/>
                 <outlet property="magnifiedImageView" destination="p6C-fB-ZXG" id="XiA-un-JVs"/>
@@ -31,7 +32,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQE-7t-1Cf" userLabel="ContentView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKf-AN-C9f" userLabel="GradientView" customClass="GradientBackgroundView" customModule="YGAM" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQE-7t-1Cf" userLabel="ContentView">
                     <rect key="frame" x="0.0" y="50" width="375" height="489.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdD-uS-v9J" userLabel="ImageView">
@@ -70,39 +75,59 @@
                                 <constraint firstAttribute="height" constant="350" id="zYY-3k-Fp8"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMo-cg-puQ">
-                            <rect key="frame" x="85" y="380" width="204.5" height="36"/>
-                            <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="30"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra tellus in risus interdum varius" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAw-Yi-2ll">
-                            <rect key="frame" x="49" y="436" width="276" height="53.5"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="276" id="KCR-eI-lbf"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="15"/>
-                            <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="cdD-uS-v9J" firstAttribute="top" secondItem="kQE-7t-1Cf" secondAttribute="top" constant="-20" id="BTF-dN-Ue9"/>
-                        <constraint firstItem="UAw-Yi-2ll" firstAttribute="centerX" secondItem="kQE-7t-1Cf" secondAttribute="centerX" id="Jcc-Cf-TzI"/>
-                        <constraint firstItem="UAw-Yi-2ll" firstAttribute="top" secondItem="hMo-cg-puQ" secondAttribute="bottom" constant="20" id="O7y-J2-980"/>
-                        <constraint firstAttribute="bottom" secondItem="UAw-Yi-2ll" secondAttribute="bottom" id="aUm-dT-Dgw"/>
-                        <constraint firstItem="hMo-cg-puQ" firstAttribute="top" secondItem="cdD-uS-v9J" secondAttribute="bottom" constant="50" id="cIL-mp-3lW"/>
                         <constraint firstItem="cdD-uS-v9J" firstAttribute="centerX" secondItem="kQE-7t-1Cf" secondAttribute="centerX" id="luw-fr-bce"/>
-                        <constraint firstItem="hMo-cg-puQ" firstAttribute="centerX" secondItem="kQE-7t-1Cf" secondAttribute="centerX" id="uLC-po-Pfh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VH1-8W-759" userLabel="TextContainer">
+                    <rect key="frame" x="0.0" y="443" width="375" height="180"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Goes Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMo-cg-puQ">
+                            <rect key="frame" x="40" y="30" width="295" height="21.5"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAw-Yi-2ll">
+                            <rect key="frame" x="40" y="62.5" width="295" height="37"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra tellus in risus interdum varius">
+                                    <attributes>
+                                        <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="12" name="Rubik-Light"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hMo-cg-puQ" firstAttribute="top" secondItem="VH1-8W-759" secondAttribute="top" constant="30" id="4BN-ex-qYd"/>
+                        <constraint firstAttribute="trailing" secondItem="UAw-Yi-2ll" secondAttribute="trailing" constant="40" id="5qK-Pg-h2K"/>
+                        <constraint firstAttribute="height" constant="180" id="JNv-Dl-tCx"/>
+                        <constraint firstItem="hMo-cg-puQ" firstAttribute="leading" secondItem="VH1-8W-759" secondAttribute="leading" constant="40" id="OBL-xs-AB1"/>
+                        <constraint firstItem="UAw-Yi-2ll" firstAttribute="leading" secondItem="VH1-8W-759" secondAttribute="leading" constant="40" id="VJ7-yD-k2X"/>
+                        <constraint firstItem="UAw-Yi-2ll" firstAttribute="top" secondItem="hMo-cg-puQ" secondAttribute="bottom" constant="11" id="dzt-XA-Twy"/>
+                        <constraint firstAttribute="trailing" secondItem="hMo-cg-puQ" secondAttribute="trailing" constant="40" id="ows-e2-4fQ"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VH1-8W-759" secondAttribute="trailing" id="BSk-oZ-Ix9"/>
+                <constraint firstItem="aKf-AN-C9f" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CgA-R7-555"/>
                 <constraint firstItem="kQE-7t-1Cf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="NwY-eK-nlH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aKf-AN-C9f" secondAttribute="bottom" id="RFe-HE-bug"/>
                 <constraint firstItem="kQE-7t-1Cf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TnD-XO-Bhf"/>
+                <constraint firstItem="aKf-AN-C9f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ezz-3E-WTM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VH1-8W-759" secondAttribute="bottom" constant="44" id="iPY-bc-Qdd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aKf-AN-C9f" secondAttribute="trailing" id="nTs-6D-Yrl"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kQE-7t-1Cf" secondAttribute="trailing" id="uIf-xT-mj9"/>
+                <constraint firstItem="VH1-8W-759" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zKo-be-lRN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="91.5" y="43.5"/>
