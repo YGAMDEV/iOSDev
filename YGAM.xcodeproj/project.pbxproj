@@ -22,16 +22,12 @@
 		4542F85320DCDAC10022CC09 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4542F84920DCDAC10022CC09 /* Rubik-Italic.ttf */; };
 		4542F85420DCDAC10022CC09 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4542F84A20DCDAC10022CC09 /* Rubik-BoldItalic.ttf */; };
 		4542F85720DCDAEE0022CC09 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4542F85520DCDAED0022CC09 /* InfoView.swift */; };
-		4542F85820DCDAEE0022CC09 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4542F85620DCDAEE0022CC09 /* GradientView.swift */; };
+		4542F85820DCDAEE0022CC09 /* AnimatedGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4542F85620DCDAEE0022CC09 /* AnimatedGradientView.swift */; };
 		4589022E20B832E100CA4C46 /* QuestionList.json in Resources */ = {isa = PBXBuildFile; fileRef = 4589022D20B832E000CA4C46 /* QuestionList.json */; };
 		45A2FC59215A1976007DC9B3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FC58215A1976007DC9B3 /* ResultsViewController.swift */; };
 		45A2FC5B215A48C6007DC9B3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FC5A215A48C6007DC9B3 /* ProgressView.swift */; };
-		45A7976E215A541900EDD507 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7976D215A541900EDD507 /* GradientBackgroundView.swift */; };
 		45A79771215B796500EDD507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A79770215B796500EDD507 /* Images.xcassets */; };
-		45E80E8E20EC2DE4008FEA6D /* DetailView1MagnifiedView.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E80E8D20EC2DE4008FEA6D /* DetailView1MagnifiedView.png */; };
-		45E80E9220EC2EFB008FEA6D /* DetailViewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E80E9120EC2EFB008FEA6D /* DetailViewImage.png */; };
-		45E80E9520EC3198008FEA6D /* DetailView3MagnifiedView.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E80E9320EC3198008FEA6D /* DetailView3MagnifiedView.png */; };
-		45E80E9620EC3198008FEA6D /* DetailView2MagnifiedView.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E80E9420EC3198008FEA6D /* DetailView2MagnifiedView.png */; };
+		45A79777215C074100EDD507 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A79776215C074100EDD507 /* GradientView.swift */; };
 		45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957A220AC3E4A00A01EB0 /* AppDelegate.swift */; };
 		45E957AA20AC3E4C00A01EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E957A920AC3E4C00A01EB0 /* Assets.xcassets */; };
 		45E957AD20AC3E4C00A01EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45E957AB20AC3E4C00A01EB0 /* LaunchScreen.storyboard */; };
@@ -42,12 +38,7 @@
 		45E957BF20AC3F2F00A01EB0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957BE20AC3F2F00A01EB0 /* Enums.swift */; };
 		45E957C220AC415300A01EB0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957C120AC415300A01EB0 /* Questions.swift */; };
 		45FEE98D20EA7BC60053FA4F /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE98C20EA7BC60053FA4F /* OnBoarding.storyboard */; };
-		45FEE99020EA7BFF0053FA4F /* OnBoardingDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE98F20EA7BFF0053FA4F /* OnBoardingDetailsView.xib */; };
 		45FEE99320EA7DAB0053FA4F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEE99220EA7DAB0053FA4F /* OnBoardingViewController.swift */; };
-		45FEE99520EA7E490053FA4F /* OnBoardingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEE99420EA7E490053FA4F /* OnBoardingDetailsView.swift */; };
-		45FEE99B20EA86610053FA4F /* scratch-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE99A20EA86610053FA4F /* scratch-logo.png */; };
-		45FEE99D20EA89880053FA4F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE99C20EA89880053FA4F /* background.png */; };
-		45FEE9A320EA8DA10053FA4F /* app.png in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE9A220EA8DA10053FA4F /* app.png */; };
 		F42ED15620F8DFC40084D404 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED15520F8DFC40084D404 /* ChartViewController.swift */; };
 		F42ED1BA20F8E1430084D404 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED18C20F8E1430084D404 /* ChartSeries.swift */; };
 		F42ED1BB20F8E1430084D404 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED18D20F8E1430084D404 /* Chart.swift */; };
@@ -80,16 +71,12 @@
 		4542F84920DCDAC10022CC09 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		4542F84A20DCDAC10022CC09 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		4542F85520DCDAED0022CC09 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		4542F85620DCDAEE0022CC09 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		4542F85620DCDAEE0022CC09 /* AnimatedGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedGradientView.swift; sourceTree = "<group>"; };
 		4589022D20B832E000CA4C46 /* QuestionList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuestionList.json; sourceTree = "<group>"; };
 		45A2FC58215A1976007DC9B3 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		45A2FC5A215A48C6007DC9B3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		45A7976D215A541900EDD507 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		45A79770215B796500EDD507 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		45E80E8D20EC2DE4008FEA6D /* DetailView1MagnifiedView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailView1MagnifiedView.png; sourceTree = "<group>"; };
-		45E80E9120EC2EFB008FEA6D /* DetailViewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailViewImage.png; sourceTree = "<group>"; };
-		45E80E9320EC3198008FEA6D /* DetailView3MagnifiedView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailView3MagnifiedView.png; sourceTree = "<group>"; };
-		45E80E9420EC3198008FEA6D /* DetailView2MagnifiedView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailView2MagnifiedView.png; sourceTree = "<group>"; };
+		45A79776215C074100EDD507 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		45E9579F20AC3E4A00A01EB0 /* YGAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YGAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E957A220AC3E4A00A01EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45E957A920AC3E4C00A01EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,17 +89,11 @@
 		45E957BE20AC3F2F00A01EB0 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		45E957C120AC415300A01EB0 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		45FEE98C20EA7BC60053FA4F /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
-		45FEE98F20EA7BFF0053FA4F /* OnBoardingDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingDetailsView.xib; sourceTree = "<group>"; };
 		45FEE99220EA7DAB0053FA4F /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		45FEE99420EA7E490053FA4F /* OnBoardingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingDetailsView.swift; sourceTree = "<group>"; };
-		45FEE99A20EA86610053FA4F /* scratch-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scratch-logo.png"; sourceTree = "<group>"; };
-		45FEE99C20EA89880053FA4F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		45FEE9A220EA8DA10053FA4F /* app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app.png; sourceTree = "<group>"; };
 		F42ED15520F8DFC40084D404 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		F42ED18C20F8E1430084D404 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
 		F42ED18D20F8E1430084D404 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		F42ED18E20F8E1430084D404 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartColors.swift; sourceTree = "<group>"; };
-		F4901C7E21303AED009868CE /* YGAM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YGAM.entitlements; sourceTree = "<group>"; };
 		F4C767B820C1855100B5DB77 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F4C767BE20C1881E00B5DB77 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
@@ -159,7 +140,7 @@
 			children = (
 				4527C9DA20C138B900590790 /* BubbleAnswerView.swift */,
 				4527C9DE20C138D200590790 /* BubbleAnswerView.xib */,
-				4542F85620DCDAEE0022CC09 /* GradientView.swift */,
+				4542F85620DCDAEE0022CC09 /* AnimatedGradientView.swift */,
 				4542F85520DCDAED0022CC09 /* InfoView.swift */,
 			);
 			path = Views;
@@ -170,7 +151,6 @@
 			children = (
 				45A2FC58215A1976007DC9B3 /* ResultsViewController.swift */,
 				45A2FC5A215A48C6007DC9B3 /* ProgressView.swift */,
-				45A7976D215A541900EDD507 /* GradientBackgroundView.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -195,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				45A2FC57215A18D4007DC9B3 /* Results */,
-				F4901C7E21303AED009868CE /* YGAM.entitlements */,
 				F42ED15720F8DFCD0084D404 /* Frameworks */,
 				45FEE98B20EA7BB00053FA4F /* OnBoarding */,
 				F4C767B520C184B400B5DB77 /* Achievements */,
@@ -229,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				45E957BE20AC3F2F00A01EB0 /* Enums.swift */,
+				45A79776215C074100EDD507 /* GradientView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -255,15 +235,6 @@
 		45FEE98E20EA7BEB0053FA4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				45E80E9120EC2EFB008FEA6D /* DetailViewImage.png */,
-				45E80E8D20EC2DE4008FEA6D /* DetailView1MagnifiedView.png */,
-				45E80E9420EC3198008FEA6D /* DetailView2MagnifiedView.png */,
-				45E80E9320EC3198008FEA6D /* DetailView3MagnifiedView.png */,
-				45FEE9A220EA8DA10053FA4F /* app.png */,
-				45FEE99C20EA89880053FA4F /* background.png */,
-				45FEE99A20EA86610053FA4F /* scratch-logo.png */,
-				45FEE98F20EA7BFF0053FA4F /* OnBoardingDetailsView.xib */,
-				45FEE99420EA7E490053FA4F /* OnBoardingDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -472,33 +443,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				4542F84E20DCDAC10022CC09 /* Rubik-Regular.ttf in Resources */,
-				45FEE99B20EA86610053FA4F /* scratch-logo.png in Resources */,
 				4542F84C20DCDAC10022CC09 /* Rubik-Bold.ttf in Resources */,
 				4542F85020DCDAC10022CC09 /* Rubik-MediumItalic.ttf in Resources */,
 				45E957AD20AC3E4C00A01EB0 /* LaunchScreen.storyboard in Resources */,
 				4542F85420DCDAC10022CC09 /* Rubik-BoldItalic.ttf in Resources */,
 				4542F85320DCDAC10022CC09 /* Rubik-Italic.ttf in Resources */,
-				45FEE99020EA7BFF0053FA4F /* OnBoardingDetailsView.xib in Resources */,
 				F4C767CA20C18ACF00B5DB77 /* Achievements.storyboard in Resources */,
 				45A79771215B796500EDD507 /* Images.xcassets in Resources */,
 				4542F85220DCDAC10022CC09 /* Rubik-Black.ttf in Resources */,
 				45FEE98D20EA7BC60053FA4F /* OnBoarding.storyboard in Resources */,
 				4589022E20B832E100CA4C46 /* QuestionList.json in Resources */,
 				4542F85120DCDAC10022CC09 /* Rubik-Medium.ttf in Resources */,
-				45E80E9620EC3198008FEA6D /* DetailView2MagnifiedView.png in Resources */,
 				45E957AA20AC3E4C00A01EB0 /* Assets.xcassets in Resources */,
 				4542F84F20DCDAC10022CC09 /* Rubik-Light.ttf in Resources */,
-				45E80E9520EC3198008FEA6D /* DetailView3MagnifiedView.png in Resources */,
 				4542F84B20DCDAC10022CC09 /* Rubik-BlackItalic.ttf in Resources */,
 				4542F84D20DCDAC10022CC09 /* Rubik-LightItalic.ttf in Resources */,
-				45E80E8E20EC2DE4008FEA6D /* DetailView1MagnifiedView.png in Resources */,
 				F4C767B920C1855100B5DB77 /* Dashboard.storyboard in Resources */,
 				F4C767C420C189D800B5DB77 /* SignPosting.storyboard in Resources */,
 				F4C767BF20C1881E00B5DB77 /* Questions.storyboard in Resources */,
-				45FEE9A320EA8DA10053FA4F /* app.png in Resources */,
 				4527C9DF20C138D200590790 /* BubbleAnswerView.xib in Resources */,
-				45FEE99D20EA89880053FA4F /* background.png in Resources */,
-				45E80E9220EC2EFB008FEA6D /* DetailViewImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,23 +473,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4542F85720DCDAEE0022CC09 /* InfoView.swift in Sources */,
-				45A7976E215A541900EDD507 /* GradientBackgroundView.swift in Sources */,
 				F4C767C720C18A3900B5DB77 /* SignpostingViewController.swift in Sources */,
 				45E957B920AC3EA200A01EB0 /* APIManager.swift in Sources */,
 				45E957BA20AC3EA200A01EB0 /* ImageManager.swift in Sources */,
-				4542F85820DCDAEE0022CC09 /* GradientView.swift in Sources */,
+				4542F85820DCDAEE0022CC09 /* AnimatedGradientView.swift in Sources */,
 				F42ED1BA20F8E1430084D404 /* ChartSeries.swift in Sources */,
 				F42ED15620F8DFC40084D404 /* ChartViewController.swift in Sources */,
 				F4C767CD20C18B2E00B5DB77 /* AchievementsViewController.swift in Sources */,
 				F4D8BF4421022CEC00D57764 /* TrackerViewController.swift in Sources */,
 				F4C767BB20C1877400B5DB77 /* DashboardViewController.swift in Sources */,
 				4527C9D820C130C200590790 /* BubbleQuestionViewController.swift in Sources */,
-				45FEE99520EA7E490053FA4F /* OnBoardingDetailsView.swift in Sources */,
 				4527C9E120C13AD100590790 /* BubbleBehavior.swift in Sources */,
 				F4D8BF4221022CD900D57764 /* TasksTableViewController.swift in Sources */,
 				4527C9DB20C138B900590790 /* BubbleAnswerView.swift in Sources */,
 				45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */,
 				F4D8BF4621022CFE00D57764 /* BadgesCollectionViewController.swift in Sources */,
+				45A79777215C074100EDD507 /* GradientView.swift in Sources */,
 				45FEE99320EA7DAB0053FA4F /* OnBoardingViewController.swift in Sources */,
 				45A2FC59215A1976007DC9B3 /* ResultsViewController.swift in Sources */,
 				F42ED1BC20F8E1430084D404 /* ChartColors.swift in Sources */,
@@ -684,7 +646,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -705,7 +667,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

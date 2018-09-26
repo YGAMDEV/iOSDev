@@ -1,5 +1,5 @@
 //
-//  GradientView.swift
+//  AnimatedGradientView.swift
 //  YGAM
 //
 //  Created by Jon Fulton on 20/06/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradientView: UIView {
+class AnimatedGradientView: UIView {
     
     var gradient = CAGradientLayer()
 

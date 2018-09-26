@@ -19,7 +19,7 @@ class BubbleQuestionViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var dynamicAnimatorReferenceView: UIView!
-    @IBOutlet weak var gradient: GradientView!
+    @IBOutlet weak var gradient: AnimatedGradientView!
     @IBOutlet weak var infoView: InfoView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!

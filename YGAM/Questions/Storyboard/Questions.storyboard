@@ -27,12 +27,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QK-60-wh0" userLabel="GradientView" customClass="GradientView" customModule="YGAM" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QK-60-wh0" userLabel="AnimatedGradientView" customClass="AnimatedGradientView" customModule="YGAM" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="One really really long Testing Label really really long three line question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCl-ns-pPb" userLabel="QuestionLabel">
-                                <rect key="frame" x="30.666666666666657" y="73" width="314.33333333333337" height="71.333333333333314"/>
+                                <rect key="frame" x="31" y="73" width="314.33333333333331" height="71.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="0uo-P5-0EN"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yv-sd-kyo">
-                                <rect key="frame" x="147.66666666666666" y="688" width="80" height="44"/>
+                                <rect key="frame" x="148" y="688" width="80" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ser-0n-h6H"/>
                                 </constraints>
@@ -66,10 +66,10 @@
                                 <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcb-qV-RIM" userLabel="InfoView" customClass="InfoView" customModule="YGAM" customModuleProvider="target">
-                                <rect key="frame" x="155" y="164.33333333333334" width="67.333333333333314" height="33"/>
+                                <rect key="frame" x="155.66666666666666" y="164.33333333333334" width="66.333333333333343" height="33"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrS-cK-B9g" userLabel="Info Label">
-                                        <rect key="frame" x="16.000000000000004" y="8" width="35.333333333333343" height="17"/>
+                                        <rect key="frame" x="16.000000000000004" y="8" width="34.333333333333343" height="17"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                         <color key="textColor" red="0.18823529411764706" green="0.14117647058823529" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -176,14 +176,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utj-xg-AVS" userLabel="TimeView" customClass="GradientBackgroundView" customModule="YGAM" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utj-xg-AVS" userLabel="TimeView" customClass="GradientView" customModule="YGAM" customModuleProvider="target">
                                 <rect key="frame" x="16" y="193.66666666666666" width="343" height="99.999999999999972"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mji-U1-wmA" userLabel="ProgressView" customClass="ProgressView" customModule="YGAM" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="60" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fr-6h-7zP">
-                                                <rect key="frame" x="17.666666666666664" y="22.666666666666686" width="25" height="15"/>
+                                                <rect key="frame" x="17.666666666666664" y="23.333333333333343" width="25" height="14"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -206,7 +206,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fka-uG-ADH">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="31.666666666666668" height="17"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -235,15 +235,23 @@
                                     <constraint firstAttribute="width" constant="343" id="gpz-WA-Vmn"/>
                                     <constraint firstAttribute="bottom" secondItem="mji-U1-wmA" secondAttribute="bottom" constant="20" id="kJX-DV-7j8"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.27843137254901962" green="1" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.058823529411764705" green="0.81960784313725488" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wx9-9p-Boh" userLabel="ControlView" customClass="GradientBackgroundView" customModule="YGAM" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wx9-9p-Boh" userLabel="ControlView" customClass="GradientView" customModule="YGAM" customModuleProvider="target">
                                 <rect key="frame" x="16" y="301.33333333333331" width="343" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTG-pq-lfd" userLabel="ProgressView" customClass="ProgressView" customModule="YGAM" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="60" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdj-3k-DXl">
-                                                <rect key="frame" x="18" y="23" width="24" height="15"/>
+                                                <rect key="frame" x="18" y="23.666666666666686" width="24.333333333333329" height="14"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -266,7 +274,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-fU-yht">
-                                                <rect key="frame" x="0.0" y="0.0" width="48" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="17"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -294,15 +302,23 @@
                                     <constraint firstItem="KTG-pq-lfd" firstAttribute="leading" secondItem="Wx9-9p-Boh" secondAttribute="leading" constant="20" id="eWA-RR-65y"/>
                                     <constraint firstAttribute="height" constant="100" id="pJC-9J-c8K"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.14901960784313725" green="0.58039215686274503" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.070588235294117646" green="0.36078431372549019" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YK0-nD-6WR" userLabel="MoneyView" customClass="GradientBackgroundView" customModule="YGAM" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YK0-nD-6WR" userLabel="MoneyView" customClass="GradientView" customModule="YGAM" customModuleProvider="target">
                                 <rect key="frame" x="16" y="409.33333333333331" width="343" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-Kl-VRf" userLabel="ProgressView" customClass="ProgressView" customModule="YGAM" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="60" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10R-uu-wpQ">
-                                                <rect key="frame" x="18" y="23" width="24" height="15"/>
+                                                <rect key="frame" x="18" y="23.666666666666686" width="24.333333333333329" height="14"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -353,6 +369,14 @@
                                     <constraint firstAttribute="height" constant="100" id="lMC-T8-v79"/>
                                     <constraint firstAttribute="trailing" secondItem="n3k-ax-P1D" secondAttribute="trailing" constant="44" id="wty-c0-oZ7"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.18823529411764706" green="0.14117647058823529" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.7803921568627451" green="0.43137254901960786" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnu-DM-Gmz" userLabel="TimeButton">
                                 <rect key="frame" x="16" y="193.66666666666666" width="343" height="99.999999999999972"/>
@@ -435,6 +459,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Eeg-sa-LCf"/>
+        <segue reference="XTF-XA-M79"/>
     </inferredMetricsTieBreakers>
 </document>

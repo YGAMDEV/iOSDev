@@ -7,15 +7,52 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
+    var navigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            let onBoarding = UIStoryboard(name: "OnBoarding", bundle: nil)
+            let mainVC = onBoarding.instantiateInitialViewController()
+            navigationController = UINavigationController(rootViewController: mainVC!)
+            navigationController?.setNavigationBarHidden(true, animated: false)
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
         return true
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Play sound and show alert to the user
+        completionHandler([.alert,.sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            let mainVC = UIViewController()
+            mainVC.view.backgroundColor = .red
+            navigationController = UINavigationController(rootViewController: mainVC)
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
+
+        completionHandler()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -42,4 +79,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
