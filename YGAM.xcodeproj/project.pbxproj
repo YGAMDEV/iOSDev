@@ -27,6 +27,7 @@
 		45A2FC59215A1976007DC9B3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FC58215A1976007DC9B3 /* ResultsViewController.swift */; };
 		45A2FC5B215A48C6007DC9B3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FC5A215A48C6007DC9B3 /* ProgressView.swift */; };
 		45A7976E215A541900EDD507 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7976D215A541900EDD507 /* GradientBackgroundView.swift */; };
+		45A79771215B796500EDD507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A79770215B796500EDD507 /* Images.xcassets */; };
 		45E80E8E20EC2DE4008FEA6D /* DetailView1MagnifiedView.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E80E8D20EC2DE4008FEA6D /* DetailView1MagnifiedView.png */; };
 		45E80E9220EC2EFB008FEA6D /* DetailViewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E80E9120EC2EFB008FEA6D /* DetailViewImage.png */; };
 		45E80E9520EC3198008FEA6D /* DetailView3MagnifiedView.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E80E9320EC3198008FEA6D /* DetailView3MagnifiedView.png */; };
@@ -84,6 +85,7 @@
 		45A2FC58215A1976007DC9B3 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		45A2FC5A215A48C6007DC9B3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		45A7976D215A541900EDD507 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
+		45A79770215B796500EDD507 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		45E80E8D20EC2DE4008FEA6D /* DetailView1MagnifiedView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailView1MagnifiedView.png; sourceTree = "<group>"; };
 		45E80E9120EC2EFB008FEA6D /* DetailViewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailViewImage.png; sourceTree = "<group>"; };
 		45E80E9320EC3198008FEA6D /* DetailView3MagnifiedView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailView3MagnifiedView.png; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				4542F84720DCDAC00022CC09 /* Rubik-Medium.ttf */,
 				4542F84620DCDAC00022CC09 /* Rubik-MediumItalic.ttf */,
 				4542F84420DCDAC00022CC09 /* Rubik-Regular.ttf */,
+				45A79770215B796500EDD507 /* Images.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				4542F85320DCDAC10022CC09 /* Rubik-Italic.ttf in Resources */,
 				45FEE99020EA7BFF0053FA4F /* OnBoardingDetailsView.xib in Resources */,
 				F4C767CA20C18ACF00B5DB77 /* Achievements.storyboard in Resources */,
+				45A79771215B796500EDD507 /* Images.xcassets in Resources */,
 				4542F85220DCDAC10022CC09 /* Rubik-Black.ttf in Resources */,
 				45FEE98D20EA7BC60053FA4F /* OnBoarding.storyboard in Resources */,
 				4589022E20B832E100CA4C46 /* QuestionList.json in Resources */,

@@ -22,7 +22,8 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
-    
+    @IBOutlet weak var leftArrow: UIImageView!
+    @IBOutlet weak var rightArrow: UIImageView!
     
     private var initialQuestions: [Question]?
     
@@ -138,9 +139,11 @@ extension OnBoardingViewController: UIScrollViewDelegate {
         case 4:
             // Notifications
             setMagnifiedView(appBadge, scale: magnificationScale)
+            rightArrow.alpha = 1 - magnificationScale
             doneButton.alpha = magnificationScale
         default:
             skipButton.alpha = magnificationScale
+            leftArrow.alpha = 1 - magnificationScale
             break
         }
     }
