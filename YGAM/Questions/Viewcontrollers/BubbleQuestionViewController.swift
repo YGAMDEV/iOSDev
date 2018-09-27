@@ -144,8 +144,11 @@ class BubbleQuestionViewController: UIViewController {
         
         switch action.type {
         case .app:
-            // Exit
+            // Show the
 //            performSegue(withIdentifier: "DashboardSegue", sender: self)
+            
+            // The user has successfully answered all questions required. Don't show them it again until it's time
+            UserDefaults.standard.set(true, forKey: EntryLogicConstants.allQuestionsAnswered)
             performSegue(withIdentifier: "ResultsSegue", sender: self)
             return
         case .question:

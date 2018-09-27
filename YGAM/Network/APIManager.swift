@@ -12,16 +12,10 @@ public protocol APIRequest {
     associatedtype Model: Decodable
 
     func createModel(completion: @escaping (Result<Model>) -> Void)
+    var requestURL: URL? { get }
 }
 
-extension APIRequest {
-    var requestURL: URL? {
-//        let baseURL = "http://ec2-52-208-210-208.eu-west-1.compute.amazonaws.com/games"
-//        return URL(string: baseURL)
-        
-        return Bundle.main.url(forResource: "QuestionList", withExtension: ".json")
-    }
-    
+extension APIRequest {    
     func createModel(completion: @escaping (Result<Model>) -> Void) {
         guard let url = requestURL else {
             completion(.failure(NetworkErrors.invalidOrNoURL))

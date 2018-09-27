@@ -1,0 +1,122 @@
+{
+    "questions": [
+                  {
+                  "id": "1",
+                  "type": "single",
+                  "text": "How long did you spend on your devices yesterday?",
+                  "answers": [
+                              {
+                              "text": "< 1hrs"
+                              },
+                              {
+                              "text": "1-2 hrs"
+                              },
+                              {
+                              "text": "2-3 hrs"
+                              },
+                              {
+                              "text": "3-4 hrs"
+                              },
+                              {
+                              "text": "5+ hrs"
+                              }
+                              ],
+                  "nudge": {
+                  "text": "Was it really {answer}?",
+                  "trigger": [
+                              "< 1hr",
+                              "1-2 hrs",
+                              "2-3 hrs",
+                              "3-4 hrs",
+                              "5+ hrs"
+                              ],
+                  "confirmedAction": {
+                  "type": "question",
+                  "value": "2"
+                  }
+                  },
+                  "completeAction": {
+                  "type": "question",
+                  "value": "2"
+                  }
+                  },
+                  {
+                  "id": "2",
+                  "type": "multi",
+                  "text": "What did you do on your devices?",
+                  "answers": [
+                              {
+                              "text": "Academic Work"
+                              },
+                              {
+                              "text": "Gaming Apps"
+                              },
+                              {
+                              "text": "Social Media"
+                              },
+                              {
+                              "text": "Online Gaming"
+                              },
+                              {
+                              "text": "Messaging"
+                              },
+                              {
+                              "text": "Browsing"
+                              },
+                              {
+                              "text": "Other"
+                              }
+                              ],
+                  "minSelections": 1,
+                  "completeAction": {
+                  "type": "question",
+                  "value": "3"
+                  }
+                  },
+                  {
+                  "id": "3",
+                  "type": "multi",
+                  "text": "Looking back at your activity, what has been the impact?",
+                  "answers": [
+                              {
+                              "text": "I exercised my mind"
+                              },
+                              {
+                              "text": "I learnt something new"
+                              },
+                              {
+                              "text": "I've lied about my use"
+                              },
+                              {
+                              "text": "I feel vulnerable"
+                              },
+                              {
+                              "text": "I made a profit"
+                              },
+                              {
+                              "text": "My work as been affected"
+                              },
+                              {
+                              "text": "I feel irritable"
+                              },
+                              {
+                              "text": "I feel lonely"
+                              },
+                              {
+                              "text": "I feel tired"
+                              },
+                              {
+                              "text": "I had fun"
+                              },
+                              {
+                              "text": "I connected socially"
+                              }
+                              ],
+                  "minSelections": 1,
+                  "completeAction": {
+                  "type": "app",
+                  "value": "exit"
+                  }
+                  }
+                  ]
+}

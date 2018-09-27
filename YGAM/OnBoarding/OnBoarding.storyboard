@@ -68,7 +68,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="443"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scrabit Logo" translatesAutoresizingMaskIntoConstraints="NO" id="6Nb-el-hm7">
-                                                                <rect key="frame" x="144.5" y="151.5" width="86" height="140"/>
+                                                                <rect key="frame" x="138.5" y="151.5" width="98" height="140"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -502,7 +502,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="TcM-f9-SnX" kind="show" identifier="QuestionSegue" id="Lyz-sC-Mw5"/>
+                                            <action selector="dismiss:" destination="uqV-eD-rlM" eventType="touchUpInside" id="kFg-hd-LA2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGO-ZZ-vqE">
@@ -512,7 +512,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="TcM-f9-SnX" kind="show" identifier="QuestionSegue" id="q0b-8U-7Qs"/>
+                                            <action selector="dismiss:" destination="uqV-eD-rlM" eventType="touchUpInside" id="mBF-67-9jd"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Keyboard Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="8XD-2m-pHU" userLabel="LeftArrow">
@@ -583,10 +583,12 @@
                         <outlet property="doneButton" destination="OGO-ZZ-vqE" id="YyI-Kp-mqa"/>
                         <outlet property="leftArrow" destination="8XD-2m-pHU" id="Xau-HQ-yf6"/>
                         <outlet property="notificationBackgroundView" destination="8ke-aO-PbS" id="aMz-rU-Taz"/>
+                        <outlet property="notificationSwitch" destination="abO-Nd-lAA" id="UG8-OX-AK7"/>
                         <outlet property="pageControl" destination="uhz-O6-FKe" id="78k-jG-Wig"/>
                         <outlet property="rightArrow" destination="5R8-hh-Dhw" id="t5R-aa-SsD"/>
                         <outlet property="scrollView" destination="Yoa-wo-el0" id="ab6-BK-bBS"/>
                         <outlet property="skipButton" destination="Bew-kK-N7j" id="NbW-sc-8qP"/>
+                        <segue destination="TcM-f9-SnX" kind="show" identifier="QuestionsSegue" id="81n-1f-R3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zo6-5i-gkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -606,9 +608,6 @@
         <image name="App_icon_backdrop" width="162" height="162"/>
         <image name="Keyboard Arrow Left" width="24" height="24"/>
         <image name="Keyboard Arrow Right" width="24" height="24"/>
-        <image name="Scrabit Logo" width="86" height="140"/>
+        <image name="Scrabit Logo" width="98" height="140"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="q0b-8U-7Qs"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -55,14 +55,15 @@ class OnBoardingViewController: UIViewController {
         if notificationSwitch.isOn {
             notificationAuthorizationRequest()
         } else {
-            self.performSegue(withIdentifier: "QuestionSegue", sender: nil)
+            self.performSegue(withIdentifier: "QuestionsSegue", sender: nil)
         }
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "QuestionSegue":
+        case "QuestionsSegue":
+            UserDefaults.standard.set(true, forKey: EntryLogicConstants.onBoardingComplete)
             if let controller = segue.destination as? BubbleQuestionViewController {
                 controller.questions = initialQuestions
             }
@@ -76,7 +77,7 @@ class OnBoardingViewController: UIViewController {
         let options: UNAuthorizationOptions = [.badge, .alert, .sound]
         center.requestAuthorization(options: options) { granted, error in
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "QuestionSegue", sender: nil)
+                self.performSegue(withIdentifier: "QuestionsSegue", sender: nil)
             }
         }
     }

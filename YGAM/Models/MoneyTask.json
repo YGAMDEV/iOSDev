@@ -1,0 +1,70 @@
+{
+    "questions": [
+                  {
+                  "id": "1",
+                  "type": "single",
+                  "text": "Did you spend any money on your device yesterday?",
+                  "answers": [
+                              {
+                              "text": "Yes",
+                              "action": {
+                              "type": "app",
+                              "value": "exit"
+                              }
+                              },
+                              {
+                              "text": "No",
+                              "action": {
+                              "type": "question",
+                              "value": "2"
+                              }
+                              }
+                              ]
+                  },
+                  {
+                  "id": "2",
+                  "type": "single",
+                  "text": "Could you afford that spend?",
+                  "answers": [
+                              {
+                              "text": "Yes, I was within budget",
+                              "action": {
+                              "type": "app",
+                              "value": "exit"
+                              }
+                              },
+                              {
+                              "text": "No, I spent too much",
+                              "action": {
+                              "type": "question",
+                              "value": "3"
+                              }
+                              }
+                              ]
+                  },
+                  {
+                  "id": "3",
+                  "type": "multi",
+                  "text": "What was the impact of this spending?",
+                  "answers": [
+                              {
+                              "text": "I'm stressed or concerned"
+                              },
+                              {
+                              "text": "I owe money"
+                              },
+                              {
+                              "text": "I couldn't afford basic necessities"
+                              },
+                              {
+                              "text": "I had to sacrifice other social activities"
+                              }
+                              ],
+                  "minSelections": 1,
+                  "completeAction": {
+                  "type": "app",
+                  "value": "exit"
+                  }
+                  }
+                  ]
+}

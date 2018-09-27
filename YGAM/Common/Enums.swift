@@ -30,3 +30,9 @@ public enum ActionType: String, Codable {
     case app
     case question
 }
+
+public enum Task: String {
+    case control
+    case money
+    case time
+}

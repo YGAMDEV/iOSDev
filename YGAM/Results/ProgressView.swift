@@ -21,7 +21,16 @@ class ProgressView: UIView {
         shapeLayer.path = circularPath.cgPath
         
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = UIColor.white.cgColor
+
+        switch percent {
+        case 0..<35:
+            shapeLayer.strokeColor = UIColor(red: 78/255, green: 255/255, blue: 183/255, alpha: 1.0).cgColor
+        case 35..<69:
+            shapeLayer.strokeColor = UIColor(red: 255/255, green: 148/255, blue: 0/255, alpha: 1.0).cgColor
+        default:
+            shapeLayer.strokeColor = UIColor(red: 255/255, green: 68/255, blue: 17/255, alpha: 1.0).cgColor
+        }
+        
         shapeLayer.lineWidth = 6
         shapeLayer.lineCap = kCALineCapRound
         shapeLayer.strokeEnd = 0

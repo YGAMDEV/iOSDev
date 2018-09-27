@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
-            let onBoarding = UIStoryboard(name: "OnBoarding", bundle: nil)
-            let mainVC = onBoarding.instantiateInitialViewController()
-            navigationController = UINavigationController(rootViewController: mainVC!)
+            let entryLogic = EntryLogic()
+            let mainVC = entryLogic.intialViewContoller()
+            navigationController = UINavigationController(rootViewController: mainVC)
             navigationController?.setNavigationBarHidden(true, animated: false)
             window.rootViewController = navigationController
             window.makeKeyAndVisible()

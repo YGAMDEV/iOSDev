@@ -13,13 +13,13 @@ class ResultsViewController: UIViewController {
 
     @IBOutlet weak var controlLabel: UILabel!
     @IBOutlet weak var controlProgressView: ProgressView!
-    @IBOutlet weak var controlView: GradientView!
+    @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var moneyLabel: UILabel!
     @IBOutlet weak var moneyProgressView: ProgressView!
-    @IBOutlet weak var moneyView: GradientView!
+    @IBOutlet weak var moneyView: UIView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timeProgressView: ProgressView!
-    @IBOutlet weak var timeView: GradientView!
+    @IBOutlet weak var timeView: UIView!
     
     public var questions: [Question]!
     public var answers: [String: [Answer]]! {
@@ -30,15 +30,63 @@ class ResultsViewController: UIViewController {
         }
     }
     
+    private struct Constants {
+        static let controlResult = "ControlResult"
+        static let moneyResult = "MoneyResult"
+        static let timeResult = "TimeResult"
+    }
+    
     private let center = UNUserNotificationCenter.current()
     
-    private let controlResultScale = 12.5
-    private let moneyResultScale = 50
-    private let timeResultScale = 25
+    private let controlResultScale = 10
+    private let moneyResultScale = 34
+    private let timeResultScale = 20
     
-    private var controlResult = 0
-    private var moneyResult = 0
-    private var timeResult = 0
+    private var cachedControlResult = 0
+    private var cachedMoneyResult = 0
+    private var cachedTimeResult = 0
+    
+    private var controlResult: Int {
+        get {
+            guard let cachedControlResult = UserDefaults.standard.value(forKey: Constants.controlResult) as? Int else {
+                return 0
+            }
+            return cachedControlResult
+        }
+        
+        set {
+            self.cachedControlResult = newValue
+            UserDefaults.standard.set(cachedControlResult, forKey: Constants.controlResult)
+        }
+    }
+    private var moneyResult: Int {
+        get {
+            guard let cachedMoneyResult = UserDefaults.standard.value(forKey: Constants.moneyResult) as? Int else {
+                return 0
+            }
+            return cachedMoneyResult
+        }
+        
+        set {
+            self.cachedMoneyResult = newValue
+            UserDefaults.standard.set(cachedMoneyResult, forKey: Constants.moneyResult)
+        }
+    }
+    
+    private var timeResult: Int {
+        get {
+            guard let cachedTimeResult = UserDefaults.standard.value(forKey: Constants.timeResult) as? Int else {
+                return 0
+            }
+            return cachedTimeResult
+        }
+        
+        set {
+            self.cachedTimeResult = newValue
+            UserDefaults.standard.set(cachedTimeResult, forKey: Constants.timeResult)
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +94,15 @@ class ResultsViewController: UIViewController {
         controlLabel.text = "\(controlResult)%"
         moneyLabel.text = "\(moneyResult)%"
         timeLabel.text = "\(timeResult)%"
+        
+        let borderColor = UIColor(red: 227/255, green: 227/255, blue: 227/255, alpha: 1.0).cgColor
+        controlView.layer.borderColor = borderColor
+        moneyView.layer.borderColor = borderColor
+        timeView.layer.borderColor = borderColor
+        
+        controlView.layer.borderWidth = 1
+        moneyView.layer.borderWidth = 1
+        timeView.layer.borderWidth = 1
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,18 +115,24 @@ class ResultsViewController: UIViewController {
     
     // MARK: - Selections
     @IBAction func controlButton(_ sender: UIButton) {
-        // Setup Tasks for Control
+        setTask(task: .control)
         scheduleNotifications()
     }
     
     @IBAction func moneyButton(_ sender: UIButton) {
-        // Setup Tasks for Money
+        setTask(task: .money)
         scheduleNotifications()
     }
     
     @IBAction func timeButton(_ sender: UIButton) {
-        // Setup Tasks for Time
+        setTask(task: .time)
         scheduleNotifications()
+    }
+    
+    private func setTask(task: Task) {
+        UserDefaults.standard.setValue(task.rawValue, forKey: EntryLogicConstants.selectedTask)
+        // Dependent on notifications
+        UserDefaults.standard.setValue(task.rawValue, forKey: EntryLogicConstants.taskStartDate)
     }
     
     private func scheduleNotifications() {
@@ -114,19 +177,20 @@ class ResultsViewController: UIViewController {
               let secondAnswer = answers["10"]?.first?.text, let secondQuestion = questionFor(ID: "10")else {
             return
         }
-        let firstResult = Double(indexOf(answer: firstAnswer, in: firstQuestion)) * controlResultScale
-        let secondResult = Double(indexOf(answer: secondAnswer, in: secondQuestion)) * controlResultScale
+        let firstResult = (indexOf(answer: firstAnswer, in: firstQuestion) + 1) * controlResultScale
+        let secondResult = (indexOf(answer: secondAnswer, in: secondQuestion) + 1) * controlResultScale
         
-        controlResult = Int(firstResult + secondResult)
+        controlResult = min(100, Int(firstResult + secondResult))
     }
     
     private func calculateMoneyResults() {
         // The id for the question relating to money is "7"
-        guard let answer = answers["7"]?.first?.text, let question = questionFor(ID: "7") else {
-            return
+        if let answer = answers["7"]?.first?.text, let question = questionFor(ID: "7") {
+            moneyResult = min(100, (indexOf(answer: answer, in: question) + 2) * moneyResultScale)
+        } else {
+            // Set the result to be the smallest value possible
+            moneyResult = 34
         }
-        // There's only two outcomes - 50 or 100, so add 1 to the index to get the correct result
-        moneyResult = (indexOf(answer: answer, in: question) + 1) * moneyResultScale
     }
     
     private func calculateTimeResults() {
@@ -134,7 +198,7 @@ class ResultsViewController: UIViewController {
         guard let answer = answers["4"]?.first?.text, let question = questionFor(ID: "4") else {
             return
         }
-        timeResult = indexOf(answer: answer, in: question) * timeResultScale
+        timeResult = min(100, (indexOf(answer: answer, in: question)  + 1) * timeResultScale)
     }
     
     // MARK: - Helpers

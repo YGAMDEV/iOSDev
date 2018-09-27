@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "type": "single",
+      "text": "Do you feel in control of the money you spend on devices?",
+      "answers": [
+        {
+          "text": "Completely"
+        },
+        {
+          "text": "Mostly"
+        },
+        {
+          "text": "Unsure"
+        },
+        {
+          "text": "Sometimes"
+        },
+        {
+          "text": "Not at all"
+        }
+      ],
+      "completeAction": {
+        "type": "question",
+        "value": "2"
+      }
+    },
+    {
+      "id": "2",
+      "type": "single",
+      "text": "Do you feel in control of the time you spend on devices?",
+      "answers": [
+        {
+          "text": "Completely"
+        },
+        {
+          "text": "Mostly"
+        },
+        {
+          "text": "Unsure"
+        },
+        {
+          "text": "Sometimes"
+        },
+        {
+          "text": "Not at all"
+        }
+      ],
+      "completeAction": {
+      "type": "question",
+      "value": "3"
+    }
+    },
+    {
+      "id": "3",
+      "type": "multi",
+      "text": "Looking back at your activity, what has been the impact?",
+      "answers": [
+        {
+          "text": "I exercised my mind"
+        },
+        {
+          "text": "I learnt something new"
+        },
+        {
+          "text": "I've lied about my use"
+        },
+        {
+          "text": "I feel vulnerable"
+        },
+        {
+          "text": "I made a profit"
+        },
+        {
+          "text": "My work as been affected"
+        },
+        {
+          "text": "I feel irritable"
+        },
+        {
+          "text": "I feel lonely"
+        },
+        {
+          "text": "I feel tired"
+        },
+        {
+          "text": "I had fun"
+        },
+        {
+          "text": "I connected socially"
+        }
+      ],
+      "minSelections": 1,
+      "completeAction": {
+        "type": "app",
+        "value": "exit"
+      }
+    }
+  ]
+}
