@@ -45,6 +45,7 @@ class ResultsViewController: UIViewController {
     private var cachedControlResult = 0
     private var cachedMoneyResult = 0
     private var cachedTimeResult = 0
+    private var selectedTask: TaskIdentifier?
     
     private var controlResult: Int {
         get {
@@ -115,18 +116,15 @@ class ResultsViewController: UIViewController {
     
     // MARK: - Selections
     @IBAction func controlButton(_ sender: UIButton) {
-        setTask(task: .control)
-        scheduleNotifications()
+        scheduleNotifications(for: .control)
     }
     
     @IBAction func moneyButton(_ sender: UIButton) {
-        setTask(task: .money)
-        scheduleNotifications()
+        scheduleNotifications(for: .money)
     }
     
     @IBAction func timeButton(_ sender: UIButton) {
-        setTask(task: .time)
-        scheduleNotifications()
+        scheduleNotifications(for: .time)
     }
     
     private func setTask(task: TaskIdentifier) {
@@ -135,7 +133,9 @@ class ResultsViewController: UIViewController {
         UserDefaults.standard.setValue(task.rawValue, forKey: EntryLogicConstants.taskStartDate)
     }
     
-    private func scheduleNotifications() {
+    private func scheduleNotifications(`for` task: TaskIdentifier) {
+        setTask(task: task)
+        selectedTask = task
         center.getNotificationSettings { settings in
             if settings.authorizationStatus == .authorized {
                 self.createNotifications()
@@ -164,7 +164,14 @@ class ResultsViewController: UIViewController {
     
     private func notificationContent() -> UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
-        content.body = "Come back and update us on your progress"
+        switch selectedTask! {
+        case .control:
+            content.body = "Are you still focussed on your personal goal of increasing your level of control? Let us know"
+        case .money:
+            content.body = "Are you still focussed on your personal goal of reducing money spent? Let us know"
+        case .time:
+            content.body = "Are you still focussed on your personal goal of reducing time spent on devices? Let us know"
+        }
         content.sound = UNNotificationSound.default()
         
         return content
