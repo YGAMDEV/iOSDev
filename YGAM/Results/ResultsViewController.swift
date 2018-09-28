@@ -129,7 +129,7 @@ class ResultsViewController: UIViewController {
         scheduleNotifications()
     }
     
-    private func setTask(task: Task) {
+    private func setTask(task: TaskIdentifier) {
         UserDefaults.standard.setValue(task.rawValue, forKey: EntryLogicConstants.selectedTask)
         // Dependent on notifications
         UserDefaults.standard.setValue(task.rawValue, forKey: EntryLogicConstants.taskStartDate)

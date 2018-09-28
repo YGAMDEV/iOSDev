@@ -23,6 +23,8 @@
 		4542F85420DCDAC10022CC09 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4542F84A20DCDAC10022CC09 /* Rubik-BoldItalic.ttf */; };
 		4542F85720DCDAEE0022CC09 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4542F85520DCDAED0022CC09 /* InfoView.swift */; };
 		4542F85820DCDAEE0022CC09 /* AnimatedGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4542F85620DCDAEE0022CC09 /* AnimatedGradientView.swift */; };
+		4582659C215E594E00F92002 /* SignpostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582659B215E594E00F92002 /* SignpostingViewController.swift */; };
+		4582659E215E5A5E00F92002 /* SignpostingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582659D215E5A5E00F92002 /* SignpostingList.swift */; };
 		4589022E20B832E100CA4C46 /* QuestionList.json in Resources */ = {isa = PBXBuildFile; fileRef = 4589022D20B832E000CA4C46 /* QuestionList.json */; };
 		45A2FC59215A1976007DC9B3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FC58215A1976007DC9B3 /* ResultsViewController.swift */; };
 		45A2FC5B215A48C6007DC9B3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FC5A215A48C6007DC9B3 /* ProgressView.swift */; };
@@ -32,6 +34,13 @@
 		45A7977C215CB9FF00EDD507 /* ControlTask.json in Resources */ = {isa = PBXBuildFile; fileRef = 45A79779215CB9FE00EDD507 /* ControlTask.json */; };
 		45A7977D215CB9FF00EDD507 /* MoneyTask.json in Resources */ = {isa = PBXBuildFile; fileRef = 45A7977A215CB9FE00EDD507 /* MoneyTask.json */; };
 		45A7977F215CC6E400EDD507 /* EntryLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7977E215CC6E400EDD507 /* EntryLogic.swift */; };
+		45A79782215DFF3500EDD507 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A79781215DFF3500EDD507 /* Task.swift */; };
+		45A79784215DFFF500EDD507 /* Signpost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A79783215DFFF500EDD507 /* Signpost.swift */; };
+		45A7978A215E20D000EDD507 /* SignpostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A79788215E20D000EDD507 /* SignpostCollectionViewCell.swift */; };
+		45A7978B215E20D000EDD507 /* SignpostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A79789215E20D000EDD507 /* SignpostCollectionViewCell.xib */; };
+		45A7978E215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */; };
+		45A7978F215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */; };
+		45A79791215E42AB00EDD507 /* InfoViewAbove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A79790215E42AA00EDD507 /* InfoViewAbove.swift */; };
 		45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957A220AC3E4A00A01EB0 /* AppDelegate.swift */; };
 		45E957AA20AC3E4C00A01EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E957A920AC3E4C00A01EB0 /* Assets.xcassets */; };
 		45E957AD20AC3E4C00A01EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45E957AB20AC3E4C00A01EB0 /* LaunchScreen.storyboard */; };
@@ -50,13 +59,9 @@
 		F4C767B920C1855100B5DB77 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767B820C1855100B5DB77 /* Dashboard.storyboard */; };
 		F4C767BB20C1877400B5DB77 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */; };
 		F4C767BF20C1881E00B5DB77 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767BE20C1881E00B5DB77 /* Questions.storyboard */; };
-		F4C767C420C189D800B5DB77 /* SignPosting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767C320C189D800B5DB77 /* SignPosting.storyboard */; };
-		F4C767C720C18A3900B5DB77 /* SignpostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767C620C18A3900B5DB77 /* SignpostingViewController.swift */; };
+		F4C767C420C189D800B5DB77 /* Signposting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767C320C189D800B5DB77 /* Signposting.storyboard */; };
 		F4C767CA20C18ACF00B5DB77 /* Achievements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C767C920C18ACF00B5DB77 /* Achievements.storyboard */; };
 		F4C767CD20C18B2E00B5DB77 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C767CC20C18B2E00B5DB77 /* AchievementsViewController.swift */; };
-		F4D8BF4221022CD900D57764 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8BF4121022CD900D57764 /* TasksTableViewController.swift */; };
-		F4D8BF4421022CEC00D57764 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8BF4321022CEC00D57764 /* TrackerViewController.swift */; };
-		F4D8BF4621022CFE00D57764 /* BadgesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8BF4521022CFE00D57764 /* BadgesCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +81,8 @@
 		4542F84A20DCDAC10022CC09 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		4542F85520DCDAED0022CC09 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		4542F85620DCDAEE0022CC09 /* AnimatedGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedGradientView.swift; sourceTree = "<group>"; };
+		4582659B215E594E00F92002 /* SignpostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostingViewController.swift; sourceTree = "<group>"; };
+		4582659D215E5A5E00F92002 /* SignpostingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostingList.swift; sourceTree = "<group>"; };
 		4589022D20B832E000CA4C46 /* QuestionList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuestionList.json; sourceTree = "<group>"; };
 		45A2FC58215A1976007DC9B3 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		45A2FC5A215A48C6007DC9B3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -85,6 +92,13 @@
 		45A79779215CB9FE00EDD507 /* ControlTask.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ControlTask.json; sourceTree = "<group>"; };
 		45A7977A215CB9FE00EDD507 /* MoneyTask.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MoneyTask.json; sourceTree = "<group>"; };
 		45A7977E215CC6E400EDD507 /* EntryLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryLogic.swift; sourceTree = "<group>"; };
+		45A79781215DFF3500EDD507 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		45A79783215DFFF500EDD507 /* Signpost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signpost.swift; sourceTree = "<group>"; };
+		45A79788215E20D000EDD507 /* SignpostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostCollectionViewCell.swift; sourceTree = "<group>"; };
+		45A79789215E20D000EDD507 /* SignpostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignpostCollectionViewCell.xib; sourceTree = "<group>"; };
+		45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostViewAllCollectionViewCell.swift; sourceTree = "<group>"; };
+		45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignpostViewAllCollectionViewCell.xib; sourceTree = "<group>"; };
+		45A79790215E42AA00EDD507 /* InfoViewAbove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewAbove.swift; sourceTree = "<group>"; };
 		45E9579F20AC3E4A00A01EB0 /* YGAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YGAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E957A220AC3E4A00A01EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45E957A920AC3E4C00A01EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,13 +119,9 @@
 		F4C767B820C1855100B5DB77 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F4C767BE20C1881E00B5DB77 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
-		F4C767C320C189D800B5DB77 /* SignPosting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignPosting.storyboard; sourceTree = "<group>"; };
-		F4C767C620C18A3900B5DB77 /* SignpostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostingViewController.swift; sourceTree = "<group>"; };
+		F4C767C320C189D800B5DB77 /* Signposting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signposting.storyboard; sourceTree = "<group>"; };
 		F4C767C920C18ACF00B5DB77 /* Achievements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Achievements.storyboard; sourceTree = "<group>"; };
 		F4C767CC20C18B2E00B5DB77 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
-		F4D8BF4121022CD900D57764 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
-		F4D8BF4321022CEC00D57764 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
-		F4D8BF4521022CFE00D57764 /* BadgesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,9 +159,16 @@
 				4527C9DA20C138B900590790 /* BubbleAnswerView.swift */,
 				4527C9DE20C138D200590790 /* BubbleAnswerView.xib */,
 				4542F85620DCDAEE0022CC09 /* AnimatedGradientView.swift */,
-				4542F85520DCDAED0022CC09 /* InfoView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4582659F215E5A6200F92002 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4582659D215E5A5E00F92002 /* SignpostingList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		45A2FC57215A18D4007DC9B3 /* Results */ = {
@@ -161,6 +178,27 @@
 				45A2FC5A215A48C6007DC9B3 /* ProgressView.swift */,
 			);
 			path = Results;
+			sourceTree = "<group>";
+		};
+		45A79780215DFF1E00EDD507 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45A79781215DFF3500EDD507 /* Task.swift */,
+				45A79783215DFFF500EDD507 /* Signpost.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		45A79787215E202C00EDD507 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4C767B820C1855100B5DB77 /* Dashboard.storyboard */,
+				45A79788215E20D000EDD507 /* SignpostCollectionViewCell.swift */,
+				45A79789215E20D000EDD507 /* SignpostCollectionViewCell.xib */,
+				45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */,
+				45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		45E9579620AC3E4A00A01EB0 = {
@@ -188,7 +226,7 @@
 				F4C767B520C184B400B5DB77 /* Achievements */,
 				F4C767B420C184AC00B5DB77 /* Dashboard */,
 				F4C767B320C184A200B5DB77 /* Questions */,
-				F4C767B220C1849500B5DB77 /* SignPosting */,
+				F4C767B220C1849500B5DB77 /* Signposting */,
 				452257A120C883A8007E00ED /* Resources */,
 				45E957C020AC411E00A01EB0 /* Models */,
 				45E957BD20AC3F0100A01EB0 /* Common */,
@@ -218,6 +256,8 @@
 				45E957BE20AC3F2F00A01EB0 /* Enums.swift */,
 				45A79776215C074100EDD507 /* GradientView.swift */,
 				45A7977E215CC6E400EDD507 /* EntryLogic.swift */,
+				4542F85520DCDAED0022CC09 /* InfoView.swift */,
+				45A79790215E42AA00EDD507 /* InfoViewAbove.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -285,13 +325,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		F4C767B220C1849500B5DB77 /* SignPosting */ = {
+		F4C767B220C1849500B5DB77 /* Signposting */ = {
 			isa = PBXGroup;
 			children = (
-				F4C767C520C18A2600B5DB77 /* Viewcontrollers */,
-				F4C767C220C189B600B5DB77 /* Storyboard */,
+				F4C767C520C18A2600B5DB77 /* Controllers */,
+				4582659F215E5A6200F92002 /* Model */,
+				F4C767C220C189B600B5DB77 /* Views */,
 			);
-			path = SignPosting;
+			path = Signposting;
 			sourceTree = "<group>";
 		};
 		F4C767B320C184A200B5DB77 /* Questions */ = {
@@ -307,8 +348,9 @@
 		F4C767B420C184AC00B5DB77 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				F4C767B720C184FF00B5DB77 /* Viewcontrollers */,
-				F4C767B620C184F300B5DB77 /* Storyboard */,
+				F4C767B720C184FF00B5DB77 /* Controllers */,
+				45A79780215DFF1E00EDD507 /* Models */,
+				45A79787215E202C00EDD507 /* Views */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -322,24 +364,13 @@
 			path = Achievements;
 			sourceTree = "<group>";
 		};
-		F4C767B620C184F300B5DB77 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				F4C767B820C1855100B5DB77 /* Dashboard.storyboard */,
-			);
-			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		F4C767B720C184FF00B5DB77 /* Viewcontrollers */ = {
+		F4C767B720C184FF00B5DB77 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				F4C767BA20C1877400B5DB77 /* DashboardViewController.swift */,
 				F42ED15520F8DFC40084D404 /* ChartViewController.swift */,
-				F4D8BF4121022CD900D57764 /* TasksTableViewController.swift */,
-				F4D8BF4321022CEC00D57764 /* TrackerViewController.swift */,
-				F4D8BF4521022CFE00D57764 /* BadgesCollectionViewController.swift */,
 			);
-			path = Viewcontrollers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F4C767BC20C187F900B5DB77 /* Viewcontrollers */ = {
@@ -359,20 +390,20 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		F4C767C220C189B600B5DB77 /* Storyboard */ = {
+		F4C767C220C189B600B5DB77 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F4C767C320C189D800B5DB77 /* SignPosting.storyboard */,
+				F4C767C320C189D800B5DB77 /* Signposting.storyboard */,
 			);
-			path = Storyboard;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		F4C767C520C18A2600B5DB77 /* Viewcontrollers */ = {
+		F4C767C520C18A2600B5DB77 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F4C767C620C18A3900B5DB77 /* SignpostingViewController.swift */,
+				4582659B215E594E00F92002 /* SignpostingViewController.swift */,
 			);
-			path = Viewcontrollers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F4C767C820C18AB000B5DB77 /* Stroryboard */ = {
@@ -456,9 +487,11 @@
 			files = (
 				4542F84E20DCDAC10022CC09 /* Rubik-Regular.ttf in Resources */,
 				4542F84C20DCDAC10022CC09 /* Rubik-Bold.ttf in Resources */,
+				45A7978F215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib in Resources */,
 				4542F85020DCDAC10022CC09 /* Rubik-MediumItalic.ttf in Resources */,
 				45E957AD20AC3E4C00A01EB0 /* LaunchScreen.storyboard in Resources */,
 				45A7977B215CB9FF00EDD507 /* TimeTask.json in Resources */,
+				45A7978B215E20D000EDD507 /* SignpostCollectionViewCell.xib in Resources */,
 				4542F85420DCDAC10022CC09 /* Rubik-BoldItalic.ttf in Resources */,
 				4542F85320DCDAC10022CC09 /* Rubik-Italic.ttf in Resources */,
 				F4C767CA20C18ACF00B5DB77 /* Achievements.storyboard in Resources */,
@@ -474,7 +507,7 @@
 				4542F84B20DCDAC10022CC09 /* Rubik-BlackItalic.ttf in Resources */,
 				4542F84D20DCDAC10022CC09 /* Rubik-LightItalic.ttf in Resources */,
 				F4C767B920C1855100B5DB77 /* Dashboard.storyboard in Resources */,
-				F4C767C420C189D800B5DB77 /* SignPosting.storyboard in Resources */,
+				F4C767C420C189D800B5DB77 /* Signposting.storyboard in Resources */,
 				F4C767BF20C1881E00B5DB77 /* Questions.storyboard in Resources */,
 				4527C9DF20C138D200590790 /* BubbleAnswerView.xib in Resources */,
 			);
@@ -488,7 +521,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4542F85720DCDAEE0022CC09 /* InfoView.swift in Sources */,
-				F4C767C720C18A3900B5DB77 /* SignpostingViewController.swift in Sources */,
 				45E957B920AC3EA200A01EB0 /* APIManager.swift in Sources */,
 				45E957BA20AC3EA200A01EB0 /* ImageManager.swift in Sources */,
 				4542F85820DCDAEE0022CC09 /* AnimatedGradientView.swift in Sources */,
@@ -496,23 +528,27 @@
 				45A7977F215CC6E400EDD507 /* EntryLogic.swift in Sources */,
 				F42ED15620F8DFC40084D404 /* ChartViewController.swift in Sources */,
 				F4C767CD20C18B2E00B5DB77 /* AchievementsViewController.swift in Sources */,
-				F4D8BF4421022CEC00D57764 /* TrackerViewController.swift in Sources */,
 				F4C767BB20C1877400B5DB77 /* DashboardViewController.swift in Sources */,
 				4527C9D820C130C200590790 /* BubbleQuestionViewController.swift in Sources */,
 				4527C9E120C13AD100590790 /* BubbleBehavior.swift in Sources */,
-				F4D8BF4221022CD900D57764 /* TasksTableViewController.swift in Sources */,
+				45A7978E215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift in Sources */,
+				45A79782215DFF3500EDD507 /* Task.swift in Sources */,
 				4527C9DB20C138B900590790 /* BubbleAnswerView.swift in Sources */,
 				45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */,
-				F4D8BF4621022CFE00D57764 /* BadgesCollectionViewController.swift in Sources */,
+				4582659E215E5A5E00F92002 /* SignpostingList.swift in Sources */,
 				45A79777215C074100EDD507 /* GradientView.swift in Sources */,
 				45FEE99320EA7DAB0053FA4F /* OnBoardingViewController.swift in Sources */,
 				45A2FC59215A1976007DC9B3 /* ResultsViewController.swift in Sources */,
 				F42ED1BC20F8E1430084D404 /* ChartColors.swift in Sources */,
 				45E957BF20AC3F2F00A01EB0 /* Enums.swift in Sources */,
 				F42ED1BB20F8E1430084D404 /* Chart.swift in Sources */,
+				45A7978A215E20D000EDD507 /* SignpostCollectionViewCell.swift in Sources */,
+				45A79791215E42AB00EDD507 /* InfoViewAbove.swift in Sources */,
 				45E957C220AC415300A01EB0 /* Questions.swift in Sources */,
 				45E957BC20AC3EA200A01EB0 /* APIRequests.swift in Sources */,
 				45E957BB20AC3EA200A01EB0 /* NetworkRequest.swift in Sources */,
+				4582659C215E594E00F92002 /* SignpostingViewController.swift in Sources */,
+				45A79784215DFFF500EDD507 /* Signpost.swift in Sources */,
 				45A2FC5B215A48C6007DC9B3 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

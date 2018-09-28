@@ -141,8 +141,8 @@
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="az7-QK-rUX" userLabel="InfoView" customClass="InfoView" customModule="YGAM" customModuleProvider="target">
-                                <rect key="frame" x="121.66666666666669" y="136.66666666666666" width="132" height="33"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="az7-QK-rUX" userLabel="InfoView" customClass="InfoViewAbove" customModule="YGAM" customModuleProvider="target">
+                                <rect key="frame" x="121.66666666666669" y="144.66666666666666" width="132" height="33"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick one option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvM-Ip-uAZ" userLabel="Info Label">
                                         <rect key="frame" x="15.999999999999986" y="8" width="100" height="17"/>
@@ -160,7 +160,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJm-X9-8Ok">
-                                <rect key="frame" x="24" y="533.33333333333337" width="327" height="52"/>
+                                <rect key="frame" x="24" y="529.33333333333337" width="327" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Fjk-eB-czA"/>
                                 </constraints>
@@ -177,7 +177,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utj-xg-AVS" userLabel="TimeView">
-                                <rect key="frame" x="16" y="193.66666666666666" width="343" height="99.999999999999972"/>
+                                <rect key="frame" x="16" y="189.66666666666666" width="343" height="99.999999999999972"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mji-U1-wmA" userLabel="ProgressView" customClass="ProgressView" customModule="YGAM" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="60" height="60"/>
@@ -235,7 +235,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wx9-9p-Boh" userLabel="ControlView">
-                                <rect key="frame" x="16" y="301.33333333333331" width="343" height="100"/>
+                                <rect key="frame" x="16" y="297.33333333333331" width="343" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTG-pq-lfd" userLabel="ProgressView" customClass="ProgressView" customModule="YGAM" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="60" height="60"/>
@@ -292,7 +292,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YK0-nD-6WR" userLabel="MoneyView">
-                                <rect key="frame" x="16" y="409.33333333333331" width="343" height="100"/>
+                                <rect key="frame" x="16" y="405.33333333333331" width="343" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-Kl-VRf" userLabel="ProgressView" customClass="ProgressView" customModule="YGAM" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="60" height="60"/>
@@ -349,19 +349,19 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnu-DM-Gmz" userLabel="TimeButton">
-                                <rect key="frame" x="16" y="193.66666666666666" width="343" height="99.999999999999972"/>
+                                <rect key="frame" x="16" y="189.66666666666666" width="343" height="99.999999999999972"/>
                                 <connections>
                                     <action selector="timeButton:" destination="DNK-aN-pBU" eventType="touchUpInside" id="AjZ-cQ-uWA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S25-WL-INp" userLabel="ControlButton">
-                                <rect key="frame" x="16" y="301.33333333333331" width="343" height="100"/>
+                                <rect key="frame" x="16" y="297.33333333333331" width="343" height="100"/>
                                 <connections>
                                     <action selector="controlButton:" destination="DNK-aN-pBU" eventType="touchUpInside" id="uie-d7-PTX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeE-bR-o5h" userLabel="MoneyButton">
-                                <rect key="frame" x="16" y="409.33333333333331" width="343" height="100"/>
+                                <rect key="frame" x="16" y="405.33333333333331" width="343" height="100"/>
                                 <connections>
                                     <action selector="moneyButton:" destination="DNK-aN-pBU" eventType="touchUpInside" id="e5o-vT-aiT"/>
                                 </connections>
@@ -370,7 +370,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="utj-xg-AVS" firstAttribute="leading" secondItem="1cu-JQ-3OS" secondAttribute="leading" constant="16" id="0Mj-tA-oxK"/>
-                            <constraint firstItem="utj-xg-AVS" firstAttribute="top" secondItem="az7-QK-rUX" secondAttribute="bottom" constant="24" id="3vz-Yj-CZx"/>
+                            <constraint firstItem="utj-xg-AVS" firstAttribute="top" secondItem="az7-QK-rUX" secondAttribute="bottom" constant="12" id="3vz-Yj-CZx"/>
                             <constraint firstItem="Wx9-9p-Boh" firstAttribute="top" secondItem="utj-xg-AVS" secondAttribute="bottom" constant="8" id="7MJ-gZ-59d"/>
                             <constraint firstItem="S25-WL-INp" firstAttribute="leading" secondItem="Wx9-9p-Boh" secondAttribute="leading" id="AwY-VC-bHB"/>
                             <constraint firstItem="Wx9-9p-Boh" firstAttribute="width" secondItem="utj-xg-AVS" secondAttribute="width" id="BUf-Ip-cHp"/>
@@ -398,7 +398,7 @@
                             <constraint firstItem="S25-WL-INp" firstAttribute="bottom" secondItem="Wx9-9p-Boh" secondAttribute="bottom" id="uRr-i4-avm"/>
                             <constraint firstItem="YK0-nD-6WR" firstAttribute="centerX" secondItem="Wx9-9p-Boh" secondAttribute="centerX" id="uVt-rr-QfZ"/>
                             <constraint firstItem="WeE-bR-o5h" firstAttribute="trailing" secondItem="YK0-nD-6WR" secondAttribute="trailing" id="uvS-Dx-gGF"/>
-                            <constraint firstItem="az7-QK-rUX" firstAttribute="top" secondItem="VWd-Ph-96T" secondAttribute="bottom" constant="16" id="vTn-v8-jZQ"/>
+                            <constraint firstItem="az7-QK-rUX" firstAttribute="top" secondItem="VWd-Ph-96T" secondAttribute="bottom" constant="24" id="vTn-v8-jZQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1cu-JQ-3OS"/>
                     </view>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SignpostCollectionViewCell" id="gTV-IL-0wX" customClass="SignpostCollectionViewCell" customModule="YGAM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBe-F1-ZBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Samaritans_400x400" translatesAutoresizingMaskIntoConstraints="NO" id="BDN-eT-Gn5">
+                                <rect key="frame" x="16" y="16" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="ez4-gu-jcQ"/>
+                                    <constraint firstAttribute="height" constant="44" id="wEM-TA-6I1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Title goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThZ-Kz-A4X">
+                                <rect key="frame" x="76" y="14" width="283" height="17"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body text will appear here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZW-bS-3TN">
+                                <rect key="frame" x="76" y="37" width="283" height="23"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgH-AX-0VS" userLabel="HorizontalRule">
+                                <rect key="frame" x="76" y="75" width="299" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="HvA-e2-AQ5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6ZW-bS-3TN" secondAttribute="bottom" priority="750" constant="16" id="494-ar-oiZ"/>
+                            <constraint firstItem="6ZW-bS-3TN" firstAttribute="top" secondItem="ThZ-Kz-A4X" secondAttribute="bottom" constant="6" id="4Wn-Tc-B1m"/>
+                            <constraint firstAttribute="trailing" secondItem="qgH-AX-0VS" secondAttribute="trailing" id="AQO-fU-2cw"/>
+                            <constraint firstItem="BDN-eT-Gn5" firstAttribute="top" secondItem="DBe-F1-ZBH" secondAttribute="top" constant="16" id="BvA-5P-1Nd"/>
+                            <constraint firstAttribute="bottom" secondItem="qgH-AX-0VS" secondAttribute="bottom" id="D0W-IC-Xbk"/>
+                            <constraint firstAttribute="trailing" secondItem="ThZ-Kz-A4X" secondAttribute="trailing" constant="16" id="Joq-vo-VR7"/>
+                            <constraint firstItem="BDN-eT-Gn5" firstAttribute="leading" secondItem="DBe-F1-ZBH" secondAttribute="leading" constant="16" id="QiJ-Lk-n34"/>
+                            <constraint firstItem="ThZ-Kz-A4X" firstAttribute="top" secondItem="DBe-F1-ZBH" secondAttribute="top" constant="14" id="W1l-Qe-gbh"/>
+                            <constraint firstItem="qgH-AX-0VS" firstAttribute="leading" secondItem="ThZ-Kz-A4X" secondAttribute="leading" id="dBy-bv-cTw"/>
+                            <constraint firstItem="ThZ-Kz-A4X" firstAttribute="leading" secondItem="BDN-eT-Gn5" secondAttribute="trailing" constant="16" id="gsJ-Us-WDa"/>
+                            <constraint firstAttribute="trailing" secondItem="6ZW-bS-3TN" secondAttribute="trailing" constant="16" id="iBL-Ow-KW6"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BDN-eT-Gn5" secondAttribute="bottom" constant="16" id="q85-AO-UeL"/>
+                            <constraint firstItem="6ZW-bS-3TN" firstAttribute="leading" secondItem="ThZ-Kz-A4X" secondAttribute="leading" id="tdP-i0-p9t"/>
+                            <constraint firstAttribute="width" constant="375" id="wek-UE-kuP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="DBe-F1-ZBH" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="k7C-un-ZrE"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="DBe-F1-ZBH" secondAttribute="trailing" id="rx9-p6-pvw"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="DBe-F1-ZBH" secondAttribute="bottom" id="xyu-m5-yiM"/>
+                <constraint firstItem="DBe-F1-ZBH" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="yCd-3b-cih"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="375" height="75"/>
+            <connections>
+                <outlet property="body" destination="6ZW-bS-3TN" id="Pfs-4b-ImC"/>
+                <outlet property="horizontalRule" destination="qgH-AX-0VS" id="XLc-le-7J0"/>
+                <outlet property="imageView" destination="BDN-eT-Gn5" id="lb4-7A-Qqn"/>
+                <outlet property="title" destination="ThZ-Kz-A4X" id="KZ2-gb-Pk3"/>
+            </connections>
+            <point key="canvasLocation" x="23.5" y="100"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Samaritans_400x400" width="400" height="400"/>
+    </resources>
+</document>

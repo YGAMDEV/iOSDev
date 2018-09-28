@@ -11,6 +11,7 @@ import UIKit
 struct EntryLogicConstants {
     static let onBoardingComplete = "OnBoardingComplete"
     static let allQuestionsAnswered = "AllQuestionsAnswered"
+    
     static let taskStartDate = "TaskStartDate"
     static let selectedTask = "SelectedTask"
 }
@@ -95,6 +96,12 @@ class EntryLogic: NSObject {
             let initialVC = questionsStoryboard.instantiateInitialViewController() as! BubbleQuestionViewController
             initialVC.questions = allQuestions
             return initialVC
+        }
+        
+        // A task has been selected - show the dashboard
+        if UserDefaults.standard.value(forKey: EntryLogicConstants.selectedTask) != nil {
+            let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+            return dashboardStoryboard.instantiateInitialViewController()!
         }
         
         // Need to show the results page - the user is yet to select a task

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SignpostViewAllCollectionViewCell" reuseIdentifier="SignpostViewAllCollectionViewCell" id="U6b-Vx-4bR" customClass="SignpostViewAllCollectionViewCell" customModule="YGAM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-4h-u3O" userLabel="Container">
+                    <rect key="frame" x="122" y="13" width="76" height="24"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXb-qt-eeR">
+                            <rect key="frame" x="0.0" y="4.5" width="44" height="15"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="More" translatesAutoresizingMaskIntoConstraints="NO" id="wOJ-PR-ObS">
+                            <rect key="frame" x="52" y="0.0" width="24" height="24"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="wOJ-PR-ObS" secondAttribute="trailing" id="9i8-RC-EEI"/>
+                        <constraint firstAttribute="bottom" secondItem="wOJ-PR-ObS" secondAttribute="bottom" id="Pgb-d8-S6m"/>
+                        <constraint firstItem="JXb-qt-eeR" firstAttribute="leading" secondItem="kpg-4h-u3O" secondAttribute="leading" id="Svi-kP-d0u"/>
+                        <constraint firstItem="wOJ-PR-ObS" firstAttribute="top" secondItem="kpg-4h-u3O" secondAttribute="top" id="XGp-wc-iOj"/>
+                        <constraint firstItem="JXb-qt-eeR" firstAttribute="centerY" secondItem="kpg-4h-u3O" secondAttribute="centerY" id="Yhe-x6-q7I"/>
+                        <constraint firstItem="wOJ-PR-ObS" firstAttribute="leading" secondItem="JXb-qt-eeR" secondAttribute="trailing" constant="8" id="dcE-VM-u1a"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="kpg-4h-u3O" secondAttribute="bottom" constant="13" id="9pB-VK-3KI"/>
+                <constraint firstItem="kpg-4h-u3O" firstAttribute="centerX" secondItem="VXr-Tz-HHm" secondAttribute="centerX" id="CF0-un-6YL"/>
+                <constraint firstItem="kpg-4h-u3O" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" constant="13" id="o33-zY-sJc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <point key="canvasLocation" x="-93" y="70.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="More" width="24" height="24"/>
+    </resources>
+</document>

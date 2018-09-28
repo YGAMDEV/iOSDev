@@ -31,7 +31,7 @@ public enum ActionType: String, Codable {
     case question
 }
 
-public enum Task: String {
+public enum TaskIdentifier: String {
     case control
     case money
     case time
