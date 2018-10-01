@@ -146,6 +146,12 @@ class BubbleQuestionViewController: UIViewController {
         switch action.type {
         case .app:
             if UserDefaults.standard.value(forKey: EntryLogicConstants.selectedTask) == nil {
+                if action.value == "exit" {
+                    // The user has dropped out of the first 10 question by not using a device. Show them the dropout page
+                    performSegue(withIdentifier: "DropoutSegue", sender: self)
+                    return
+                }
+                
                 // The user has successfully answered all questions required. Don't show them it again until it's time
                 UserDefaults.standard.set(true, forKey: EntryLogicConstants.allQuestionsAnswered)
                 performSegue(withIdentifier: "ResultsSegue", sender: self)
