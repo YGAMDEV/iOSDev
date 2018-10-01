@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 private enum Edge: Int {
     case top = 0
@@ -144,12 +145,19 @@ class BubbleQuestionViewController: UIViewController {
         
         switch action.type {
         case .app:
-            // Show the
-//            performSegue(withIdentifier: "DashboardSegue", sender: self)
+            if UserDefaults.standard.value(forKey: EntryLogicConstants.selectedTask) == nil {
+                // The user has successfully answered all questions required. Don't show them it again until it's time
+                UserDefaults.standard.set(true, forKey: EntryLogicConstants.allQuestionsAnswered)
+                performSegue(withIdentifier: "ResultsSegue", sender: self)
+                return
+            }
             
-            // The user has successfully answered all questions required. Don't show them it again until it's time
-            UserDefaults.standard.set(true, forKey: EntryLogicConstants.allQuestionsAnswered)
-            performSegue(withIdentifier: "ResultsSegue", sender: self)
+            // The user is currently doing their daily task questions
+            performSegue(withIdentifier: "DashboardSegue", sender: self)
+            Date().save(as: EntryLogicConstants.dailyQuestionsAnsweredDate)
+            
+            // Cancel any notifications for today
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["\(Date().daysPastSinceTaskStartDate())"])
             return
         case .question:
             guard let nextQuestion = questionFor(ID: action.value) else {

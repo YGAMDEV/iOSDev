@@ -43,11 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
-            let mainVC = UIViewController()
-            mainVC.view.backgroundColor = .red
+            let entryLogic = EntryLogic()
+            let mainVC = entryLogic.intialViewContoller()
             navigationController = UINavigationController(rootViewController: mainVC)
+            navigationController?.setNavigationBarHidden(true, animated: false)
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }
@@ -67,6 +67,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        if let window = window {
+            let entryLogic = EntryLogic()
+            let mainVC = entryLogic.intialViewContoller()
+            navigationController = UINavigationController(rootViewController: mainVC)
+            navigationController?.setNavigationBarHidden(true, animated: false)
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

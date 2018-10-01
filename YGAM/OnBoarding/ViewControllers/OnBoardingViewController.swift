@@ -104,13 +104,13 @@ extension OnBoardingViewController: UIScrollViewDelegate {
         switch page {
         case 1:
             // DetailView1
-            print("Page 1")
+            break;
         case 2:
             // DetailView2
-            print("Page 2")
+            break;
         case 3:
             // DetailView3
-            print("Page 3")
+            break;
         case 4:
             // Notifications
             setMagnifiedView(appBadge, scale: magnificationScale)

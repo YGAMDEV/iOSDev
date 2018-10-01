@@ -12,12 +12,14 @@ class Task: NSObject {
     var gradientFirstColor: UIColor?
     var gradientSecondColor: UIColor?
     var signposts: [Signpost]?
+    var taskCompletion: String?
     var taskDescription: String?
 }
 
 class ControlTask: Task {
     override init() {
         super.init()
+        taskCompletion = "You chose to focus on increasing your feeling of control on devices. Do you now feel any different?"
         taskDescription = "Your goal was to gain back control of how you spend your time on your device"
         gradientFirstColor = UIColor(red:0.15, green:0.58, blue:0.85, alpha:1)
         gradientSecondColor =  UIColor(red:0.07, green:0.36, blue:0.7, alpha:1)
@@ -44,6 +46,7 @@ class ControlTask: Task {
 class MoneyTask: Task {
     override init() {
         super.init()
+        taskCompletion = "You chose to focus on reducing the money you spend on devices. How have you progressed?"
         taskDescription = "Your goal was to reduce the amount of money you spend on your device"
         gradientFirstColor = UIColor(red:0.19, green:0.14, blue:0.68, alpha:1)
         gradientSecondColor =  UIColor(red:0.78, green:0.43, blue:0.84, alpha:1)
@@ -66,6 +69,7 @@ class MoneyTask: Task {
 class TimeTask: Task {
     override init() {
         super.init()
+        taskCompletion = "You chose to focus on reducing the time you spend on devices. How have you progressed?"
         taskDescription = "Your goal was to reduce the amount of time you spend on your device"
         gradientFirstColor = UIColor(red:0.28, green:1, blue:0.86, alpha:1)
         gradientSecondColor =  UIColor(red:0.06, green:0.82, blue:0.67, alpha:1)

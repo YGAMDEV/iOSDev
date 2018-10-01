@@ -14,6 +14,7 @@ struct EntryLogicConstants {
     
     static let taskStartDate = "TaskStartDate"
     static let selectedTask = "SelectedTask"
+    static let dailyQuestionsAnsweredDate = "DailyQuestionsAnsweredDate"
 }
 
 class EntryLogic: NSObject {
@@ -89,7 +90,8 @@ class EntryLogic: NSObject {
             return onBoardingStoryBoard.instantiateInitialViewController()!
         }
         
-        // Need to show the full set of questions
+        // Need to show the full set of questions - either they haven't completed it yet or it's been
+        // longer than seven days since they set their task
         if UserDefaults.standard.bool(forKey: EntryLogicConstants.allQuestionsAnswered) == false {
             let questionsStoryboard = UIStoryboard(name: "Questions", bundle: nil)
             // Load the questionsViewController with the relevant questions for the Task selected
@@ -98,31 +100,34 @@ class EntryLogic: NSObject {
             return initialVC
         }
         
-        // A task has been selected - show the dashboard
+        // A task has been selected
         if UserDefaults.standard.value(forKey: EntryLogicConstants.selectedTask) != nil {
-            let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
-            return dashboardStoryboard.instantiateInitialViewController()!
+            if Calendar.current.isDateInToday(UserDefaults.standard.value(forKey: EntryLogicConstants.dailyQuestionsAnsweredDate) as! Date) ||
+               Date().daysPastSinceTaskStartDate() > 7 {
+                // Questions have been answered for today OR it's been 7 days past so don't show the task questions again - show the dashboard
+                let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+                return dashboardStoryboard.instantiateInitialViewController()!
+            }
+            
+            // Load the questionsViewController with the relevant questions for the Task selected
+            let questions = UIStoryboard(name: "Questions", bundle: nil)
+            let initialVC = questions.instantiateInitialViewController() as! BubbleQuestionViewController
+            
+            if let task = UserDefaults.standard.value(forKey: EntryLogicConstants.selectedTask) as? String,
+                let taskIdentifier = TaskIdentifier.init(rawValue: task) {
+                switch taskIdentifier {
+                case .control:
+                    initialVC.questions = controlQuestions
+                case .money:
+                    initialVC.questions = moneyQuestions
+                case .time:
+                    initialVC.questions = timeQuestions
+                }
+            }
+            return initialVC
         }
         
-        // Need to show the results page - the user is yet to select a task
         let questionsStoryBoard = UIStoryboard(name: "Questions", bundle: nil)
         return questionsStoryBoard.instantiateViewController(withIdentifier: "ResultsViewController")
-        
-//        if UserDefaults.standard.bool(forKey: EntryLogicConstants.onBoardingComplete) == true {
-//            if UserDefaults.standard.value(forKey: EntryLogicConstants.selectedTask) == nil {
-//                // No current tasks
-//                let dashboard = UIStoryboard(name: "Dashboard", bundle: nil)
-//                return dashboard.instantiateInitialViewController()!
-//            } else {
-//                let questions = UIStoryboard(name: "Questions", bundle: nil)
-//                // Load the questionsViewController with the relevant questions for the Task selected
-//                let initialVC = questions.instantiateInitialViewController() as? BubbleQuestionViewController
-//                initialVC?.questions = controlQuestions
-//
-//                return initialVC!
-//            }
-//        }
-        
-
     }
 }

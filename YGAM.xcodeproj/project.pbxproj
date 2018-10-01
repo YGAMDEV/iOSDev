@@ -41,6 +41,7 @@
 		45A7978E215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */; };
 		45A7978F215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */; };
 		45A79791215E42AB00EDD507 /* InfoViewAbove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A79790215E42AA00EDD507 /* InfoViewAbove.swift */; };
+		45CB6D04216201160083D8D0 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB6D03216201160083D8D0 /* DateHelper.swift */; };
 		45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957A220AC3E4A00A01EB0 /* AppDelegate.swift */; };
 		45E957AA20AC3E4C00A01EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E957A920AC3E4C00A01EB0 /* Assets.xcassets */; };
 		45E957AD20AC3E4C00A01EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45E957AB20AC3E4C00A01EB0 /* LaunchScreen.storyboard */; };
@@ -99,6 +100,7 @@
 		45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostViewAllCollectionViewCell.swift; sourceTree = "<group>"; };
 		45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignpostViewAllCollectionViewCell.xib; sourceTree = "<group>"; };
 		45A79790215E42AA00EDD507 /* InfoViewAbove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewAbove.swift; sourceTree = "<group>"; };
+		45CB6D03216201160083D8D0 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		45E9579F20AC3E4A00A01EB0 /* YGAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YGAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E957A220AC3E4A00A01EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45E957A920AC3E4C00A01EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				45A7977E215CC6E400EDD507 /* EntryLogic.swift */,
 				4542F85520DCDAED0022CC09 /* InfoView.swift */,
 				45A79790215E42AA00EDD507 /* InfoViewAbove.swift */,
+				45CB6D03216201160083D8D0 /* DateHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				45A79782215DFF3500EDD507 /* Task.swift in Sources */,
 				4527C9DB20C138B900590790 /* BubbleAnswerView.swift in Sources */,
 				45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */,
+				45CB6D04216201160083D8D0 /* DateHelper.swift in Sources */,
 				4582659E215E5A5E00F92002 /* SignpostingList.swift in Sources */,
 				45A79777215C074100EDD507 /* GradientView.swift in Sources */,
 				45FEE99320EA7DAB0053FA4F /* OnBoardingViewController.swift in Sources */,
@@ -687,7 +691,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YGAM/YGAM.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = N94Y33LN3H;
 				INFOPLIST_FILE = YGAM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -696,7 +700,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.YGAM.Scrabit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "ca66f71c-1a5a-4a45-9a65-cdd63b6d3a08";
+				PROVISIONING_PROFILE_SPECIFIER = "YGAM Development";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -708,8 +713,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YGAM/YGAM.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N94Y33LN3H;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YGAM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -16,6 +16,11 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var gradientView: GradientView!
     @IBOutlet weak var activityHeading: UILabel!
     @IBOutlet weak var signpostCollectionView: UICollectionView!
+    @IBOutlet weak var taskCompletionView: UIView!
+    @IBOutlet weak var taskCompletionButton: UIButton!
+    @IBOutlet weak var taskCompletionButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var taskCompletionLabel: UILabel!
+    @IBOutlet weak var taskInformationView: UIView!
     
     private struct Constants {
         static let signpostCell = "SignpostCollectionViewCell"
@@ -48,12 +53,28 @@ class DashboardViewController: UIViewController {
                 selectedTask = TimeTask()
             }
         }
+        taskCompletionLabel.text = selectedTask.taskCompletion
         taskDescription.text = selectedTask.taskDescription
         gradientView.firstColor = selectedTask.gradientFirstColor!
         gradientView.secondColor = selectedTask.gradientSecondColor!
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if Date().daysPastSinceTaskStartDate() > 7 {
+            taskCompletionView.isHidden = false
+            taskCompletionButtonHeight.constant = 35.0
+            taskInformationView.isHidden = true
+        }
+    }
+    
     private func setupUI() {
+        taskCompletionButton.layer.borderColor = UIColor.white.cgColor
+        taskCompletionButton.layer.backgroundColor = UIColor.init(white: 1.0, alpha: 0.2).cgColor
+        taskCompletionButton.layer.cornerRadius = 4.0
+        taskCompletionButton.layer.borderWidth = 1
+        
         roundedTop.layer.cornerRadius = 8
         roundedTop.layer.shadowColor = Constants.shadowColor
         roundedTop.layer.shadowRadius = Constants.shadowRadius
@@ -62,6 +83,27 @@ class DashboardViewController: UIViewController {
         
         aimImageView.image = aimImageView.image?.withRenderingMode(.alwaysTemplate)
         aimImageView.tintColor = .white
+    }
+    
+    @IBAction func taskCompletionButtonTapped(_ sender: Any) {
+        resetFlags()
+        let entryLogic = EntryLogic()
+        navigationController?.present(entryLogic.intialViewContoller(), animated: true, completion: nil)
+    }
+
+    private func resetFlags() {
+        // Reset flags in preparation for the user to complete the full 10 questions again
+        UserDefaults.standard.set(false, forKey: EntryLogicConstants.allQuestionsAnswered)
+        UserDefaults.standard.removeObject(forKey: EntryLogicConstants.dailyQuestionsAnsweredDate)
+        UserDefaults.standard.removeObject(forKey: EntryLogicConstants.selectedTask)
+        UserDefaults.standard.removeObject(forKey: EntryLogicConstants.taskStartDate)
+        
+        // Remove values associated with Results
+        UserDefaults.standard.removeObject(forKey: ResultsViewController.Constants.controlResult)
+        UserDefaults.standard.removeObject(forKey: ResultsViewController.Constants.moneyResult)
+        UserDefaults.standard.removeObject(forKey: ResultsViewController.Constants.timeResult)
+        
+        UserDefaults.standard.synchronize()
     }
 }
 

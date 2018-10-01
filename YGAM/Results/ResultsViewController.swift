@@ -30,7 +30,7 @@ class ResultsViewController: UIViewController {
         }
     }
     
-    private struct Constants {
+    public struct Constants {
         static let controlResult = "ControlResult"
         static let moneyResult = "MoneyResult"
         static let timeResult = "TimeResult"
@@ -130,7 +130,8 @@ class ResultsViewController: UIViewController {
     private func setTask(task: TaskIdentifier) {
         UserDefaults.standard.setValue(task.rawValue, forKey: EntryLogicConstants.selectedTask)
         // Dependent on notifications
-        UserDefaults.standard.setValue(task.rawValue, forKey: EntryLogicConstants.taskStartDate)
+        Date().save(as: EntryLogicConstants.taskStartDate, stripTime: true)
+        Date().save(as: EntryLogicConstants.dailyQuestionsAnsweredDate)
     }
     
     private func scheduleNotifications(`for` task: TaskIdentifier) {
@@ -152,9 +153,8 @@ class ResultsViewController: UIViewController {
     
     // MARK: - Notification Creation
     private func createNotifications() {
-//        let numberOfSecondsInADay: Double = 86400
-        let numberOfSecondsInADay: Double = 10
-        let numberOfDays = 3
+        let numberOfSecondsInADay: Double = 86400
+        let numberOfDays = 7
         for i in 1...numberOfDays {
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(i) * numberOfSecondsInADay, repeats: false)
             let request = UNNotificationRequest(identifier: "\(i)", content: self.notificationContent(), trigger: trigger)
