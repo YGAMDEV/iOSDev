@@ -59,6 +59,9 @@
           "text": "Browsing"
         },
         {
+          "text": "Paid work"
+        },
+        {
           "text": "Other"
         }
       ],
@@ -93,6 +96,9 @@
         },
         {
           "text": "Progression"
+        },
+        {
+          "text": "Earn money"
         },
         {
           "text": "Other"
@@ -148,7 +154,7 @@
       "id": "5",
       "type": "single",
       "text": "What did you spend the majority of your time doing?",
-      "answersFromQuestion": "3",
+      "answersFromQuestion": "2",
       "minSelections": 1,
       "completeAction": {
         "type": "question",
@@ -185,7 +191,7 @@
           "text": "Yes, I was within budget",
             "action": {
               "type": "question",
-              "value": "8"
+              "value": "9"
         }
         },
         {
@@ -291,7 +297,7 @@
           "text": "I feel vulnerable"
         },
         {
-          "text": "I made a profit"
+          "text": "Neglected friends/family"
         },
         {
           "text": "My work as been affected"

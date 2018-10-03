@@ -169,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				4582659D215E5A5E00F92002 /* SignpostingList.swift */,
+				45A79783215DFFF500EDD507 /* Signpost.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				45A79781215DFF3500EDD507 /* Task.swift */,
-				45A79783215DFFF500EDD507 /* Signpost.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,10 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				F4C767B820C1855100B5DB77 /* Dashboard.storyboard */,
-				45A79788215E20D000EDD507 /* SignpostCollectionViewCell.swift */,
-				45A79789215E20D000EDD507 /* SignpostCollectionViewCell.xib */,
-				45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */,
-				45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -396,6 +392,10 @@
 		F4C767C220C189B600B5DB77 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45A79788215E20D000EDD507 /* SignpostCollectionViewCell.swift */,
+				45A79789215E20D000EDD507 /* SignpostCollectionViewCell.xib */,
+				45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */,
+				45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */,
 				F4C767C320C189D800B5DB77 /* Signposting.storyboard */,
 			);
 			path = Views;

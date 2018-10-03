@@ -24,11 +24,11 @@ class SignpostingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        signpostCollectionView.register(UINib(nibName: Constants.signpostCell, bundle: nil), forCellWithReuseIdentifier: Constants.signpostCell)
-        
         if let flowLayout = signpostCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         }
+        
+        signpostCollectionView.register(UINib(nibName: Constants.signpostCell, bundle: nil), forCellWithReuseIdentifier: Constants.signpostCell)
         
         roundedTop.layer.cornerRadius = 8
         roundedTop.layer.shadowColor = Constants.shadowColor

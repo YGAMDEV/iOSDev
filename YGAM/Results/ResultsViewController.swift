@@ -12,12 +12,15 @@ import UserNotifications
 class ResultsViewController: UIViewController {
 
     @IBOutlet weak var controlLabel: UILabel!
+    @IBOutlet weak var controlImage: UIImageView!
     @IBOutlet weak var controlProgressView: ProgressView!
     @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var moneyImage: UIImageView!
     @IBOutlet weak var moneyProgressView: ProgressView!
     @IBOutlet weak var moneyView: UIView!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var timeImage: UIImageView!
     @IBOutlet weak var timeProgressView: ProgressView!
     @IBOutlet weak var timeView: UIView!
     
@@ -95,6 +98,10 @@ class ResultsViewController: UIViewController {
         controlLabel.text = "\(controlResult)%"
         moneyLabel.text = "\(moneyResult)%"
         timeLabel.text = "\(timeResult)%"
+        
+        image(for: controlImage, percent: controlResult)
+        image(for: moneyImage, percent: moneyResult)
+        image(for: timeImage, percent: timeResult)
         
         let borderColor = UIColor(red: 227/255, green: 227/255, blue: 227/255, alpha: 1.0).cgColor
         controlView.layer.borderColor = borderColor
@@ -209,6 +216,24 @@ class ResultsViewController: UIViewController {
     }
     
     // MARK: - Helpers
+    private func image(`for` imageView: UIImageView, percent: Int) {
+        var tintColor: UIColor!
+        switch percent {
+        case 0..<35:
+            imageView.image = #imageLiteral(resourceName: "Accept")
+            tintColor = UIColor(red: 78/255, green: 255/255, blue: 183/255, alpha: 1.0)
+        case 35..<69:
+            imageView.image = #imageLiteral(resourceName: "Neutral")
+            tintColor = UIColor(red: 255/255, green: 148/255, blue: 0/255, alpha: 1.0)
+        default:
+            imageView.image = #imageLiteral(resourceName: "Close")
+            tintColor = UIColor(red: 255/255, green: 68/255, blue: 17/255, alpha: 1.0)
+        }
+    
+        imageView.image = imageView.image?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = tintColor
+    }
+    
     private func questionFor(ID questionID: String) -> Question? {
         return questions.first(where: { $0.id == questionID })
     }

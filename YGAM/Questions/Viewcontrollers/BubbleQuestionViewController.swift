@@ -279,7 +279,7 @@ extension BubbleQuestionViewController: BubbleAnswerViewDelegate {
         for adjacentView in views {
             let pushBehavior = UIPushBehavior(items: [adjacentView], mode: .instantaneous)
             pushBehavior.pushDirection = vector(selectedAnswer: answerView, to: adjacentView)
-            pushBehavior.magnitude = 0.08
+            pushBehavior.magnitude = 0.04
             pushBehavior.active = true
             pushBehavior.action = {
                 if !pushBehavior.active {

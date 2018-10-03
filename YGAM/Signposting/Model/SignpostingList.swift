@@ -40,7 +40,7 @@ class SignpostingList: NSObject {
                  url: URL(string: "https://www.samaritans.org/")),
         Signpost(image: #imageLiteral(resourceName: "YGAM_400x400"),
                  heading: "Informing, educatind and safeguarding young people against problematic gambling & social gaming",
-                 body: "Informing, educatind and safeguarding young people against problematic gambling & social gaming",
+                 body: "Informing, educating and safeguarding young people against problematic gambling & social gaming",
                  url: URL(string: "http://www.ygam.org/")),
         Signpost(image: #imageLiteral(resourceName: "Money_advice_service_400x400"),
                  heading: "Free and impartial money advice, set up by the UK government",

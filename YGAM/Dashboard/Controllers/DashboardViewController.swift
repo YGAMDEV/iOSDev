@@ -17,8 +17,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var activityHeading: UILabel!
     @IBOutlet weak var signpostCollectionView: UICollectionView!
     @IBOutlet weak var taskCompletionView: UIView!
+    @IBOutlet weak var taskCompletionBottomAnchor: NSLayoutConstraint!
     @IBOutlet weak var taskCompletionButton: UIButton!
-    @IBOutlet weak var taskCompletionButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var taskCompletionLabel: UILabel!
     @IBOutlet weak var taskInformationView: UIView!
     
@@ -64,9 +64,15 @@ class DashboardViewController: UIViewController {
         
         if Date().daysPastSinceTaskStartDate() > 7 {
             taskCompletionView.isHidden = false
-            taskCompletionButtonHeight.constant = 35.0
             taskInformationView.isHidden = true
+        } else {
+            taskCompletionBottomAnchor?.isActive = false
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        signpostCollectionView.reloadData()
     }
     
     private func setupUI() {

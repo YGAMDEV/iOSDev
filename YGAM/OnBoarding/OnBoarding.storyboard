@@ -42,13 +42,13 @@
                                                         <rect key="frame" x="0.0" y="443" width="375" height="180"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-MU-SAz">
-                                                                <rect key="frame" x="40" y="34.5" width="295" height="111"/>
+                                                                <rect key="frame" x="32" y="14.5" width="311" height="151"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment>
                                                                         <string key="content">We all spend more time on our phones, tablets and consoles than we perhaps should. At times, this can make us feel a bit down. So Scrabit is here to help you get back control of your device usage. We want you to feel good, and have the tools to maintain a healty relationship with your devices.</string>
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Rubik-Regular"/>
+                                                                            <font key="NSFont" size="14" name="Rubik-Regular"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -60,8 +60,8 @@
                                                         <constraints>
                                                             <constraint firstItem="Ztd-MU-SAz" firstAttribute="centerY" secondItem="afh-vE-r8g" secondAttribute="centerY" id="9PB-Tl-bYu"/>
                                                             <constraint firstAttribute="height" constant="180" id="BAQ-vy-Q5I"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ztd-MU-SAz" secondAttribute="trailing" constant="40" id="tEc-11-g9p"/>
-                                                            <constraint firstItem="Ztd-MU-SAz" firstAttribute="leading" secondItem="afh-vE-r8g" secondAttribute="leading" constant="40" id="vdy-cg-Dwn"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ztd-MU-SAz" secondAttribute="trailing" constant="32" id="tEc-11-g9p"/>
+                                                            <constraint firstItem="Ztd-MU-SAz" firstAttribute="leading" secondItem="afh-vE-r8g" secondAttribute="leading" constant="32" id="vdy-cg-Dwn"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7F-nd-7mw" userLabel="LogoContainer">
@@ -113,19 +113,19 @@
                                                         <rect key="frame" x="0.0" y="443" width="375" height="180"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH4-eD-yNh">
-                                                                <rect key="frame" x="40" y="84" width="295" height="37"/>
+                                                                <rect key="frame" x="40" y="84" width="295" height="43.5"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="Answer 10 questions to get a tailored summary of your activity and habits">
+                                                                    <fragment content="Answer a few simple questions to get a tailored summary of your activity and habits">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Rubik-Light"/>
+                                                                            <font key="NSFont" size="14" name="Rubik-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get a glimpse into how your habits add up" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1D-GX-WLT">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get a glimpse into your device usage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1D-GX-WLT">
                                                                 <rect key="frame" x="40" y="30" width="295" height="43"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                                                 <nil key="textColor"/>
@@ -185,19 +185,19 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-kU-oSp" userLabel="TextBackground">
                                                         <rect key="frame" x="0.0" y="443" width="375" height="180"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete tasks and help improve your habits" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9s-lu-K3v">
-                                                                <rect key="frame" x="40" y="30" width="295" height="43"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a targeted goal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9s-lu-K3v">
+                                                                <rect key="frame" x="40" y="30" width="295" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-XH-PHb">
-                                                                <rect key="frame" x="40" y="84" width="295" height="37"/>
+                                                                <rect key="frame" x="40" y="62.5" width="295" height="65"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="Answer 10 questions to get a tailored summary of your activity and habits">
+                                                                    <fragment content="Based on your personal summary, select a behaviour to improve over the course of a week">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Rubik-Light"/>
+                                                                            <font key="NSFont" size="14" name="Rubik-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -258,19 +258,19 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5U-yb-bfW" userLabel="TextBackground">
                                                         <rect key="frame" x="0.0" y="443" width="375" height="180"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of your task progression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-hz-bGk">
-                                                                <rect key="frame" x="40" y="30" width="295" height="43"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll help you keep focussed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-hz-bGk">
+                                                                <rect key="frame" x="40" y="30" width="295" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzC-Lv-kfv">
-                                                                <rect key="frame" x="40" y="84" width="295" height="37"/>
+                                                                <rect key="frame" x="40" y="62.5" width="295" height="43.5"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="Answer 10 questions to get a tailored summary of your activity and habits">
+                                                                    <fragment content="Track your progress daily, and view tips that will help you achieve your goal">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Rubik-Light"/>
+                                                                            <font key="NSFont" size="14" name="Rubik-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -338,12 +338,12 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWE-KU-sgZ">
-                                                                <rect key="frame" x="40" y="62" width="295" height="37"/>
+                                                                <rect key="frame" x="40" y="62" width="295" height="43.5"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="Answer 10 questions to get a tailored summary of your activity and habits">
+                                                                    <fragment content="Receive daily reminders of your goal to stay on track for the whole week">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Rubik-Light"/>
+                                                                            <font key="NSFont" size="14" name="Rubik-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -506,9 +506,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGO-ZZ-vqE">
-                                        <rect key="frame" x="318" y="7" width="37" height="30"/>
+                                        <rect key="frame" x="297" y="7" width="58" height="30"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
-                                        <state key="normal" title="Done">
+                                        <state key="normal" title="Let's go!">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
