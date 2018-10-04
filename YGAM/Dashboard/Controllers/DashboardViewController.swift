@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class DashboardViewController: UIViewController {
 
@@ -15,6 +16,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var roundedTop: UIView!
     @IBOutlet weak var gradientView: GradientView!
     @IBOutlet weak var activityHeading: UILabel!
+    @IBOutlet weak var chartView: LineChartView!
+    @IBOutlet weak var chartViewContainerHeight: NSLayoutConstraint!
     @IBOutlet weak var signpostCollectionView: UICollectionView!
     @IBOutlet weak var taskCompletionView: UIView!
     @IBOutlet weak var taskCompletionBottomAnchor: NSLayoutConstraint!
@@ -89,6 +92,103 @@ class DashboardViewController: UIViewController {
         
         aimImageView.image = aimImageView.image?.withRenderingMode(.alwaysTemplate)
         aimImageView.tintColor = .white
+        
+        setupChart()
+    }
+    
+    private func setupChart() {
+        guard let savedResults = UserDefaults.standard.array(forKey: DailyResultsConstants.dailyResults) as? [[String: Any]] else {
+            chartViewContainerHeight.constant = 0
+            return
+        }
+        
+        let chartResults = savedResults.map { ChartDataEntry(x: $0[DailyResultsConstants.day] as! Double, y: $0[DailyResultsConstants.value] as! Double, icon: UIImage(named: $0[DailyResultsConstants.imageName] as! String)!) }
+        
+        let line = LineChartDataSet(values: chartResults, label: nil)
+        line.colors = [NSUIColor.white]
+        
+        // Removes the circle at each point
+        line.drawCirclesEnabled = false
+
+        // Remove values on each point
+        line.drawValuesEnabled = false
+
+        // Make the line rounded
+        line.mode = .cubicBezier
+        
+        // Set the line width and fill colour under the line
+        line.lineWidth = 1
+        line.fill = Fill(color: .init(white: 1.0, alpha: 0.4))
+        line.drawFilledEnabled = true
+        
+        let data = LineChartData()
+        data.addDataSet(line)
+        
+        chartView.pinchZoomEnabled = false
+        chartView.autoScaleMinMaxEnabled = false
+        
+        // Turn off gridlines on xAxis
+        chartView.xAxis.drawGridLinesEnabled = false
+        chartView.leftAxis.drawGridLinesEnabled = false
+        
+        // Set the label position to be at the bottom of the graph
+        chartView.xAxis.labelPosition = .bottom
+        
+        // Turn off the right axis, don't draw the left axis
+        chartView.rightAxis.enabled = false
+        chartView.leftAxis.drawAxisLineEnabled = false
+        chartView.leftAxis.drawLabelsEnabled = false
+        
+        // Set the yAxis max to 100 and min to 0
+        chartView.leftAxis.axisMaximum = 100
+        chartView.leftAxis.axisMinimum = 0
+        
+        chartView.xAxis.axisMinimum = 1
+        chartView.xAxis.axisMaximum = 7
+        chartView.xAxis.axisLineColor = .white
+        chartView.xAxis.axisLineWidth = 1
+        chartView.xAxis.labelFont = UIFont(name: "Rubik", size: 8.0)!
+        chartView.xAxis.labelTextColor = .white
+        
+        // Turn off description
+        chartView.chartDescription?.enabled = false
+        
+        // Turn off legend
+        chartView.legend.enabled = false
+        
+        chartView.animate(yAxisDuration: 1.5)
+        
+        
+        //        let goodLimit = ChartLimitLine(limit: 34)
+        //        goodLimit.lineColor = .green
+        //        goodLimit.lineWidth = 1
+        //
+        //        let midLimit = ChartLimitLine(limit: 68)
+        //        midLimit.lineColor = .orange
+        //        midLimit.lineWidth = 1
+        //
+        //        let badLimit = ChartLimitLine(limit: 100)
+        //        badLimit.lineColor = .red
+        //        badLimit.lineWidth = 1
+        //
+        //        chartView.leftAxis.addLimitLine(goodLimit)
+        //        chartView.leftAxis.addLimitLine(midLimit)
+        //        chartView.leftAxis.addLimitLine(badLimit)
+        
+//        let midLimit = ChartLimitLine(limit: 34)
+//        midLimit.lineColor = .orange
+//        midLimit.lineWidth = 1
+//
+//        let badLimit = ChartLimitLine(limit: 68)
+//        badLimit.lineColor = .red
+//        badLimit.lineWidth = 1
+//
+//        chartView.leftAxis.addLimitLine(midLimit)
+//        chartView.leftAxis.addLimitLine(badLimit)
+        
+        
+        // Set that data
+        chartView.data = data
     }
     
     @IBAction func taskCompletionButtonTapped(_ sender: Any) {

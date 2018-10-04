@@ -159,8 +159,9 @@ class BubbleQuestionViewController: UIViewController {
             }
             
             // The user is currently doing their daily task questions
-            performSegue(withIdentifier: "DashboardSegue", sender: self)
+            DailyResults().saveData(day: Date().daysPastSinceTaskStartDate(), answers: answers, questions: questions)
             Date().save(as: EntryLogicConstants.dailyQuestionsAnsweredDate)
+            performSegue(withIdentifier: "DashboardSegue", sender: self)
             
             // Cancel any notifications for today
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["\(Date().daysPastSinceTaskStartDate())"])

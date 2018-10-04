@@ -41,6 +41,7 @@
 		45A7978E215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */; };
 		45A7978F215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */; };
 		45A79791215E42AB00EDD507 /* InfoViewAbove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A79790215E42AA00EDD507 /* InfoViewAbove.swift */; };
+		45B730AD21669B6E005CD77F /* DailyResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B730AC21669B6E005CD77F /* DailyResults.swift */; };
 		45CB6D04216201160083D8D0 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB6D03216201160083D8D0 /* DateHelper.swift */; };
 		45E957A320AC3E4A00A01EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957A220AC3E4A00A01EB0 /* AppDelegate.swift */; };
 		45E957AA20AC3E4C00A01EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E957A920AC3E4C00A01EB0 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		45E957C220AC415300A01EB0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E957C120AC415300A01EB0 /* Questions.swift */; };
 		45FEE98D20EA7BC60053FA4F /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FEE98C20EA7BC60053FA4F /* OnBoarding.storyboard */; };
 		45FEE99320EA7DAB0053FA4F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEE99220EA7DAB0053FA4F /* OnBoardingViewController.swift */; };
+		C9EFD910CE1BE4307A18E790 /* Pods_YGAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EB2BA52224CD103E8CA69E /* Pods_YGAM.framework */; };
 		F42ED15620F8DFC40084D404 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED15520F8DFC40084D404 /* ChartViewController.swift */; };
 		F42ED1BA20F8E1430084D404 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED18C20F8E1430084D404 /* ChartSeries.swift */; };
 		F42ED1BB20F8E1430084D404 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42ED18D20F8E1430084D404 /* Chart.swift */; };
@@ -66,6 +68,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AE1B1F65A5682C57E4A202A /* Pods-YGAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YGAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-YGAM/Pods-YGAM.release.xcconfig"; sourceTree = "<group>"; };
+		26EB2BA52224CD103E8CA69E /* Pods_YGAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YGAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D9B4F6CED16BFB64561A854 /* Pods-YGAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YGAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YGAM/Pods-YGAM.debug.xcconfig"; sourceTree = "<group>"; };
 		4527C9D620C130C200590790 /* BubbleQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleQuestionViewController.swift; sourceTree = "<group>"; };
 		4527C9DA20C138B900590790 /* BubbleAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleAnswerView.swift; sourceTree = "<group>"; };
 		4527C9DE20C138D200590790 /* BubbleAnswerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleAnswerView.xib; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 		45A7978C215E319800EDD507 /* SignpostViewAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostViewAllCollectionViewCell.swift; sourceTree = "<group>"; };
 		45A7978D215E319800EDD507 /* SignpostViewAllCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignpostViewAllCollectionViewCell.xib; sourceTree = "<group>"; };
 		45A79790215E42AA00EDD507 /* InfoViewAbove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewAbove.swift; sourceTree = "<group>"; };
+		45B730AC21669B6E005CD77F /* DailyResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyResults.swift; sourceTree = "<group>"; };
 		45CB6D03216201160083D8D0 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		45E9579F20AC3E4A00A01EB0 /* YGAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YGAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E957A220AC3E4A00A01EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,12 +137,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9EFD910CE1BE4307A18E790 /* Pods_YGAM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4046A6EB74059E849790AC79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D9B4F6CED16BFB64561A854 /* Pods-YGAM.debug.xcconfig */,
+				1AE1B1F65A5682C57E4A202A /* Pods-YGAM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		452257A120C883A8007E00ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,11 +215,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		45B730AB21669B59005CD77F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45B730AC21669B6E005CD77F /* DailyResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		45E9579620AC3E4A00A01EB0 = {
 			isa = PBXGroup;
 			children = (
 				45E957A120AC3E4A00A01EB0 /* YGAM */,
 				45E957A020AC3E4A00A01EB0 /* Products */,
+				4046A6EB74059E849790AC79 /* Pods */,
+				AC8A40D8F258632C28EADD77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,6 +324,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		AC8A40D8F258632C28EADD77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26EB2BA52224CD103E8CA69E /* Pods_YGAM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F42ED15720F8DFCD0084D404 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +371,7 @@
 		F4C767B320C184A200B5DB77 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				45B730AB21669B59005CD77F /* Models */,
 				4542F85920DCDCC70022CC09 /* Views */,
 				F4C767BC20C187F900B5DB77 /* Viewcontrollers */,
 				F4C767BD20C1880700B5DB77 /* Storyboard */,
@@ -432,9 +467,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45E957B120AC3E4C00A01EB0 /* Build configuration list for PBXNativeTarget "YGAM" */;
 			buildPhases = (
+				FFBF6D26C675DE927D70D68D /* [CP] Check Pods Manifest.lock */,
 				45E9579B20AC3E4A00A01EB0 /* Sources */,
 				45E9579C20AC3E4A00A01EB0 /* Frameworks */,
 				45E9579D20AC3E4A00A01EB0 /* Resources */,
+				53E74E4E78AC1F15B69E681B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -518,6 +555,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53E74E4E78AC1F15B69E681B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YGAM/Pods-YGAM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YGAM/Pods-YGAM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFBF6D26C675DE927D70D68D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YGAM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45E9579B20AC3E4A00A01EB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -541,6 +617,7 @@
 				45CB6D04216201160083D8D0 /* DateHelper.swift in Sources */,
 				4582659E215E5A5E00F92002 /* SignpostingList.swift in Sources */,
 				45A79777215C074100EDD507 /* GradientView.swift in Sources */,
+				45B730AD21669B6E005CD77F /* DailyResults.swift in Sources */,
 				45FEE99320EA7DAB0053FA4F /* OnBoardingViewController.swift in Sources */,
 				45A2FC59215A1976007DC9B3 /* ResultsViewController.swift in Sources */,
 				F42ED1BC20F8E1430084D404 /* ChartColors.swift in Sources */,
@@ -687,6 +764,7 @@
 		};
 		45E957B220AC3E4C00A01EB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D9B4F6CED16BFB64561A854 /* Pods-YGAM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YGAM/YGAM.entitlements;
@@ -709,6 +787,7 @@
 		};
 		45E957B320AC3E4C00A01EB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE1B1F65A5682C57E4A202A /* Pods-YGAM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YGAM/YGAM.entitlements;
