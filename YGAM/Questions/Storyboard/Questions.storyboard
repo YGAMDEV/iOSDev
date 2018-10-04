@@ -143,10 +143,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="az7-QK-rUX" userLabel="InfoView" customClass="InfoViewAbove" customModule="YGAM" customModuleProvider="target">
-                                <rect key="frame" x="121.5" y="120.5" width="132" height="33"/>
+                                <rect key="frame" x="69.5" y="120.5" width="236.5" height="33"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick one option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvM-Ip-uAZ" userLabel="Info Label">
-                                        <rect key="frame" x="16" y="8" width="100" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick one option to focus on first" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvM-Ip-uAZ" userLabel="Info Label">
+                                        <rect key="frame" x="16" y="8" width="204.5" height="17"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                         <color key="textColor" red="0.18823529411764706" green="0.14117647058823529" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -263,7 +263,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-Ua-HLw" userLabel="ContainerView">
-                                        <rect key="frame" x="104" y="15.5" width="215" height="61"/>
+                                        <rect key="frame" x="104" y="14.5" width="215" height="61"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYz-kh-Sg7">
                                                 <rect key="frame" x="0.0" y="24" width="215" height="37"/>

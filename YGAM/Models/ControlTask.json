@@ -55,7 +55,7 @@
     {
       "id": "3",
       "type": "multi",
-      "text": "Looking back at your activity, what has been the impact?",
+      "text": "How do you think you've been affected by using your devices?",
       "answers": [
         {
           "text": "I exercised my mind"
@@ -70,7 +70,7 @@
           "text": "I feel vulnerable"
         },
         {
-          "text": "I made a profit"
+          "text": "Neglected friends/family"
         },
         {
           "text": "My work as been affected"

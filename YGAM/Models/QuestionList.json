@@ -3,7 +3,7 @@
     {
       "id": "1",
       "type": "multi",
-      "text": "Did you use any of these devices yesterday?",
+      "text": "Which of these devices did you use yesterday?",
       "answers": [
         {
           "text": "Phone"
@@ -61,6 +61,9 @@
         {
           "text": "Paid work"
         },
+                  {
+                  "text": "Online shopping"
+                  },
         {
           "text": "Other"
         }
@@ -100,6 +103,9 @@
         {
           "text": "Earn money"
         },
+                  {
+                  "text": "To buy stuff"
+                  },
         {
           "text": "Other"
         }
@@ -185,7 +191,7 @@
     {
       "id": "7",
       "type": "single",
-      "text": "Can you afford that spend?",
+      "text": "Could you afford that spend?",
       "answers": [
         {
           "text": "Yes, I was within budget",
@@ -206,7 +212,7 @@
     {
       "id": "8",
       "type": "multi",
-      "text": "What was the impact of this spending?",
+      "text": "What was the impact of spending too much?",
       "answers": [
         {
           "text": "I'm stressed or concerned"
@@ -282,7 +288,7 @@
     {
       "id": "11",
       "type": "multi",
-      "text": "Looking back at your activity, what has been the impact?",
+      "text": "How do you think you've been affected by using your devices?",
       "answers": [
         {
           "text": "I exercised my mind"
