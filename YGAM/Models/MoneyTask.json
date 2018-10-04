@@ -8,15 +8,15 @@
                               {
                               "text": "Yes",
                               "action": {
-                              "type": "app",
-                              "value": "exit"
+                              "type": "question",
+                              "value": "2"
                               }
                               },
                               {
                               "text": "No",
                               "action": {
-                              "type": "question",
-                              "value": "2"
+                              "type": "app",
+                              "value": "exit"
                               }
                               }
                               ]
