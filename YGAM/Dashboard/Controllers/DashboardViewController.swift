@@ -127,6 +127,7 @@ class DashboardViewController: UIViewController {
         chartView.pinchZoomEnabled = false
         chartView.autoScaleMinMaxEnabled = false
         
+        
         // Turn off gridlines on xAxis
         chartView.xAxis.drawGridLinesEnabled = false
         chartView.leftAxis.drawGridLinesEnabled = false

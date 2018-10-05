@@ -496,7 +496,7 @@
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -767,9 +767,8 @@
 			baseConfigurationReference = 2D9B4F6CED16BFB64561A854 /* Pods-YGAM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = YGAM/YGAM.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N94Y33LN3H;
 				INFOPLIST_FILE = YGAM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -778,8 +777,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.YGAM.Scrabit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ca66f71c-1a5a-4a45-9a65-cdd63b6d3a08";
-				PROVISIONING_PROFILE_SPECIFIER = "YGAM Development";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -790,10 +789,9 @@
 			baseConfigurationReference = 1AE1B1F65A5682C57E4A202A /* Pods-YGAM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = YGAM/YGAM.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N94Y33LN3H;
 				INFOPLIST_FILE = YGAM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
