@@ -65,7 +65,7 @@ class DashboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if Date().daysPastSinceTaskStartDate() > 7 {
+        if Date().daysPastSinceTaskStartDate() >= 7 {
             taskCompletionView.isHidden = false
             taskInformationView.isHidden = true
         } else {
@@ -208,6 +208,7 @@ class DashboardViewController: UIViewController {
         UserDefaults.standard.removeObject(forKey: ResultsViewController.Constants.controlResult)
         UserDefaults.standard.removeObject(forKey: ResultsViewController.Constants.moneyResult)
         UserDefaults.standard.removeObject(forKey: ResultsViewController.Constants.timeResult)
+        UserDefaults.standard.removeObject(forKey: DailyResultsConstants.dailyResults)
         
         UserDefaults.standard.synchronize()
     }
