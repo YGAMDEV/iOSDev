@@ -46,7 +46,7 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-Sb-kC0" userLabel="ChartContainer">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-Sb-kC0" userLabel="ChartContainer">
                                         <rect key="frame" x="16" y="69.666666666666657" width="343" height="125"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-FV-F6l" userLabel="LineChart" customClass="LineChartView" customModule="Charts">
