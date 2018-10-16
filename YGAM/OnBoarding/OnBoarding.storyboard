@@ -45,7 +45,7 @@
                                                                 <rect key="frame" x="32" y="14.5" width="311" height="151"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment>
-                                                                        <string key="content">We all spend more time on our phones, tablets and consoles than we perhaps should. At times, this can make us feel a bit down. So Scrabit is here to help you get back control of your device usage. We want you to feel good, and have the tools to maintain a healty relationship with your devices.</string>
+                                                                        <string key="content">We all spend more time on our phones, tablets and consoles than we perhaps should. At times, this can make us feel a bit down. So Scrabit is here to help you get back control of your device usage. We want you to feel good, and have the tools to maintain a healthy relationship with your devices.</string>
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Rubik-Regular"/>
@@ -109,6 +109,9 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding 1" translatesAutoresizingMaskIntoConstraints="NO" id="bB6-BG-xDK">
+                                                        <rect key="frame" x="52" y="52" width="270" height="506"/>
+                                                    </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSG-qj-lF7" userLabel="TextBackground">
                                                         <rect key="frame" x="0.0" y="443" width="375" height="180"/>
                                                         <subviews>
@@ -158,7 +161,9 @@
                                                     <constraint firstItem="d7M-qH-Fed" firstAttribute="leading" secondItem="PbG-Il-U5m" secondAttribute="leading" id="V2l-JA-LPR"/>
                                                     <constraint firstAttribute="trailing" secondItem="d7M-qH-Fed" secondAttribute="trailing" id="V2q-A7-6I9"/>
                                                     <constraint firstItem="VSG-qj-lF7" firstAttribute="leading" secondItem="PbG-Il-U5m" secondAttribute="leading" id="bOj-l9-ACQ"/>
+                                                    <constraint firstItem="VSG-qj-lF7" firstAttribute="top" secondItem="bB6-BG-xDK" secondAttribute="bottom" priority="250" id="box-pW-W5N"/>
                                                     <constraint firstItem="iWn-Cm-meG" firstAttribute="top" secondItem="PbG-Il-U5m" secondAttribute="top" id="inx-4x-njv"/>
+                                                    <constraint firstItem="bB6-BG-xDK" firstAttribute="centerX" secondItem="PbG-Il-U5m" secondAttribute="centerX" id="lC5-A7-Vnh"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaJ-A1-t90" userLabel="Results">
@@ -182,6 +187,9 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding 2" translatesAutoresizingMaskIntoConstraints="NO" id="qsF-2E-xhh">
+                                                        <rect key="frame" x="52" y="52" width="270" height="506"/>
+                                                    </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-kU-oSp" userLabel="TextBackground">
                                                         <rect key="frame" x="0.0" y="443" width="375" height="180"/>
                                                         <subviews>
@@ -229,9 +237,11 @@
                                                     <constraint firstAttribute="trailing" secondItem="m8X-xM-xW0" secondAttribute="trailing" id="OsH-zc-gU6"/>
                                                     <constraint firstItem="m8X-xM-xW0" firstAttribute="leading" secondItem="UaJ-A1-t90" secondAttribute="leading" id="RP7-Nk-Nxn"/>
                                                     <constraint firstItem="dHH-kU-oSp" firstAttribute="leading" secondItem="UaJ-A1-t90" secondAttribute="leading" id="Suw-qv-dmv"/>
+                                                    <constraint firstItem="qsF-2E-xhh" firstAttribute="bottom" secondItem="dHH-kU-oSp" secondAttribute="bottom" priority="250" id="a63-RQ-lFN"/>
                                                     <constraint firstItem="r42-2u-bcU" firstAttribute="top" secondItem="UaJ-A1-t90" secondAttribute="top" id="dt6-2s-RHa"/>
                                                     <constraint firstItem="r42-2u-bcU" firstAttribute="leading" secondItem="UaJ-A1-t90" secondAttribute="leading" id="dxo-3O-fhl"/>
                                                     <constraint firstAttribute="trailing" secondItem="dHH-kU-oSp" secondAttribute="trailing" id="h7P-ZF-Ljj"/>
+                                                    <constraint firstItem="qsF-2E-xhh" firstAttribute="centerX" secondItem="UaJ-A1-t90" secondAttribute="centerX" id="lSa-LF-mes"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nw-1j-Cc8" userLabel="Tasks">
@@ -255,6 +265,9 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding 3" translatesAutoresizingMaskIntoConstraints="NO" id="lgA-2v-t6Y">
+                                                        <rect key="frame" x="52" y="52" width="270" height="506"/>
+                                                    </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5U-yb-bfW" userLabel="TextBackground">
                                                         <rect key="frame" x="0.0" y="443" width="375" height="180"/>
                                                         <subviews>
@@ -301,10 +314,12 @@
                                                     <constraint firstItem="kd0-Tu-pgj" firstAttribute="top" secondItem="8Nw-1j-Cc8" secondAttribute="top" id="SAD-35-Aqf"/>
                                                     <constraint firstItem="pt5-CH-EXJ" firstAttribute="leading" secondItem="8Nw-1j-Cc8" secondAttribute="leading" id="SJB-xb-9oU"/>
                                                     <constraint firstItem="t5U-yb-bfW" firstAttribute="leading" secondItem="8Nw-1j-Cc8" secondAttribute="leading" id="XNH-3S-RG5"/>
+                                                    <constraint firstItem="lgA-2v-t6Y" firstAttribute="bottom" secondItem="t5U-yb-bfW" secondAttribute="bottom" priority="250" id="c2V-kC-GFg"/>
                                                     <constraint firstItem="kd0-Tu-pgj" firstAttribute="leading" secondItem="8Nw-1j-Cc8" secondAttribute="leading" id="efU-yZ-7IN"/>
                                                     <constraint firstItem="t5U-yb-bfW" firstAttribute="top" secondItem="kd0-Tu-pgj" secondAttribute="bottom" id="pUB-sU-rHE"/>
                                                     <constraint firstAttribute="trailing" secondItem="t5U-yb-bfW" secondAttribute="trailing" id="qJT-FR-DIN"/>
                                                     <constraint firstItem="pt5-CH-EXJ" firstAttribute="top" secondItem="8Nw-1j-Cc8" secondAttribute="top" id="uKd-el-x0g"/>
+                                                    <constraint firstItem="lgA-2v-t6Y" firstAttribute="centerX" secondItem="8Nw-1j-Cc8" secondAttribute="centerX" id="wVM-dn-7Gb"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jp-fp-W3H" userLabel="Notifications">
@@ -548,6 +563,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bjx-D3-bIZ" firstAttribute="height" secondItem="l35-w0-hF0" secondAttribute="height" id="0um-qS-ICg"/>
+                            <constraint firstItem="joi-XR-QHz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qsF-2E-xhh" secondAttribute="top" constant="-32" id="4Md-zf-QoI"/>
                             <constraint firstItem="afh-vE-r8g" firstAttribute="bottom" secondItem="OxL-8K-Kn6" secondAttribute="bottom" id="5ml-VD-E8h"/>
                             <constraint firstItem="IAs-Lk-8Wr" firstAttribute="bottom" secondItem="OxL-8K-Kn6" secondAttribute="bottom" id="8zy-xC-A9w"/>
                             <constraint firstItem="bjx-D3-bIZ" firstAttribute="top" secondItem="l35-w0-hF0" secondAttribute="top" id="96C-ld-6DD"/>
@@ -559,6 +575,8 @@
                             <constraint firstItem="joi-XR-QHz" firstAttribute="bottom" secondItem="8ke-aO-PbS" secondAttribute="bottom" id="HvP-CE-ZHX"/>
                             <constraint firstAttribute="trailing" secondItem="Yoa-wo-el0" secondAttribute="trailing" id="ICZ-eA-Fx8"/>
                             <constraint firstItem="bjx-D3-bIZ" firstAttribute="width" secondItem="l35-w0-hF0" secondAttribute="width" priority="250" id="KWH-Ye-z51"/>
+                            <constraint firstItem="joi-XR-QHz" firstAttribute="top" relation="lessThanOrEqual" secondItem="bB6-BG-xDK" secondAttribute="top" constant="-32" id="M1y-zQ-vUc"/>
+                            <constraint firstItem="joi-XR-QHz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lgA-2v-t6Y" secondAttribute="top" constant="-32" id="NMW-jY-nff"/>
                             <constraint firstItem="joi-XR-QHz" firstAttribute="bottom" secondItem="m8X-xM-xW0" secondAttribute="bottom" id="QVy-WS-DhJ"/>
                             <constraint firstItem="2Jp-fp-W3H" firstAttribute="width" secondItem="l35-w0-hF0" secondAttribute="width" id="T7B-xI-9k8"/>
                             <constraint firstItem="gfe-4x-zta" firstAttribute="leading" secondItem="joi-XR-QHz" secondAttribute="leading" id="Ugd-B9-61j"/>
@@ -608,6 +626,9 @@
         <image name="App_icon_backdrop" width="162" height="162"/>
         <image name="Keyboard Arrow Left" width="24" height="24"/>
         <image name="Keyboard Arrow Right" width="24" height="24"/>
+        <image name="Onboarding 1" width="270" height="506"/>
+        <image name="Onboarding 2" width="270" height="506"/>
+        <image name="Onboarding 3" width="270" height="506"/>
         <image name="Scrabit Logo" width="98" height="140"/>
     </resources>
 </document>
