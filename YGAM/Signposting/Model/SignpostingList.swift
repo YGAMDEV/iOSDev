@@ -46,10 +46,13 @@ class SignpostingList: NSObject {
                  heading: "Free and impartial money advice, set up by the UK government",
                  body: "We change lives by helping people make the most of their money.",
                  url: URL(string: "https://www.moneyadviceservice.org.uk/en")),
-        
         Signpost(image: #imageLiteral(resourceName: "Thinkyouknowlogo_400x400"),
                  heading: "Advice to help young people stay safe online",
                  body: "Thinkuknow is the education programme from CEOP, a UK organisation which protects children both online and offline.",
-                 url: URL(string: "https://www.thinkuknow.co.uk/"))
+                 url: URL(string: "https://www.thinkuknow.co.uk/")),
+        Signpost(image: #imageLiteral(resourceName: "ScreenTime"),
+                 heading: "Use Screen Time to get insights about how you use your device",
+                 body: "Screen Time — a new feature in iOS 12 — lets you know how much time you spend on apps, websites, and more. This way, you can make more informed decisions about how you use your devices, and set limits if you'd like to.",
+                 url: URL(string: "https://support.apple.com/en-gb/HT208982"))
     ]
 }

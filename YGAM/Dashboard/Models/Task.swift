@@ -38,7 +38,11 @@ class ControlTask: Task {
                       Signpost(image: #imageLiteral(resourceName: "NHS_400x400"),
                                heading: "Pay attention to the present moment",
                                body: "Take control of your health and wellbeing. Get medical advice, information about healthcare services and support for a healthy life.",
-                               url: URL(string: "https://www.nhs.uk/conditions/stress-anxiety-depression/mindfulness/"))
+                               url: URL(string: "https://www.nhs.uk/conditions/stress-anxiety-depression/mindfulness/")),
+                      Signpost(image: #imageLiteral(resourceName: "ScreenTime"),
+                               heading: "Understand your device usage and set limits",
+                               body: "Screen Time — a new feature in iOS 12 — lets you know how much time you spend on apps, websites, and more. This way, you can make more informed decisions about how you use your devices, and set limits if you'd like to.",
+                               url: URL(string: "https://support.apple.com/en-gb/HT208982"))
         ]
     }
 }
@@ -80,7 +84,11 @@ class TimeTask: Task {
                       Signpost(image: #imageLiteral(resourceName: "yound_minds_400x400"),
                                heading: "Take time out",
                                body: "We will make sure all young people get the best possible mental health support and have the resilience to overcome life's challenges.",
-                               url: URL(string: "https://youngminds.org.uk/find-help/looking-after-yourself/take-time-out/"))
+                               url: URL(string: "https://youngminds.org.uk/find-help/looking-after-yourself/take-time-out/")),
+                      Signpost(image: #imageLiteral(resourceName: "ScreenTime"),
+                               heading: "Understand your device usage and set limits",
+                               body: "Screen Time — a new feature in iOS 12 — lets you know how much time you spend on apps, websites, and more. This way, you can make more informed decisions about how you use your devices, and set limits if you'd like to.",
+                               url: URL(string: "https://support.apple.com/en-gb/HT208982"))
         ]
         
     }
