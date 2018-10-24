@@ -36,7 +36,9 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="76" id="8Qz-PY-t69"/>
                         <constraint firstAttribute="trailing" secondItem="wOJ-PR-ObS" secondAttribute="trailing" id="9i8-RC-EEI"/>
+                        <constraint firstAttribute="height" constant="24" id="GB6-Yk-sxb"/>
                         <constraint firstAttribute="bottom" secondItem="wOJ-PR-ObS" secondAttribute="bottom" id="Pgb-d8-S6m"/>
                         <constraint firstItem="JXb-qt-eeR" firstAttribute="leading" secondItem="kpg-4h-u3O" secondAttribute="leading" id="Svi-kP-d0u"/>
                         <constraint firstItem="wOJ-PR-ObS" firstAttribute="top" secondItem="kpg-4h-u3O" secondAttribute="top" id="XGp-wc-iOj"/>

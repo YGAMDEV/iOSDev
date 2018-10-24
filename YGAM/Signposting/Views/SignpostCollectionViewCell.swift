@@ -14,14 +14,14 @@ class SignpostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var body: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var horizontalRule: UIView!
+    @IBOutlet weak var cellWidthConstraint: NSLayoutConstraint!
     
     public func setup(signpost: Signpost) {
         title.text = signpost.heading
         body.text = signpost.body
         imageView.image = signpost.image
         
-        
-        imageView.image = signpost.image
+        cellWidthConstraint.constant = UIScreen.main.bounds.size.width
 
         let titleAttributedString = NSMutableAttributedString(string: signpost.heading!)
         let titleParagraphStyle = NSMutableParagraphStyle()

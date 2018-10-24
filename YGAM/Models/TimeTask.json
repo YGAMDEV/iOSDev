@@ -46,16 +46,13 @@
                   "text": "What did you do on your devices?",
                   "answers": [
                               {
-                              "text": "Academic Work"
+                              "text": "Work"
                               },
                               {
-                              "text": "Gaming Apps"
+                              "text": "Gaming"
                               },
                               {
                               "text": "Social Media"
-                              },
-                              {
-                              "text": "Online Gaming"
                               },
                               {
                               "text": "Messaging"
@@ -65,9 +62,6 @@
                               },
                               {
                               "text": "Browsing"
-                              },
-                              {
-                              "text": "Paid work"
                               },
                               {
                               "text": "Online shopping"
@@ -91,13 +85,7 @@
                               "text": "I exercised my mind"
                               },
                               {
-                              "text": "I learnt something new"
-                              },
-                              {
                               "text": "I've lied about my use"
-                              },
-                              {
-                              "text": "I feel vulnerable"
                               },
                               {
                               "text": "Neglected friends/family"
@@ -106,13 +94,10 @@
                               "text": "My work as been affected"
                               },
                               {
-                              "text": "I feel irritable"
+                              "text": "I feel lonely / vulnerable"
                               },
                               {
-                              "text": "I feel lonely"
-                              },
-                              {
-                              "text": "I feel tired"
+                              "text": "I feel tired / irritable"
                               },
                               {
                               "text": "I had fun"

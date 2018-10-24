@@ -57,39 +57,30 @@
       "type": "multi",
       "text": "How do you think you've been affected by using your devices?",
       "answers": [
-        {
-          "text": "I exercised my mind"
-        },
-        {
-          "text": "I learnt something new"
-        },
-        {
-          "text": "I've lied about my use"
-        },
-        {
-          "text": "I feel vulnerable"
-        },
-        {
-          "text": "Neglected friends/family"
-        },
-        {
-          "text": "My work as been affected"
-        },
-        {
-          "text": "I feel irritable"
-        },
-        {
-          "text": "I feel lonely"
-        },
-        {
-          "text": "I feel tired"
-        },
-        {
-          "text": "I had fun"
-        },
-        {
-          "text": "I connected socially"
-        }
+                  {
+                  "text": "I exercised my mind"
+                  },
+                  {
+                  "text": "I've lied about my use"
+                  },
+                  {
+                  "text": "Neglected friends/family"
+                  },
+                  {
+                  "text": "My work as been affected"
+                  },
+                  {
+                  "text": "I feel lonely / vulnerable"
+                  },
+                  {
+                  "text": "I feel tired / irritable"
+                  },
+                  {
+                  "text": "I had fun"
+                  },
+                  {
+                  "text": "I connected socially"
+                  }
       ],
       "minSelections": 1,
       "completeAction": {

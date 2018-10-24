@@ -116,9 +116,9 @@
                                                         <rect key="frame" x="0.0" y="443" width="375" height="180"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH4-eD-yNh">
-                                                                <rect key="frame" x="40" y="84" width="295" height="43.5"/>
+                                                                <rect key="frame" x="40" y="84" width="295" height="65"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="Answer a few simple questions to get a tailored summary of your activity and habits">
+                                                                    <fragment content="Answer a few simple questions to get a tailored and private summary of your habits - no personal data leaves your device">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Rubik-Light"/>

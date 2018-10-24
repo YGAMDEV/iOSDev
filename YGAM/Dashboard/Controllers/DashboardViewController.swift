@@ -60,6 +60,7 @@ class DashboardViewController: UIViewController {
         taskDescription.text = selectedTask.taskDescription
         gradientView.firstColor = selectedTask.gradientFirstColor!
         gradientView.secondColor = selectedTask.gradientSecondColor!
+        gradientView.layer.cornerRadius = 2.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -158,35 +159,6 @@ class DashboardViewController: UIViewController {
         chartView.legend.enabled = false
         
         chartView.animate(yAxisDuration: 1.5)
-        
-        
-        //        let goodLimit = ChartLimitLine(limit: 34)
-        //        goodLimit.lineColor = .green
-        //        goodLimit.lineWidth = 1
-        //
-        //        let midLimit = ChartLimitLine(limit: 68)
-        //        midLimit.lineColor = .orange
-        //        midLimit.lineWidth = 1
-        //
-        //        let badLimit = ChartLimitLine(limit: 100)
-        //        badLimit.lineColor = .red
-        //        badLimit.lineWidth = 1
-        //
-        //        chartView.leftAxis.addLimitLine(goodLimit)
-        //        chartView.leftAxis.addLimitLine(midLimit)
-        //        chartView.leftAxis.addLimitLine(badLimit)
-        
-//        let midLimit = ChartLimitLine(limit: 34)
-//        midLimit.lineColor = .orange
-//        midLimit.lineWidth = 1
-//
-//        let badLimit = ChartLimitLine(limit: 68)
-//        badLimit.lineColor = .red
-//        badLimit.lineWidth = 1
-//
-//        chartView.leftAxis.addLimitLine(midLimit)
-//        chartView.leftAxis.addLimitLine(badLimit)
-        
         
         // Set that data
         chartView.data = data

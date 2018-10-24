@@ -71,12 +71,12 @@
                             <constraint firstAttribute="trailing" secondItem="ThZ-Kz-A4X" secondAttribute="trailing" constant="16" id="Joq-vo-VR7"/>
                             <constraint firstItem="BDN-eT-Gn5" firstAttribute="leading" secondItem="DBe-F1-ZBH" secondAttribute="leading" constant="16" id="QiJ-Lk-n34"/>
                             <constraint firstItem="ThZ-Kz-A4X" firstAttribute="top" secondItem="DBe-F1-ZBH" secondAttribute="top" constant="14" id="W1l-Qe-gbh"/>
+                            <constraint firstAttribute="width" constant="375" id="beG-ct-NcC"/>
                             <constraint firstItem="qgH-AX-0VS" firstAttribute="leading" secondItem="ThZ-Kz-A4X" secondAttribute="leading" id="dBy-bv-cTw"/>
                             <constraint firstItem="ThZ-Kz-A4X" firstAttribute="leading" secondItem="BDN-eT-Gn5" secondAttribute="trailing" constant="16" id="gsJ-Us-WDa"/>
                             <constraint firstAttribute="trailing" secondItem="6ZW-bS-3TN" secondAttribute="trailing" constant="16" id="iBL-Ow-KW6"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BDN-eT-Gn5" secondAttribute="bottom" constant="16" id="q85-AO-UeL"/>
                             <constraint firstItem="6ZW-bS-3TN" firstAttribute="leading" secondItem="ThZ-Kz-A4X" secondAttribute="leading" id="tdP-i0-p9t"/>
-                            <constraint firstAttribute="width" constant="375" id="wek-UE-kuP"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -91,6 +91,7 @@
             <size key="customSize" width="375" height="79"/>
             <connections>
                 <outlet property="body" destination="6ZW-bS-3TN" id="Pfs-4b-ImC"/>
+                <outlet property="cellWidthConstraint" destination="beG-ct-NcC" id="A1t-c4-iQY"/>
                 <outlet property="horizontalRule" destination="qgH-AX-0VS" id="XLc-le-7J0"/>
                 <outlet property="imageView" destination="BDN-eT-Gn5" id="lb4-7A-Qqn"/>
                 <outlet property="title" destination="ThZ-Kz-A4X" id="KZ2-gb-Pk3"/>
