@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gW7-c8-4ne">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
         <array key="Rubik-Regular.ttf">
             <string>Rubik-Regular</string>
         </array>
@@ -21,20 +24,20 @@
             <objects>
                 <viewController id="gW7-c8-4ne" customClass="DashboardViewController" customModule="YGAM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONf-CD-S0E" customClass="GradientView" customModule="YGAM" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yO-CL-G9g" userLabel="Header">
-                                <rect key="frame" x="0.0" y="59.999999999999986" width="375" height="194.66666666666663"/>
+                                <rect key="frame" x="0.0" y="36" width="320" height="197.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxz-Vm-9Hd">
-                                        <rect key="frame" x="16" y="0.0" width="106" height="21"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                                        <rect key="frame" x="16" y="0.0" width="124" height="24"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1k-lF-cJZ">
-                                        <rect key="frame" x="16" y="24.999999999999996" width="343" height="36.666666666666657"/>
+                                        <rect key="frame" x="16" y="28" width="288" height="36.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="We'll remind you daily to come back and track how you are progessing">
                                                 <attributes>
@@ -47,14 +50,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-Sb-kC0" userLabel="ChartContainer">
-                                        <rect key="frame" x="16" y="69.666666666666657" width="343" height="125"/>
+                                        <rect key="frame" x="16" y="72.5" width="288" height="125"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-FV-F6l" userLabel="LineChart" customClass="LineChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="105"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="105"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ova-86-iyS">
-                                                <rect key="frame" x="160" y="113" width="23" height="12"/>
+                                                <rect key="frame" x="132.5" y="113" width="23" height="12"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="10"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -86,30 +89,30 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oag-PD-J1D" userLabel="RoundedTop">
-                                <rect key="frame" x="0.0" y="270.66666666666669" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="249.5" width="320" height="20"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Tro-yF-51M"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7N-M0-7Ln" userLabel="ContentView">
-                                <rect key="frame" x="0.0" y="280.66666666666669" width="375" height="531.33333333333326"/>
+                                <rect key="frame" x="0.0" y="259.5" width="320" height="308.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scs-vP-4PU" customClass="GradientView" customModule="YGAM" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="8" width="343" height="138"/>
+                                        <rect key="frame" x="16" y="8" width="288" height="138"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aim" translatesAutoresizingMaskIntoConstraints="NO" id="Ky2-kx-iu3">
-                                                <rect key="frame" x="20" y="57.333333333333314" width="24" height="24"/>
+                                                <rect key="frame" x="20" y="57" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="ZVf-IO-zfQ"/>
                                                     <constraint firstAttribute="width" constant="24" id="aPU-c2-OWs"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bor-aN-i9d" userLabel="TextView">
-                                                <rect key="frame" x="64" y="7.6666666666666217" width="271" height="120.33333333333331"/>
+                                                <rect key="frame" x="64" y="7.5" width="216" height="120.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus on your current goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-ZE-qAV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="198.33333333333334" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="198.5" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="Rfu-0p-jlT"/>
                                                         </constraints>
@@ -118,7 +121,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll remind you daily to come back and track how you are progessing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NPY-oX-RFH">
-                                                        <rect key="frame" x="0.0" y="21.999999999999993" width="271" height="98.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="22" width="216" height="98.5"/>
                                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
                                                         <color key="textColor" white="1" alpha="0.80078125" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -135,10 +138,10 @@
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItB-G2-aw5" userLabel="Time Up">
-                                                <rect key="frame" x="64" y="7" width="271" height="123"/>
+                                                <rect key="frame" x="64" y="7" width="216" height="123"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's been 7 days since you set your goal" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-ve-saG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="259" height="38"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="204" height="38"/>
                                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -158,7 +161,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rSp-kr-EZb">
-                                                        <rect key="frame" x="0.0" y="42.666666666666629" width="271" height="37"/>
+                                                        <rect key="frame" x="0.0" y="42.5" width="216" height="37"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="It's been 7 days since you set your goal. Do you feel any different?">
                                                                 <attributes>
@@ -200,10 +203,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sC-G3-ds0" customClass="InfoViewAbove" customModule="YGAM" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="162" width="311" height="32.333333333333343"/>
+                                        <rect key="frame" x="32" y="162" width="256" height="49"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint: The links below offer some useful tips" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-rE-USE">
-                                                <rect key="frame" x="16" y="8.0000000000000018" width="279" height="16.666666666666671"/>
+                                                <rect key="frame" x="16" y="8" width="224" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                 <color key="textColor" red="0.18823529411764706" green="0.14117647058823529" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -218,7 +221,7 @@
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qUB-3m-dHs">
-                                        <rect key="frame" x="0.0" y="209.99999999999997" width="375" height="287.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="227" width="320" height="81.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cFZ-D3-6aA">
                                             <size key="itemSize" width="50" height="50"/>
