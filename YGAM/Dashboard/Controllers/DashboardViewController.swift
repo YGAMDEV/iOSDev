@@ -203,6 +203,7 @@ extension DashboardViewController: UICollectionViewDataSource {
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.signpostCell, for: indexPath) as! SignpostCollectionViewCell
         cell.setup(signpost: selectedTask.signposts![indexPath.row])
+        cell.horizontalRule.isHidden = false
         if indexPath.row + 1 == selectedTask.signposts!.count {
             // Last normal cell - hide the horizontal view
             cell.horizontalRule.isHidden = true
